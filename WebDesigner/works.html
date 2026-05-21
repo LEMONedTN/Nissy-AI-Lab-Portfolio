@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works | Nissy AI Lab</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-black': '#050505', 'brand-dark': '#121212', 'brand-gray': '#222222', 'brand-accent': '#B0C4DE',
+                    },
+                    fontFamily: { sans: ['Inter', 'Noto Sans JP', 'sans-serif'], },
+                    letterSpacing: { widest: '.2em', }
+                }
+            }
+        }
+    </script>
+
+    <!-- 分離した外部CSSファイルの読み込み -->
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="bg-brand-black text-white">
+
+    <header
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-brand-black/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <h1 class="text-xl font-semibold tracking-wider"><a href="index.html"
+                    class="transition-colors hover:text-brand-accent">Nissy AI Lab</a></h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-10 text-sm tracking-wider font-light">
+                    <li><a href="index.html" class="hover-underline">Home</a></li>
+                    <li><a href="about.html" class="hover-underline">About</a></li>
+                    <li><a href="works.html" class="hover-underline text-brand-accent">Works</a></li>
+                    <li><a href="service.html" class="hover-underline">Service</a></li>
+                    <li><a href="contact.html" class="hover-underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="pt-32 pb-16 px-6 bg-brand-dark border-b border-white/5">
+        <div class="max-w-7xl mx-auto text-center fade-in">
+            <h2 class="text-4xl md:text-5xl font-light tracking-widest mb-4">Works</h2>
+            <p class="text-xs uppercase tracking-widest text-brand-accent">制作実績</p>
+        </div>
+    </div>
+
+    <section class="py-24 px-6 max-w-7xl mx-auto fade-in delay-1">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-12 gap-y-16">
+            <!-- Work Item 1 -->
+            <a href="#" class="group block">
+                <div class="overflow-hidden mb-6 relative bg-brand-gray aspect-[16/10]">
+                    <img src="Image/work01.png" alt="Work 01"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                </div>
+                <h4 class="text-xl font-light tracking-wider mb-2">Corporate Rebranding</h4>
+                <p class="text-xs text-brand-accent uppercase tracking-widest">Web Design / Coding</p>
+            </a>
+            <!-- Work Item 2 -->
+            <a href="#" class="group block">
+                <div class="overflow-hidden mb-6 relative bg-brand-gray aspect-[16/10]">
+                    <img src="Image/work02.png" alt="Work 02"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                </div>
+                <h4 class="text-xl font-light tracking-wider mb-2">Minimal Portfolio</h4>
+                <p class="text-xs text-brand-accent uppercase tracking-widest">UI/UX / Design</p>
+            </a>
+            <!-- Work Item 3 -->
+            <a href="#" class="group block">
+                <div class="overflow-hidden mb-6 relative bg-brand-gray aspect-[16/10]">
+                    <img src="Image/work03.png" alt="Work 03"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                </div>
+                <h4 class="text-xl font-light tracking-wider mb-2">Product Landing Page</h4>
+                <p class="text-xs text-brand-accent uppercase tracking-widest">Branding / LP</p>
+            </a>
+            <!-- Work Item 4 -->
+            <a href="#" class="group block">
+                <div class="overflow-hidden mb-6 relative bg-brand-gray aspect-[16/10]">
+                    <img src="Image/work04.png" alt="Work 04"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                </div>
+                <h4 class="text-xl font-light tracking-wider mb-2">Concept Cafe Website</h4>
+                <p class="text-xs text-brand-accent uppercase tracking-widest">Web Design</p>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-brand-black border-t border-white/10 py-12 px-6 mt-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <h2 class="text-lg font-medium tracking-widest mb-1">Nissy AI Lab</h2>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
