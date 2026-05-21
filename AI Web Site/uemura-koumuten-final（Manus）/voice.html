@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お客様の声 | 上村工務店</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background-color: var(--main-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        .voice-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .voice-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+        }
+        .voice-img {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .voice-content {
+            padding: 40px;
+            flex-grow: 1;
+        }
+        .voice-meta {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--bg-light);
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .voice-meta span {
+            margin-right: 20px;
+        }
+        .voice-meta .construction {
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 2px 10px;
+            border-radius: 3px;
+        }
+        .voice-comment {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            position: relative;
+        }
+        .voice-comment::before {
+            content: '“';
+            font-size: 4rem;
+            color: var(--bg-light);
+            position: absolute;
+            top: -30px;
+            left: -20px;
+            z-index: 0;
+        }
+        .voice-comment p {
+            position: relative;
+            z-index: 1;
+        }
+        @media (max-width: 768px) {
+            .voice-card { flex-direction: column; }
+            .voice-img { width: 100%; height: 200px; }
+            .voice-content { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">上村工務店</div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">上村工務店について</a></li>
+                    <li><a href="works.html">施工実績</a></li>
+                    <li><a href="voice.html">お客様の声</a></li>
+                    <li><a href="company.html">会社情報</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>お客様の声</h1>
+            </div>
+        </div>
+
+        <section class="voices">
+            <div class="container">
+                <div class="voice-list">
+                    <div class="voice-card">
+                        <div class="voice-img" style="background: url('customer1.jpg') center/cover no-repeat;"></div>
+                        <div class="voice-content">
+                            <div class="voice-meta">
+                                <span>T.K様</span>
+                                <span>大阪市北区</span>
+                                <span class="construction">キッチンリフォーム</span>
+                            </div>
+                            <div class="voice-comment">
+                                <p>古くなったキッチンが見違えるほどきれいになりました。上村さんの丁寧な対応に感謝しています。工事中も細かな配慮があり、安心してお任せすることができました。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voice-card">
+                        <div class="voice-img" style="background: url('customer2.jpg') center/cover no-repeat;"></div>
+                        <div class="voice-content">
+                            <div class="voice-meta">
+                                <span>M.S様</span>
+                                <span>大阪市淀川区</span>
+                                <span class="construction">浴室リフォーム</span>
+                            </div>
+                            <div class="voice-comment">
+                                <p>冬場のお風呂が寒くて悩んでいましたが、断熱もしっかりしてもらい、今は快適です。最新のユニットバスは掃除もしやすく、毎日のお風呂が楽しみになりました。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voice-card">
+                        <div class="voice-img" style="background: url('customer3.jpg') center/cover no-repeat;"></div>
+                        <div class="voice-content">
+                            <div class="voice-meta">
+                                <span>Y.H様</span>
+                                <span>大阪市西区</span>
+                                <span class="construction">リビング改装</span>
+                            </div>
+                            <div class="voice-comment">
+                                <p>子どもが走り回れる広々としたリビングになりました。家族の時間が増えました。自然素材の床がとても気持ちよく、素足で過ごすのがお気に入りです。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voice-card">
+                        <div class="voice-img" style="background: url('customer4.jpg') center/cover no-repeat;"></div>
+                        <div class="voice-content">
+                            <div class="voice-meta">
+                                <span>A.N様</span>
+                                <span>大阪市中変区</span>
+                                <span class="construction">外壁塚装</span>
+                            </div>
+                            <div class="voice-comment">
+                                <p>近所の方から「新築ですか？」と聞かれるほどきれいになりました。色選びのアドバイスも的確で、イメージ通りの仕上がりに大変満足しています。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>上村工務店</h3>
+                    <p>〒530-0001 大阪府大阪市北区梅田3丁目1-1</p>
+                    <p>受付時間：9:00〜18:00（日・祝定休）</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">上村工務店について</a></li>
+                        <li><a href="works.html">施工実績</a></li>
+                        <li><a href="voice.html">お客様の声</a></li>
+                        <li><a href="company.html">会社情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>お問い合わせ</h4>
+                    <span class="tel">06-XXXX-XXXX</span>
+                    <a href="contact.html" class="btn-contact">メールで相談する</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 上村工務店 All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | 上村工務店</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background-color: var(--main-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .tel-box {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .tel-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--main-color);
+            display: block;
+            margin: 10px 0;
+        }
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-group label span {
+            background: #e53935;
+            color: var(--white);
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--gray);
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        textarea.form-control {
+            height: 150px;
+        }
+        .form-submit {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .btn-submit {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+            padding: 15px 60px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .btn-submit:hover {
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            .tel-number { font-size: 1.8rem; }
+            .contact-form { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">上村工務店</div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">上村工務店について</a></li>
+                    <li><a href="works.html">施工実績</a></li>
+                    <li><a href="voice.html">お客様の声</a></li>
+                    <li><a href="company.html">会社情報</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>お問い合わせ</h1>
+            </div>
+        </div>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-intro">
+                        <p>リフォームに関するご相談、現地調査のご依頼、お見積りなど、お気軽にお問い合わせください。<br>内容を確認後、担当者より折り返しご連絡させていただきます。</p>
+                    </div>
+
+                    <div class="tel-box">
+                        <p>お急ぎの方はお電話にてお問い合わせください</p>
+                        <span class="tel-number">06-XXXX-XXXX</span>
+                        <p>受付時間：9:00〜18:00（日・祝定休）</p>
+                    </div>
+
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">お名前<span>必須</span></label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="例：上村 太郎" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">メールアドレス<span>必須</span></label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="例：example@mail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">電話番号<span>必須</span></label>
+                            <input type="tel" id="tel" name="tel" class="form-control" placeholder="例：090-0000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="content">お問い合わせ内容<span>必須</span></label>
+                            <textarea id="content" name="content" class="form-control" placeholder="ご相談内容をご記入ください" required></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <button type="button" class="btn-submit">送信する</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>上村工務店</h3>
+                    <p>〒530-0001 大阪府大阪市北区梅田3丁目1-1</p>
+                    <p>受付時間：9:00〜18:00（日・祝定休）</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">上村工務店について</a></li>
+                        <li><a href="works.html">施工実績</a></li>
+                        <li><a href="voice.html">お客様の声</a></li>
+                        <li><a href="company.html">会社情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>お問い合わせ</h4>
+                    <span class="tel">06-XXXX-XXXX</span>
+                    <a href="contact.html" class="btn-contact">メールで相談する</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 上村工務店 All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

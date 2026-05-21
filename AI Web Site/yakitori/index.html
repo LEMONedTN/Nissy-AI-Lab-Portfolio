@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>土田屋 | 炭火焼き鳥専門店</title>
+  <meta name="description" content="炭火で一本一本、丁寧に焼き上げる焼き鳥専門店「土田屋」。素材の旨みを最大限に引き出した本物の焼き鳥をご堪能ください。">
+  <link rel="stylesheet" href="Style/reset.css">
+  <link rel="stylesheet" href="Style/style.css">
+</head>
+
+<body>
+
+  <!-- ==============================
+    HEADER
+  ============================== -->
+  <header class="site-header" id="site-header">
+    <a href="index.html" class="header-logo">
+      <span class="header-logo__ja">土田屋</span>
+      <span class="header-logo__en">Tsuchidaya Yakitori</span>
+    </a>
+    <nav class="global-nav" id="global-nav">
+      <a href="index.html">ホーム</a>
+      <a href="about.html">土田屋について</a>
+      <a href="menu.html">メニュー</a>
+      <a href="shop.html">店舗情報</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="contact.html" class="header-reserve">ご予約</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ==============================
+      HERO / FIRST VIEW
+    ============================== -->
+    <section class="hero">
+      <!-- 背景画像 -->
+      <img src="images/hero_bg.png" alt="ヒーローメインビジュアル" class="hero__bg"
+        style="object-fit: cover; width: 100%; height: 100%;">
+      <div class="hero__overlay"></div>
+      <div class="hero__glow"></div>
+
+      <div class="hero__content">
+        <span class="hero__catch-en">Charcoal Grilled Yakitori</span>
+        <h1 class="hero__title">
+          炭火の温もり、<br><em>一本に宿る。</em>
+        </h1>
+        <p class="hero__sub">
+          備長炭の遠赤外線が素材の旨みを閉じ込め、<br>
+          丁寧に焼き上げる。それが土田屋の焼き鳥。
+        </p>
+        <a href="menu.html" class="hero__cta">
+          お品書きを見る
+          <span class="hero__cta-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="hero__scroll">
+        <div class="hero__scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ==============================
+      ABOUT INTRO
+    ============================== -->
+    <section class="about-intro">
+      <div class="container">
+        <div class="about-intro__inner">
+
+          <div class="about-intro__img reveal">
+            <img src="images/about_intro.png" alt="店内・炭火焼きの様子"
+              style="object-fit: cover; width: 100%; height: 100%; display: block;">
+          </div>
+
+          <div class="about-intro__text reveal reveal-delay1">
+            <span class="section-en">About Tsuchidaya</span>
+            <h2 class="section-title">土田屋について</h2>
+
+            <p class="about-intro__lead">
+              <em>素材と炭火</em>だけが語る、<br>
+              焼き鳥の本質。
+            </p>
+            <p class="about-intro__body">
+              土田屋は、国産の厳選された鶏を使い、備長炭で一本一本丁寧に焼き上げる焼き鳥専門店です。余分なものは一切加えず、素材本来の旨みと炭火の香りだけで勝負する。それが土田屋の流儀です。<br><br>
+              カウンター越しに見える炎の揺らめきと、炭火の音。その空間ごと、焼き鳥を楽しんでいただきたいと思っています。
+            </p>
+
+            <div class="about-intro__owner">
+              <div class="about-intro__owner-img">
+                <img src="images/owner_avatar.png" alt="土田聖太郎"
+                  style="width: 64px; height: 64px; object-fit: cover; border-radius: 50%;">
+              </div>
+              <div>
+                <p class="about-intro__owner-name">土田　聖太郎</p>
+                <p class="about-intro__owner-role">店主 / Chef &amp; Owner</p>
+              </div>
+            </div>
+
+            <a href="about.html" class="btn-ghost">
+              土田屋のこだわり →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+      FEATURE（3つのこだわり）
+    ============================== -->
+    <section class="feature">
+      <div class="container">
+        <div class="feature__header reveal">
+          <span class="section-en">Our Commitment</span>
+          <h2 class="section-title">三つのこだわり</h2>
+        </div>
+      </div>
+
+      <div class="feature__grid">
+
+        <div class="feature__item reveal">
+          <div class="feature__item-bg">
+            <img src="images/feature_charcoal.png" alt="備長炭"
+              style="object-fit: cover; width: 100%; height: 100%; display: block;">
+          </div>
+          <div class="feature__item-overlay"></div>
+          <div class="feature__item-content">
+            <span class="feature__item-num">01 — Charcoal</span>
+            <h3 class="feature__item-title">備長炭の<br>遠赤外線</h3>
+            <p class="feature__item-text">
+              土佐備長炭の安定した火力と遠赤外線効果が、素材の表面をすばやく焼き固め、旨みとジューシーさを中に閉じ込めます。
+            </p>
+          </div>
+        </div>
+
+        <div class="feature__item reveal reveal-delay1">
+          <div class="feature__item-bg">
+            <img src="images/feature_chicken.png" alt="国産鶏素材"
+              style="object-fit: cover; width: 100%; height: 100%; display: block;">
+          </div>
+          <div class="feature__item-overlay"></div>
+          <div class="feature__item-content">
+            <span class="feature__item-num">02 — Ingredient</span>
+            <h3 class="feature__item-title">厳選した<br>国産鶏</h3>
+            <p class="feature__item-text">
+              毎朝仕入れる新鮮な国産銘柄鶏。部位ごとに最適な串打ちを行い、炭火焼きの美味しさを最大限に引き出します。
+            </p>
+          </div>
+        </div>
+
+        <div class="feature__item reveal reveal-delay2">
+          <div class="feature__item-bg">
+            <img src="images/feature_tare.png" alt="秘伝のタレ"
+              style="object-fit: cover; width: 100%; height: 100%; display: block;">
+          </div>
+          <div class="feature__item-overlay"></div>
+          <div class="feature__item-content">
+            <span class="feature__item-num">03 — Tare</span>
+            <h3 class="feature__item-title">継ぎ足し続ける<br>秘伝のタレ</h3>
+            <p class="feature__item-text">
+              創業以来、一度も絶やすことなく継ぎ足し続けてきた秘伝のタレ。歳月が積み重なった深い甘みと複雑な旨みが特徴です。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+      MENU SECTION
+    ============================== -->
+    <section class="menu-section">
+      <div class="container">
+
+        <div class="menu-section__header reveal">
+          <div>
+            <span class="section-en">Menu</span>
+            <h2 class="section-title">お品書き</h2>
+          </div>
+          <a href="menu.html" class="menu-section__link">
+            メニューをすべて見る →
+          </a>
+        </div>
+
+        <div class="menu-tabs">
+          <button class="menu-tab active">定番焼き鳥</button>
+          <button class="menu-tab">串焼き</button>
+          <button class="menu-tab">一品料理</button>
+          <button class="menu-tab">お飲み物</button>
+        </div>
+
+        <div class="menu-grid">
+
+          <div class="menu-card reveal">
+            <div class="menu-card__img">
+              <img src="images/menu_momo.png" alt="もも"
+                style="object-fit: cover; width: 100%; height: 180px; display: block;">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__name">もも</p>
+              <p class="menu-card__desc">ジューシーな腿肉を丁寧に串打ち。炭火でこんがり焼き上げた定番の一本。</p>
+              <p class="menu-card__price">¥ 180 / 本</p>
+            </div>
+          </div>
+
+          <div class="menu-card reveal reveal-delay1">
+            <div class="menu-card__img">
+              <img src="images/menu_negima.png" alt="ねぎま"
+                style="object-fit: cover; width: 100%; height: 180px; display: block;">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__name">ねぎま</p>
+              <p class="menu-card__desc">鶏肉とねぎを交互に刺した、焼き鳥の王道。ねぎの甘みが絶妙です。</p>
+              <p class="menu-card__price">¥ 180 / 本</p>
+            </div>
+          </div>
+
+          <div class="menu-card reveal reveal-delay2">
+            <div class="menu-card__img">
+              <img src="images/menu_tsukune.png" alt="つくね"
+                style="object-fit: cover; width: 100%; height: 180px; display: block;">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__name">つくね</p>
+              <p class="menu-card__desc">自家製の鶏挽き肉を丁寧に練り上げたつくね。卵黄に絡めてどうぞ。</p>
+              <p class="menu-card__price">¥ 200 / 本</p>
+            </div>
+          </div>
+
+          <div class="menu-card reveal reveal-delay3">
+            <div class="menu-card__img">
+              <img src="images/menu_kawa.png" alt="かわ"
+                style="object-fit: cover; width: 100%; height: 180px; display: block;">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__name">かわ</p>
+              <p class="menu-card__desc">パリッとした食感が後を引く鶏皮。じっくり炭火で焼くことで余分な脂が落ち、旨みが凝縮。</p>
+              <p class="menu-card__price">¥ 160 / 本</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+      CHEF / OWNER
+    ============================== -->
+    <section class="chef-section">
+      <div class="container">
+        <div class="chef-section__inner">
+
+          <div class="chef-section__img-wrap reveal">
+            <div class="chef-section__img">
+              <img src="images/chef_seitaro.png" alt="店主・土田聖太郎の写真"
+                style="object-fit: cover; width: 100%; height: 100%; display: block;">
+            </div>
+          </div>
+
+          <div class="chef-section__text reveal reveal-delay1">
+            <span class="section-en">Chef &amp; Owner</span>
+            <h2 class="section-title">店主紹介</h2>
+            <blockquote class="chef-section__quote">
+              「焼き鳥は、素材と火と時間が作るもの。<br>私はただ、その場に立ち会う人間です。」
+            </blockquote>
+            <p class="chef-section__body">
+              東京の名店で10年間修業を積んだ後、故郷にて「土田屋」を開業。備長炭の扱い方、仕込みの丁寧さ、串の打ち方──どれひとつ妥協することなく、毎日カウンターに立ち続けています。<br><br>
+              お客様の顔を見ながら焼き上げる、カウンター越しの焼き鳥。その一体感こそが、土田屋の醍醐味だと考えています。
+            </p>
+            <div class="chef-section__name-block">
+              <p class="chef-section__name-ja">土田　聖太郎</p>
+              <p class="chef-section__name-en">Seitaro Tsuchida</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+      NEWS
+    ============================== -->
+    <section class="news-section">
+      <div class="container">
+
+        <div class="news-section__header reveal">
+          <div>
+            <span class="section-en">News &amp; Topics</span>
+            <h2 class="section-title">お知らせ</h2>
+          </div>
+          <a href="#" class="menu-section__link">すべて見る →</a>
+        </div>
+
+        <ul class="news-list reveal">
+          <li class="news-item">
+            <span class="news-item__date">2025.06.10</span>
+            <span class="news-item__cat">お知らせ</span>
+            <p class="news-item__title">夏季限定「冷やし鶏コース」のご案内</p>
+          </li>
+          <li class="news-item">
+            <span class="news-item__date">2025.05.20</span>
+            <span class="news-item__cat">営業情報</span>
+            <p class="news-item__title">6月の定休日のお知らせ（毎週月曜日）</p>
+          </li>
+          <li class="news-item">
+            <span class="news-item__date">2025.04.05</span>
+            <span class="news-item__cat">メニュー</span>
+            <p class="news-item__title">春の新メニュー「山椒香る鶏白レバー串」を追加しました</p>
+          </li>
+          <li class="news-item">
+            <span class="news-item__date">2025.03.01</span>
+            <span class="news-item__cat">お知らせ</span>
+            <p class="news-item__title">ホームページをリニューアルしました</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+      SHOP INFO
+    ============================== -->
+    <section class="info-section">
+      <div class="container">
+        <div class="reveal" style="margin-bottom:64px;">
+          <span class="section-en">Shop Information</span>
+          <h2 class="section-title">店舗情報</h2>
+        </div>
+
+        <div class="info-section__inner">
+
+          <div class="info-map reveal">
+            <img src="images/map_area.png" alt="店舗外観"
+              style="object-fit: cover; width: 100%; height: 100%; display: block;">
+          </div>
+
+          <div class="reveal reveal-delay1">
+            <table class="info-table">
+              <tbody>
+                <tr>
+                  <th>店名</th>
+                  <td>土田屋（つちだや）</td>
+                </tr>
+                <tr>
+                  <th>住所</th>
+                  <td>〒000-0000<br>○○県○○市○○町1-2-3</td>
+                </tr>
+                <tr>
+                  <th>電話</th>
+                  <td>000-0000-0000</td>
+                </tr>
+                <tr>
+                  <th>営業時間</th>
+                  <td>17:00〜23:00（L.O. 22:30）</td>
+                </tr>
+                <tr>
+                  <th>定休日</th>
+                  <td>毎週月曜日<br>（祝日の場合は翌火曜日）</td>
+                </tr>
+                <tr>
+                  <th>席数</th>
+                  <td>カウンター8席 / テーブル16席</td>
+                </tr>
+                <tr>
+                  <th>予算</th>
+                  <td>お一人様 3,000円〜5,000円</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="contact.html" class="info-reserve-btn">
+              ご予約・お問い合わせ
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================
+    FOOTER
+  ============================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div>
+          <p class="footer-logo__ja">土田屋</p>
+          <p class="footer-logo__en">Tsuchidaya Yakitori</p>
+          <p class="footer-tagline">
+            備長炭の火と、厳選素材だけで勝負する。<br>
+            それが土田屋の焼き鳥です。
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">ホーム</a>
+          <a href="about.html">土田屋について</a>
+          <a href="menu.html">メニュー</a>
+          <a href="shop.html">店舗情報</a>
+          <a href="contact.html">お問い合わせ</a>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="footer-copy">© 2025 Tsuchidaya All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================
+    JavaScript
+  ============================== -->
+  <script>
+    // ---- Header: スクロールで背景を濃く ----
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ---- ハンバーガーメニュー (SP) ----
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('global-nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+
+    // ---- Scroll Reveal ----
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // ---- Menu Tab ----
+    const tabs = document.querySelectorAll('.menu-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+
+</html>

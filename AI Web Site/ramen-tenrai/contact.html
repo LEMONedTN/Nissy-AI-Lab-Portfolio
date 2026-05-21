@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ｜天来 Tenrai</title>
+  <meta name="description" content="天来（Tenrai）へのお問い合わせはこちらから。ご不明な点やご要望がございましたら、お気軽にご連絡ください。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        天来
+        <span>TENRAI RAMEN</span>
+      </a>
+      <nav class="global-nav" id="globalNav">
+        <ul>
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="kodawari.html">こだわり</a></li>
+          <li><a href="menu.html">メニュー</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="contact.html" class="active">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <div class="page-header">
+    <div class="container">
+      <span class="section-label">CONTACT</span>
+      <h1 class="section-title">お問い合わせ</h1>
+      <p class="section-sub">ご質問・ご要望・取材のご依頼など、お気軽にどうぞ。</p>
+    </div>
+  </div>
+
+  <!-- ============ フォーム ============ -->
+  <section class="section section-dark">
+    <div class="container">
+
+      <p style="text-align: center; font-size: 0.9rem; color: rgba(245,240,232,0.65); line-height: 2; margin-bottom: 56px;">
+        下記フォームにご記入のうえ、送信ボタンを押してください。<br>
+        通常2〜3営業日以内にご返信いたします。<br>
+        お急ぎの方はお電話（06-XXXX-XXXX）でもご対応しております。
+      </p>
+
+      <form class="contact-form" action="#" method="post">
+
+        <div class="form-group">
+          <label class="form-label" for="name">
+            お名前
+            <span class="required">必須</span>
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-input"
+            placeholder="山田 太郎"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">
+            メールアドレス
+            <span class="required">必須</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-input"
+            placeholder="example@mail.com"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="tel">
+            電話番号
+            <span style="font-size: 0.75rem; color: rgba(245,240,232,0.45); margin-left: 6px;">任意</span>
+          </label>
+          <input
+            type="tel"
+            id="tel"
+            name="tel"
+            class="form-input"
+            placeholder="090-0000-0000"
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">
+            お問い合わせ内容
+            <span class="required">必須</span>
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            class="form-textarea"
+            placeholder="ご質問・ご要望・取材のご依頼など、なんでもお気軽にどうぞ。"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label style="display: flex; align-items: flex-start; gap: 12px; cursor: pointer;">
+            <input type="checkbox" name="privacy" required style="margin-top: 3px; accent-color: var(--color-accent);">
+            <span style="font-size: 0.85rem; color: rgba(245,240,232,0.65); line-height: 1.7;">
+              <a href="#" style="color: var(--color-accent); text-decoration: underline;">プライバシーポリシー</a>に同意の上、送信します。
+            </span>
+          </label>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit">送信する</button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <p class="footer-logo">
+            天来
+            <span>TENRAI RAMEN</span>
+          </p>
+          <p class="footer-address" style="margin-top: 16px;">
+            〒530-0001 大阪府大阪市北区梅田3-1-1 天来ビル 1F<br>
+            TEL: 06-XXXX-XXXX<br>
+            営業時間: 11:00〜15:00 / 18:00〜22:30
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="kodawari.html">こだわり</a></li>
+            <li><a href="menu.html">メニュー</a></li>
+            <li><a href="access.html">アクセス</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">© 2025 天来（Tenrai） All Rights Reserved.</p>
+        <p class="footer-policy"><a href="#">プライバシーポリシー</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('globalNav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

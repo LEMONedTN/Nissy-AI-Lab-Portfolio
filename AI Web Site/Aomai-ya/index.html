@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="葵舞家 Aomai-ya ｜ 炎と鉄板が奏でる、上質な宴。厳選された肉・海鮮を炭火と鉄板で焼き上げる、こだわりの鉄板焼き居酒屋。">
+  <title>葵舞家 | Aomai-ya ─ 鉄板焼き居酒屋</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Josefin+Sans:wght@100;200;300;400&family=Noto+Sans+JP:wght@300;400&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <!-- =============================
+       Header
+  ============================== -->
+  <header class="site-header" id="site-header">
+    <div class="inner">
+      <a href="#" class="site-logo">
+        <span class="logo-ja">葵舞家</span>
+        <span class="logo-en">Aomai-ya</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#teppan">Teppan</a>
+        <a href="#owner">Owner</a>
+        <a href="#shop">Shop</a>
+        <a href="#reserve" class="nav-reserve">Reserve</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- =============================
+       Hero
+  ============================== -->
+  <section class="hero" id="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active slide-1">
+        <div class="hero-slide-bg"></div>
+      </div>
+      <div class="hero-slide slide-2">
+        <div class="hero-slide-bg"></div>
+      </div>
+      <div class="hero-slide slide-3">
+        <div class="hero-slide-bg"></div>
+      </div>
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <span class="hero-eyebrow">Teppanyaki &amp; Izakaya — Kyoto</span>
+      <h1 class="hero-title">葵舞家</h1>
+      <span class="hero-title-ruby">Aomai-ya</span>
+      <p class="hero-desc">
+        炎と鉄板が奏でる、上質な宴。<br>
+        厳選された肉と海鮮を、職人の手で焼き上げる。<br>
+        大切な夜を、特別な記憶に。
+      </p>
+      <a href="#reserve" class="hero-cta">
+        ご予約はこちら
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="hero-indicators" id="hero-indicators">
+      <button class="active" data-index="0" aria-label="スライド1"></button>
+      <button data-index="1" aria-label="スライド2"></button>
+      <button data-index="2" aria-label="スライド3"></button>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+
+  <!-- =============================
+       About
+  ============================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <span class="section-label">About</span>
+          <h2 class="section-title">炎と鉄板、<br>職人の美学。</h2>
+          <div class="divider"></div>
+          <p class="lead">
+            「葵舞家」は、炎の力と職人の技が融合した<br>
+            本格鉄板焼き居酒屋です。
+          </p>
+          <p>
+            厳選された国産牛・産地直送の海鮮を、熟練の職人が鉄板の前で焼き上げる。煙と香り、音と熱——五感を満たす体験が、この一枚の鉄板から始まります。
+          </p>
+          <p>
+            古都・京都の静けさと、炭火の力強さ。相反する二つの美学が交わる空間で、忘れられない時間をお届けします。
+          </p>
+        </div>
+
+        <div class="about-image-wrap reveal reveal-delay-2">
+          <div class="about-image-main">
+            <img src="images/about_chef_portrait.png" alt="職人ポートレート" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="about-image-sub">
+            <img src="images/about_counter_interior.png" alt="カウンター内装" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================
+       Concept Bar
+  ============================== -->
+  <div class="concept-bar">
+    <div class="container">
+      <div class="concept-item reveal">
+        <div class="concept-num">12+</div>
+        <div class="concept-label">Aged Beef</div>
+        <div class="concept-desc">厳選12種以上の熟成肉を常時ラインナップ</div>
+      </div>
+      <div class="concept-item reveal reveal-delay-1">
+        <div class="concept-num">Daily</div>
+        <div class="concept-label">Fresh Seafood</div>
+        <div class="concept-desc">毎朝仕入れる産地直送の新鮮海鮮</div>
+      </div>
+      <div class="concept-item reveal reveal-delay-2">
+        <div class="concept-num">150+</div>
+        <div class="concept-label">Drink Menu</div>
+        <div class="concept-desc">厳選地酒・クラフトビール含む充実のドリンク</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =============================
+       Menu
+  ============================== -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="menu-header reveal">
+        <span class="section-label">Menu</span>
+        <h2 class="section-title">こだわりの一皿</h2>
+        <div class="divider"></div>
+        <p>素材の声を聞き、炎と鉄板で最高の状態へ。<br>シンプルゆえに、誤魔化しのない一皿をお届けします。</p>
+      </div>
+
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-tab="meat">Meat</button>
+        <button class="menu-tab" data-tab="seafood">Seafood</button>
+        <button class="menu-tab" data-tab="yasai">Yasai</button>
+        <button class="menu-tab" data-tab="drink">Drink</button>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Card 1 -->
+        <div class="menu-card reveal">
+          <div class="menu-card-img">
+            <img src="images/menu_wagyu_steak.png" alt="国産黒毛和牛 A5ロース" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="menu-card-category">Wagyu</div>
+          <div class="menu-card-name">国産黒毛和牛<br>A5ロース</div>
+          <div class="menu-card-name-en">A5 Wagyu Loin</div>
+          <div class="menu-card-desc">
+            脂の甘みと赤身の旨みが共存するA5ランクの黒毛和牛ロース。鉄板の熱でゆっくりと旨みを引き出します。
+          </div>
+          <div class="menu-card-price">¥3,800<span>（税込）</span></div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="menu-card reveal reveal-delay-1">
+          <div class="menu-card-img">
+            <img src="images/menu_shrimp_butter.png" alt="大海老の鉄板バター焼き" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="menu-card-category">Seafood</div>
+          <div class="menu-card-name">大海老の<br>鉄板バター焼き</div>
+          <div class="menu-card-name-en">Tiger Prawn Butter</div>
+          <div class="menu-card-desc">
+            豪快な大海老を贅沢にバター醤油で焼き上げる一品。香ばしさとプリプリの食感がたまらない人気メニュー。
+          </div>
+          <div class="menu-card-price">¥1,980<span>（税込）</span></div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="menu-card reveal reveal-delay-2">
+          <div class="menu-card-img">
+            <img src="images/menu_special_assortment.png" alt="葵舞家 特製盛り合わせ" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="menu-card-category">Specialty</div>
+          <div class="menu-card-name">葵舞家<br>特製盛り合わせ</div>
+          <div class="menu-card-name-en">Aomai-ya Special</div>
+          <div class="menu-card-desc">
+            本日のおすすめ肉・海鮮を職人がセレクトした葵舞家の看板メニュー。特製だれと薬味でどうぞ。
+          </div>
+          <div class="menu-card-price">¥5,500<span>（税込・2名〜）</span></div>
+        </div>
+      </div>
+
+      <div class="menu-footer reveal">
+        <a href="#" class="btn-outline">
+          全メニューを見る
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================
+       Teppan Story (Feature)
+  ============================== -->
+  <section class="feature" id="teppan">
+    <div class="container">
+      <div class="feature-grid reveal">
+        <div class="feature-visual">
+          <img src="images/story_fire_hands.png" alt="鉄板の上の炎と職人の手" style="width:100%; height:100%; object-fit:cover; min-height:500px; position:absolute; inset:0;">
+          <div class="ember-glow"></div>
+        </div>
+
+        <div class="feature-body">
+          <span class="section-label">Teppan Story</span>
+          <h2 class="section-title" style="font-size:clamp(1.8rem,3.5vw,2.8rem);">鉄板の前に立つ、<br>職人の矜持。</h2>
+          <div class="divider"></div>
+          <p class="lead">一枚の鉄板が、食材と人をつなぐ。</p>
+          <p>
+            葵舞家の職人は、素材の温度・厚み・鮮度を見極め、炎のコントロールひとつで味を変える。マニュアルのない、感覚の料理。
+          </p>
+          <p>
+            目の前で繰り広げられる炎と鉄板のパフォーマンスは、それ自体がひとつのエンターテインメント。食べる前から、記憶に刻まれる体験を。
+          </p>
+          <div class="feature-tags">
+            <span class="feature-tag"># 炭火焼き</span>
+            <span class="feature-tag"># 鉄板焼き</span>
+            <span class="feature-tag"># 国産牛</span>
+            <span class="feature-tag"># 産地直送海鮮</span>
+            <span class="feature-tag"># 職人技</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================
+       Owner
+  ============================== -->
+  <section class="owner" id="owner">
+    <div class="container">
+      <div class="owner-grid">
+
+        <!-- 画像 -->
+        <div class="owner-image-wrap reveal">
+          <div class="owner-image-deco"></div>
+          <div class="owner-image-frame">
+            <img src="images/owner_mai_nishi.png" alt="オーナーシェフ 西まい" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="owner-image-deco-br"></div>
+        </div>
+
+        <!-- テキスト -->
+        <div class="owner-body reveal reveal-delay-1">
+          <span class="section-label">Owner</span>
+
+          <div class="owner-name-wrap">
+            <span class="owner-name-ja">西　まい</span>
+            <span class="owner-name-en">Mai Nishi</span>
+          </div>
+
+          <div class="owner-role">Owner &amp; Head Chef — Aomai-ya</div>
+
+          <p class="lead">
+            「食卓を囲む人の、笑顔が見たい。<br>
+            それだけを、ずっと考えてきました。」
+          </p>
+
+          <p>
+            京都の料理人の家に生まれ、幼い頃から炎と鉄板のそばで育つ。修業を経て「葵舞家」を創業。繊細な感覚と力強い火入れで、厳選素材の本質を引き出す料理を追求し続けている。
+          </p>
+          <p>
+            「鉄板の前に立つと、余計なことは全部消える。素材と向き合う、ただそれだけです。」静かな眼差しの奥に、職人としての揺るぎない矜持が宿る。
+          </p>
+          <p>
+            大切な人との時間を、特別な記憶に変えるために——今日も葵舞家の鉄板に火が入る。
+          </p>
+
+          <div class="owner-signature">
+            <span class="owner-sig-line">Mai Nishi</span>
+            <span class="owner-sig-note">Founder &amp; Owner<br>葵舞家 / Aomai-ya</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================
+       Shop Info
+  ============================== -->
+  <section class="shop" id="shop">
+    <div class="container">
+      <div class="shop-header reveal">
+        <span class="section-label">Shop</span>
+        <h2 class="section-title">店舗案内</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="shop-grid">
+        <!-- 店舗1 -->
+        <div class="shop-card reveal">
+          <div class="shop-card-img">
+            <img src="images/shop_gion_exterior.png" alt="葵舞家 祇園店" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="shop-card-name">葵舞家 祇園店</div>
+          <div class="shop-card-name-en">Gion Main</div>
+          <div class="shop-info-list">
+            <div class="shop-info-item">
+              <span class="shop-info-label">Hours</span>
+              <span class="shop-info-val">17:00 〜 24:00<br><small style="font-size:1rem;color:var(--color-text-sub);">（L.O. 23:00）定休日：月曜</small></span>
+            </div>
+            <div class="shop-info-item">
+              <span class="shop-info-label">Tel</span>
+              <span class="shop-info-val"><a href="tel:075-000-0000" style="color:var(--color-accent-lt);">075-000-0000</a></span>
+            </div>
+            <div class="shop-info-item">
+              <span class="shop-info-label">Access</span>
+              <span class="shop-info-val shop-addr">京都府京都市東山区祇園町〇〇<br>京阪「祇園四条」駅より徒歩5分</span>
+            </div>
+          </div>
+          <div class="shop-actions">
+            <a href="#reserve" class="btn-solid">予約する</a>
+            <a href="#" class="btn-ghost">Google Map</a>
+          </div>
+        </div>
+
+        <!-- 店舗2 -->
+        <div class="shop-card reveal reveal-delay-1">
+          <div class="shop-card-img">
+            <img src="images/shop_karasuma_interior.png" alt="葵舞家 烏丸店" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="shop-card-name">葵舞家 烏丸店</div>
+          <div class="shop-card-name-en">Karasuma</div>
+          <div class="shop-info-list">
+            <div class="shop-info-item">
+              <span class="shop-info-label">Hours</span>
+              <span class="shop-info-val">17:00 〜 23:30<br><small style="font-size:1rem;color:var(--color-text-sub);">（L.O. 22:30）定休日：火曜</small></span>
+            </div>
+            <div class="shop-info-item">
+              <span class="shop-info-label">Tel</span>
+              <span class="shop-info-val"><a href="tel:075-000-0001" style="color:var(--color-accent-lt);">075-000-0001</a></span>
+            </div>
+            <div class="shop-info-item">
+              <span class="shop-info-label">Access</span>
+              <span class="shop-info-val shop-addr">京都府京都市下京区烏丸通〇〇<br>地下鉄「四条」駅より徒歩3分</span>
+            </div>
+          </div>
+          <div class="shop-actions">
+            <a href="#reserve" class="btn-solid">予約する</a>
+            <a href="#" class="btn-ghost">Google Map</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================
+       Reserve CTA
+  ============================== -->
+  <section class="reserve-cta" id="reserve">
+    <div class="container">
+      <span class="section-label" style="justify-content:center;display:flex;">Reserve</span>
+      <h2 class="section-title reveal">特別な夜の席を、<br>今すぐご予約を。</h2>
+      <div class="divider" style="margin:28px auto;"></div>
+      <p class="reveal">お電話・WEBいずれでもご予約を承っております。<br>コース料理・貸切のご相談もお気軽にどうぞ。</p>
+      <a href="tel:075-000-0000" class="btn-solid reveal">
+        ☎ 予約する（祇園店）
+      </a>
+    </div>
+  </section>
+
+
+  <!-- =============================
+       Footer
+  ============================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <div class="logo-ja">葵舞家</div>
+          <div class="logo-en">Aomai-ya</div>
+          <p>炎と鉄板が奏でる、上質な宴。<br>京都・祇園発の本格鉄板焼き居酒屋。</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#teppan">Teppan Story</a></li>
+            <li><a href="#owner">Owner</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#reserve">Reserve</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <p class="shop-addr">
+            <strong style="color:var(--color-text-muted);font-size:1rem;">祇園店</strong><br>
+            京都府京都市東山区祇園町〇〇<br>
+            TEL 075-000-0000
+          </p>
+          <p class="shop-addr" style="margin-top:16px;">
+            <strong style="color:var(--color-text-muted);font-size:1rem;">烏丸店</strong><br>
+            京都府京都市下京区烏丸通〇〇<br>
+            TEL 075-000-0001
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <small>© 2025 葵舞家 Aomai-ya. All Rights Reserved.</small>
+        <div class="footer-sns">
+          <a href="#">Instagram</a>
+          <a href="#">X（Twitter）</a>
+          <a href="#">LINE</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =============================
+       JavaScript
+  ============================== -->
+  <script>
+    /* --- Header scroll --- */
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* --- Hamburger --- */
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('site-nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => nav.classList.remove('open'));
+    });
+
+    /* --- Hero Slider --- */
+    const slides = document.querySelectorAll('.hero-slide');
+    const indicators = document.querySelectorAll('.hero-indicators button');
+    let current = 0;
+    let sliderInterval;
+
+    function goToSlide(index) {
+      slides[current].classList.remove('active');
+      indicators[current].classList.remove('active');
+      current = index;
+      slides[current].classList.add('active');
+      indicators[current].classList.add('active');
+    }
+
+    function nextSlide() {
+      goToSlide((current + 1) % slides.length);
+    }
+
+    function startSlider() {
+      sliderInterval = setInterval(nextSlide, 5000);
+    }
+
+    indicators.forEach(btn => {
+      btn.addEventListener('click', () => {
+        clearInterval(sliderInterval);
+        goToSlide(parseInt(btn.dataset.index));
+        startSlider();
+      });
+    });
+
+    startSlider();
+
+    /* --- Menu Tabs --- */
+    const tabs = document.querySelectorAll('.menu-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+
+    /* --- Scroll Reveal --- */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

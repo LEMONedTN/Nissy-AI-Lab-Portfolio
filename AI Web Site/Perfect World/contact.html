@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Protect World</title>
+  <meta name="description" content="Protect Worldへのお問い合わせ・無料体験のご予約はこちら。お名前・メールアドレス・ご希望の内容をお送りください。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo">Protect<span>World</span></a>
+      <nav class="site-nav">
+        <a href="index.html" class="site-nav__item">Home</a>
+        <a href="concept.html" class="site-nav__item">Concept</a>
+        <a href="trainer.html" class="site-nav__item">Trainer</a>
+        <a href="program.html" class="site-nav__item">Program</a>
+        <a href="voice.html" class="site-nav__item">Voice</a>
+        <a href="access.html" class="site-nav__item">Access</a>
+        <a href="contact.html" class="nav-cta">無料体験予約</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav__close" id="navClose">✕</button>
+    <a href="index.html">Home</a>
+    <a href="concept.html">Concept</a>
+    <a href="trainer.html">Trainer</a>
+    <a href="program.html">Program</a>
+    <a href="voice.html">Voice</a>
+    <a href="access.html">Access</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header__bg"></div>
+    <div class="page-header__content">
+      <span class="page-header__en">Contact</span>
+      <h1 class="page-header__title">お問い合わせ・無料体験予約</h1>
+    </div>
+  </section>
+
+  <!-- ============================
+       Contact Section
+  ============================ -->
+  <section class="contact-section section">
+    <div class="container">
+
+      <div class="contact-section__intro">
+        <div class="section-heading">
+          <span class="section-heading__en">Contact / Free Trial</span>
+          <h2 class="section-heading__jp">お問い合わせ・無料体験のご予約</h2>
+          <div class="section-heading__line"></div>
+        </div>
+        <p>
+          無料体験のご予約・施設見学・プログラムに関するご質問など、お気軽にご連絡ください。<br>
+          通常2営業日以内にご返信いたします。お電話でのお問い合わせは 000-0000-0000 まで。
+        </p>
+      </div>
+
+      <form class="contact-form" action="#" method="post">
+
+        <div class="form-group">
+          <label for="name">
+            お名前<span class="required">必須</span>
+          </label>
+          <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">
+            メールアドレス<span class="required">必須</span>
+          </label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">電話番号</label>
+          <input type="tel" id="phone" name="phone" placeholder="000-0000-0000">
+        </div>
+
+        <div class="form-group">
+          <label for="type">
+            お問い合わせ種別<span class="required">必須</span>
+          </label>
+          <select id="type" name="type" required>
+            <option value="" disabled selected>選択してください</option>
+            <option value="trial">無料体験・カウンセリングの予約</option>
+            <option value="program">プログラム・料金について</option>
+            <option value="visit">見学希望</option>
+            <option value="schedule">スケジュール・空き状況の確認</option>
+            <option value="other">その他のご質問</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">
+            メッセージ・ご要望<span class="required">必須</span>
+          </label>
+          <textarea id="message" name="message" placeholder="お身体の悩みや目標、ご希望の日時など、お気軽にご記入ください。" required></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn--primary">送信する</button>
+        </div>
+
+        <p class="form-privacy">
+          送信いただく前に、<a href="#">プライバシーポリシー</a>をご確認ください。<br>
+          個人情報は適切に管理し、第三者への提供は行いません。
+        </p>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div>
+          <p class="site-footer__logo">Protect<span>World</span></p>
+          <p class="site-footer__tagline">あなたの身体と健康を守るパーソナルトレーニングジム</p>
+        </div>
+        <nav class="site-footer__nav">
+          <a href="index.html">Home</a>
+          <a href="program.html">Program</a>
+          <a href="concept.html">Concept</a>
+          <a href="voice.html">Voice</a>
+          <a href="trainer.html">Trainer</a>
+          <a href="access.html">Access</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 Protect World All Rights Reserved.</p>
+        <a href="#" class="site-footer__privacy">プライバシーポリシー</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('overlay');
+    const navClose = document.getElementById('navClose');
+    function openNav() { mobileNav.classList.add('open'); overlay.classList.add('open'); }
+    function closeNav() { mobileNav.classList.remove('open'); overlay.classList.remove('open'); }
+    hamburger.addEventListener('click', openNav);
+    navClose.addEventListener('click', closeNav);
+    overlay.addEventListener('click', closeNav);
+  </script>
+
+</body>
+</html>

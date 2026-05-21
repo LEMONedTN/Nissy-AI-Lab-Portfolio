@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="炭火焼きと旬の肴。昭和の香り漂う大衆居酒屋「深川屋」。">
+  <title>深川屋 | 大衆居酒屋</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="header__logo">
+        深川屋
+        <span>FUKAGAWAYA</span>
+      </div>
+      <nav>
+        <ul class="nav__list">
+          <li><a href="#about">お店について</a></li>
+          <li><a href="#menu">メニュー</a></li>
+          <li><a href="#staff">スタッフ</a></li>
+          <li><a href="#access">アクセス</a></li>
+        </ul>
+      </nav>
+      <a href="#reserve" class="header__reserve-btn">予約する</a>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="swiper hero__bg">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/hero_interior.png" alt="店内の雰囲気" class="hero__slide-img"></div>
+        <div class="swiper-slide"><img src="images/hero_food.png" alt="料理の雰囲気" class="hero__slide-img"></div>
+        <div class="swiper-slide"><img src="images/hero_exterior.png" alt="外観" class="hero__slide-img"></div>
+      </div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="hero__tag">SINCE 2025 — 将来オープン予定</span>
+      <h1 class="hero__title">
+        今宵も、<em>炭火</em>の前で<br>一杯やりましょか。
+      </h1>
+      <p class="hero__copy">昭和の活気と、炭火の香り。仲間と笑える場所がここにある。</p>
+      <div class="hero__btn-wrap">
+        <a href="#reserve" class="btn-primary">ご予約はこちら</a>
+        <a href="#menu" class="btn-outline">メニューを見る</a>
+      </div>
+    </div>
+    <div class="hero__scroll">SCROLL</div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <section class="features">
+    <div class="container">
+      <p class="section-title">むすびの3つのこだわり</p>
+      <div class="section-divider"></div>
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__img-wrap"><img src="images/feature_charcoal_v2.png" alt="本格炭火焼き" class="feature-card__img"></div>
+          <h3 class="feature-card__title">本格炭火焼き</h3>
+          <p class="feature-card__text">備長炭でじっくり焼き上げる串焼きは、外はカリッ、中はジューシー。素材の旨みを最大限に引き出します。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__img-wrap"><img src="images/feature_sake_v2.png" alt="全国の地酒・地ビール" class="feature-card__img"></div>
+          <h3 class="feature-card__title">全国の地酒・地ビール</h3>
+          <p class="feature-card__text">各地の蔵元から厳選した日本酒・焼酎を常時20種以上ラインナップ。料理に合う一杯をご提案します。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__img-wrap"><img src="images/feature_retro_v2.png" alt="昭和の雰囲気" class="feature-card__img"></div>
+          <h3 class="feature-card__title">昭和の雰囲気</h3>
+          <p class="feature-card__text">木のぬくもりと赤提灯が迎えるノスタルジックな空間。仲間と、家族と、大切な人と—みんなで楽しめる居場所です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENU PREVIEW ========== -->
+  <section class="menu-preview" id="menu">
+    <div class="container">
+      <p class="section-title">人気メニュー</p>
+      <p class="section-subtitle">POPULAR MENU</p>
+      <div class="section-divider"></div>
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <img src="images/menu_yakitori.png" alt="備長炭 焼き鳥盛り合わせ" class="menu-card__img">
+          <div class="menu-card__body">
+            <span class="menu-card__category">串焼き</span>
+            <h4 class="menu-card__name">備長炭 焼き鳥盛り合わせ</h4>
+            <p class="menu-card__desc">もも・ねぎま・つくね・レバーなど5本セット。タレ・塩お選びいただけます。</p>
+            <p class="menu-card__price">¥980</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/menu_dashimaki.png" alt="だし巻き玉子" class="menu-card__img">
+          <div class="menu-card__body">
+            <span class="menu-card__category">おつまみ</span>
+            <h4 class="menu-card__name">だし巻き玉子</h4>
+            <p class="menu-card__desc">毎日仕込む自家製だし巻き。ふわとろの食感とやさしい出汁の香り。</p>
+            <p class="menu-card__price">¥550</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/menu_ochazuke.png" alt="鶏だし茶漬け" class="menu-card__img">
+          <div class="menu-card__body">
+            <span class="menu-card__category">〆もの</span>
+            <h4 class="menu-card__name">鶏だし茶漬け</h4>
+            <p class="menu-card__desc">炭火で焼いた鶏を載せ、香ばしい鶏だしをかけた〆の一杯。</p>
+            <p class="menu-card__price">¥680</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/menu_motsunabe.png" alt="もつ鍋" class="menu-card__img">
+          <div class="menu-card__body">
+            <span class="menu-card__category">鍋もの</span>
+            <h4 class="menu-card__name">もつ鍋（1人前）</h4>
+            <p class="menu-card__desc">新鮮なもつをたっぷり使った博多風もつ鍋。醤油・味噌からお選びいただけます。</p>
+            <p class="menu-card__price">¥1,280</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="menu-cta">
+        <a href="#" class="btn-outline">メニューをすべて見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__inner">
+        <img src="images/about_interior.png" alt="店内の雰囲気" class="about__img">
+        <div class="about__body">
+          <p class="about__tag">ABOUT US</p>
+          <h2 class="about__title">ここは、昭和の活気が<br>息づく居場所。</h2>
+          <p class="about__text">
+            「深川屋」は、炭火の香りと昭和の温かさが共存する大衆居酒屋です。
+            気取らず、肩の力を抜いて、ただ旨い酒と肴を楽しめる—そんな場所を作りたい、という思いから生まれました。
+          </p>
+          <p class="about__text">
+            お酒は全国の蔵元から厳選。料理はすべて手仕込みにこだわります。
+            仕事帰りの一杯も、大切な仲間との宴会も、どんな場面でも「来てよかった」と思っていただけるお店を目指しています。
+          </p>
+          <a href="#reserve" class="btn-primary" style="display:inline-block; margin-top:8px;">ご予約はこちら</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STAFF ========== -->
+  <section class="staff" id="staff">
+    <div class="container">
+      <p class="section-title">スタッフ紹介</p>
+      <p class="section-subtitle">OUR STAFF</p>
+      <div class="section-divider"></div>
+      <div class="staff__grid">
+
+        <div class="staff-card">
+          <img src="images/staff_tanaka.png" alt="田中 大輔" class="staff-card__img">
+          <h4 class="staff-card__name">田中 大輔</h4>
+          <p class="staff-card__role">オーナー / 料理長</p>
+          <p class="staff-card__comment">居酒屋一筋20年。旨い酒と料理で、皆さんの笑顔をつくります。気軽に声をかけてください！</p>
+        </div>
+
+        <div class="staff-card">
+          <img src="images/staff_sato.png" alt="佐藤 美咲" class="staff-card__img">
+          <h4 class="staff-card__name">佐藤 美咲</h4>
+          <p class="staff-card__role">ホール / 日本酒担当</p>
+          <p class="staff-card__comment">全国の地酒を飲み歩いた経験を活かし、料理に合うお酒をご提案します。お任せください！</p>
+        </div>
+
+        <div class="staff-card">
+          <img src="images/staff_yamada.png" alt="山田 健太" class="staff-card__img">
+          <h4 class="staff-card__name">山田 健太</h4>
+          <p class="staff-card__role">串焼き担当</p>
+          <p class="staff-card__comment">炭火の前が一番落ち着きます。ベストな焼き加減でお届けするので、ぜひ炭焼きをご堪能ください。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACCESS & RESERVE ========== -->
+  <section class="reserve" id="access">
+    <div class="container">
+      <p class="section-title">アクセス・ご予約</p>
+      <p class="section-subtitle">ACCESS &amp; RESERVE</p>
+      <div class="section-divider"></div>
+      <div class="reserve__inner" id="reserve">
+
+        <!-- 店舗情報 -->
+        <div class="reserve__info">
+          <h3 class="reserve__info-title">店舗情報</h3>
+          <table class="reserve__table">
+            <tbody>
+              <tr>
+                <th>店名</th>
+                <td>深川屋</td>
+              </tr>
+              <tr>
+                <th>住所</th>
+                <td>〒XXX-XXXX<br>○○県○○市○○町X-X-X</td>
+              </tr>
+              <tr>
+                <th>最寄り駅</th>
+                <td>○○駅 徒歩5分</td>
+              </tr>
+              <tr>
+                <th>電話</th>
+                <td>XXX-XXXX-XXXX</td>
+              </tr>
+              <tr>
+                <th>営業時間</th>
+                <td>月〜土　17:00〜24:00<br>日・祝　17:00〜23:00</td>
+              </tr>
+              <tr>
+                <th>定休日</th>
+                <td>毎週火曜日</td>
+              </tr>
+            </tbody>
+          </table>
+          <iframe src="https://maps.google.com/maps?q=JR%E5%A4%A7%E9%98%AA%E9%A7%85&t=&z=16&ie=UTF8&iwloc=&output=embed" class="reserve__map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- 予約フォーム -->
+        <div class="reserve__form">
+          <h3 class="reserve__form-title">ご予約フォーム</h3>
+          <form>
+            <div class="form-group">
+              <label for="name">お名前 <span style="color:var(--color-red);font-size:0.85rem;">必須</span></label>
+              <input type="text" id="name" name="name" placeholder="例）田中 太郎">
+            </div>
+            <div class="form-group">
+              <label for="tel">電話番号 <span style="color:var(--color-red);font-size:0.85rem;">必須</span></label>
+              <input type="tel" id="tel" name="tel" placeholder="例）090-XXXX-XXXX">
+            </div>
+            <div class="form-group">
+              <label for="date">ご希望日時 <span style="color:var(--color-red);font-size:0.85rem;">必須</span></label>
+              <input type="datetime-local" id="date" name="date">
+            </div>
+            <div class="form-group">
+              <label for="guests">人数</label>
+              <select id="guests" name="guests">
+                <option value="">選択してください</option>
+                <option value="1">1名</option>
+                <option value="2">2名</option>
+                <option value="3">3名</option>
+                <option value="4">4名</option>
+                <option value="5">5名</option>
+                <option value="6plus">6名以上</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">ご要望・アレルギー等</label>
+              <textarea id="message" name="message" placeholder="アレルギーや席のご希望などがあればお書きください。"></textarea>
+            </div>
+            <button type="submit" class="form-submit">予約を申し込む</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__logo">深川屋</p>
+          <p class="footer__desc">
+            炭火の香りと昭和の活気。<br>
+            仲間と笑える居場所がここにある。
+          </p>
+        </div>
+        <div>
+          <p class="footer__nav-title">MENU</p>
+          <ul class="footer__nav-list">
+            <li><a href="#about">お店について</a></li>
+            <li><a href="#menu">メニュー</a></li>
+            <li><a href="#staff">スタッフ</a></li>
+            <li><a href="#access">アクセス</a></li>
+            <li><a href="#reserve">ご予約</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__nav-title">INFO</p>
+          <ul class="footer__nav-list">
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">特定商取引法表記</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 深川屋. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.hero__bg', {
+      loop: true,
+      effect: 'fade',
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      speed: 1500,
+    });
+  </script>
+</body>
+</html>

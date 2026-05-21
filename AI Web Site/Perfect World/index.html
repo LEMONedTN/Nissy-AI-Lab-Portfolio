@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protect World | パーソナルトレーニングジム</title>
+  <meta name="description" content="Protect Worldは、あなたの理想の身体と健康を守るパーソナルトレーニングジムです。代表トレーナー橘和樹が、あなただけのプログラムで全力サポートします。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <!-- ============================
+       Header
+  ============================ -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo">Protect<span>World</span></a>
+      <nav class="site-nav">
+        <a href="index.html" class="site-nav__item active">Home</a>
+        <a href="concept.html" class="site-nav__item">Concept</a>
+        <a href="trainer.html" class="site-nav__item">Trainer</a>
+        <a href="program.html" class="site-nav__item">Program</a>
+        <a href="voice.html" class="site-nav__item">Voice</a>
+        <a href="access.html" class="site-nav__item">Access</a>
+        <a href="contact.html" class="nav-cta">無料体験予約</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav__close" id="navClose">✕</button>
+    <a href="index.html" class="active">Home</a>
+    <a href="concept.html">Concept</a>
+    <a href="trainer.html">Trainer</a>
+    <a href="program.html">Program</a>
+    <a href="voice.html">Voice</a>
+    <a href="access.html">Access</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- ============================
+       Hero
+  ============================ -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="hero__label">Personal Training Gym</span>
+      <h1 class="hero__title">
+        PROTECT<br>
+        YOUR <span>WORLD</span>
+      </h1>
+      <p class="hero__subtitle">
+        あなたの身体と健康を守るために。<br>
+        科学に基づいたトレーニングで、<br>
+        理想のあなたへ確実に導きます。
+      </p>
+      <div class="hero__actions">
+        <a href="contact.html" class="btn btn--primary">無料体験を予約する</a>
+        <a href="program.html" class="btn btn--outline">プログラムを見る</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================
+       Features（3つの特徴）
+  ============================ -->
+  <section class="features">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-heading__en">Our Features</span>
+        <h2 class="section-heading__jp">Protect Worldが選ばれる理由</h2>
+        <div class="section-heading__line"></div>
+      </div>
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__num">01</div>
+          <h3 class="feature-card__title">完全マンツーマン指導</h3>
+          <p class="feature-card__text">
+            代表トレーナーがすべてのセッションを担当。お客様一人ひとりの目標・体質・生活習慣に合わせた、完全オーダーメイドのプログラムを提供します。グループレッスンでは得られない、きめ細やかな指導が最速の結果を生み出します。
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__num">02</div>
+          <h3 class="feature-card__title">科学的根拠のある指導</h3>
+          <p class="feature-card__text">
+            最新のスポーツ科学・栄養学・機能解剖学に基づいたトレーニング指導を実施。感覚頼りではなく、データと理論に裏付けられたアプローチで、無駄なく確実に身体を変えます。
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__num">03</div>
+          <h3 class="feature-card__title">食事・生活習慣まで徹底サポート</h3>
+          <p class="feature-card__text">
+            トレーニングだけでなく、食事管理・睡眠・日常の動き方まで包括的にサポート。ジムを出た後の24時間をプロデュースすることで、圧倒的なボディチェンジを実現します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       Concept Preview
+  ============================ -->
+  <section class="concept-preview">
+    <div class="container">
+      <div class="concept-preview__inner">
+        <div class="concept-preview__img" style="background-image: url('images/concept_01.png');"></div>
+        <div class="concept-preview__body">
+          <span class="concept-preview__label">Our Concept</span>
+          <h2 class="concept-preview__title">
+            「守る」ことが、<br>
+            最大の攻めになる。
+          </h2>
+          <p class="concept-preview__text">
+            Protect Worldは、「あなたの身体・健康・自信を守る」というコンセプトのもとに誕生したパーソナルトレーニングジムです。<br><br>
+            ダイエットや筋力アップだけでなく、怪我の予防・姿勢改善・健康維持まで、長期的な視点でお客様の身体に向き合います。美しく、強く、健やかな身体は、あなたの人生をより豊かにする最大の財産です。
+          </p>
+          <a href="concept.html" class="btn btn--outline-dark">コンセプトを詳しく見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       Voice（抜粋）
+  ============================ -->
+  <section class="voice">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-heading__en">Customer Voice</span>
+        <h2 class="section-heading__jp">お客様の声</h2>
+        <div class="section-heading__line"></div>
+      </div>
+      <div class="voice__grid">
+        <div class="voice-card">
+          <div class="voice-card__img" style="background-image: url('images/voice_01.png');"></div>
+          <p class="voice-card__comment">
+            産後の体型が気になり始めて入会しました。トレーナーさんが私の身体の状態を丁寧に確認してくれて、無理なく続けられるメニューを組んでくれました。3ヶ月で体重マイナス8kg、何より身体の引き締まりを実感しています。本当に来てよかった！
+          </p>
+          <p class="voice-card__name">T.M 様</p>
+          <p class="voice-card__age">30代・女性・会社員</p>
+        </div>
+        <div class="voice-card">
+          <div class="voice-card__img" style="background-image: url('images/voice_02.png');"></div>
+          <p class="voice-card__comment">
+            長年の腰痛と肩こりに悩んでいたところ、知人の紹介で入会。トレーニングを通じて姿勢が改善され、慢性的な痛みがほとんどなくなりました。仕事のパフォーマンスも上がり、毎日が快適になりました。完全に人生が変わりましたね。
+          </p>
+          <p class="voice-card__name">K.H 様</p>
+          <p class="voice-card__age">40代・男性・管理職</p>
+        </div>
+        <div class="voice-card">
+          <div class="voice-card__img" style="background-image: url('images/voice_03.png');"></div>
+          <p class="voice-card__comment">
+            マラソンの記録を伸ばしたくてパーソナルに挑戦。弱点の筋肉を特定して重点的に鍛えてもらった結果、フルマラソンのタイムが30分以上短縮できました。科学的なアプローチで納得感のある指導が受けられます。
+          </p>
+          <p class="voice-card__name">Y.S 様</p>
+          <p class="voice-card__age">30代・男性・会社員</p>
+        </div>
+      </div>
+      <div class="text-center mt-48">
+        <a href="voice.html" class="btn btn--outline-dark">お客様の声をもっと見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       Program Preview
+  ============================ -->
+  <section class="program-preview section--dark">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-heading__en">Program</span>
+        <h2 class="section-heading__jp">あなたの目標に合わせたプログラム</h2>
+        <div class="section-heading__line"></div>
+      </div>
+      <div class="program__grid">
+        <div class="program-card">
+          <div class="program-card__num">Program 01</div>
+          <h3 class="program-card__title">ダイエット・減量</h3>
+          <div class="program-card__tags">
+            <span class="program-card__tag">#体重管理</span>
+            <span class="program-card__tag">#体脂肪減少</span>
+            <span class="program-card__tag">#食事管理</span>
+          </div>
+          <p class="program-card__text">
+            代謝を上げながら脂肪を燃やす最適なアプローチで、リバウンドしない身体づくりを実現。食事指導も含めた総合的なサポートを行います。
+          </p>
+        </div>
+        <div class="program-card">
+          <div class="program-card__num">Program 02</div>
+          <h3 class="program-card__title">ボディメイク</h3>
+          <div class="program-card__tags">
+            <span class="program-card__tag">#筋力アップ</span>
+            <span class="program-card__tag">#ヒップアップ</span>
+            <span class="program-card__tag">#美ボディ</span>
+          </div>
+          <p class="program-card__text">
+            単なる体重変化ではなく、プロポーションや筋肉のバランスにこだわった、美しく引き締まった身体へ。理想のシルエットを一緒に追求します。
+          </p>
+        </div>
+        <div class="program-card">
+          <div class="program-card__num">Program 03</div>
+          <h3 class="program-card__title">健康維持・機能改善</h3>
+          <div class="program-card__tags">
+            <span class="program-card__tag">#姿勢改善</span>
+            <span class="program-card__tag">#腰痛改善</span>
+            <span class="program-card__tag">#健康寿命</span>
+          </div>
+          <p class="program-card__text">
+            痛みの軽減・姿勢の改善・機能的な動きの獲得を目指します。年齢を重ねても活動的に過ごせる身体を、科学的アプローチでつくります。
+          </p>
+        </div>
+      </div>
+      <div class="text-center mt-48">
+        <a href="program.html" class="btn btn--primary">料金・プログラム詳細を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       CTA Section
+  ============================ -->
+  <section class="cta-section">
+    <div class="container">
+      <span class="cta-section__label">Free Trial</span>
+      <h2 class="cta-section__title">まずは無料体験から始めてみませんか？</h2>
+      <p class="cta-section__text">
+        カウンセリング・体験トレーニング・施設見学が無料でご体験いただけます。<br>
+        入会のご検討でなくても大歓迎です。お気軽にご来店ください。
+      </p>
+      <a href="contact.html" class="btn btn--outline-dark">無料体験を予約する</a>
+    </div>
+  </section>
+
+  <!-- ============================
+       Access Preview
+  ============================ -->
+  <section class="access-preview">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-heading__en">Access</span>
+        <h2 class="section-heading__jp">アクセス</h2>
+        <div class="section-heading__line"></div>
+      </div>
+      <div class="access-preview__inner">
+        <div class="access-preview__map" style="background-image: url('images/access_map.png');"></div>
+        <div>
+          <p class="access-info__title">Protect World</p>
+          <table class="access-info__table">
+            <tr>
+              <th>住所</th>
+              <td>〒530-0001<br>大阪府大阪市北区梅田3丁目1-1（JR大阪駅構内）</td>
+            </tr>
+            <tr>
+              <th>電話</th>
+              <td>000-0000-0000</td>
+            </tr>
+            <tr>
+              <th>営業時間</th>
+              <td>平日 9:00〜21:00<br>土日 9:00〜18:00</td>
+            </tr>
+            <tr>
+              <th>定休日</th>
+              <td>毎週月曜日・祝日</td>
+            </tr>
+            <tr>
+              <th>最寄駅</th>
+              <td>JR「大阪駅」徒歩0分<br>各線「梅田駅」徒歩3分</td>
+            </tr>
+          </table>
+          <div class="mt-32">
+            <a href="access.html" class="btn btn--outline-dark">アクセス詳細を見る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       Footer
+  ============================ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div>
+          <p class="site-footer__logo">Protect<span>World</span></p>
+          <p class="site-footer__tagline">あなたの身体と健康を守るパーソナルトレーニングジム</p>
+        </div>
+        <nav class="site-footer__nav">
+          <a href="index.html">Home</a>
+          <a href="program.html">Program</a>
+          <a href="concept.html">Concept</a>
+          <a href="voice.html">Voice</a>
+          <a href="trainer.html">Trainer</a>
+          <a href="access.html">Access</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 Protect World All Rights Reserved.</p>
+        <a href="#" class="site-footer__privacy">プライバシーポリシー</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('overlay');
+    const navClose = document.getElementById('navClose');
+
+    function openNav() {
+      mobileNav.classList.add('open');
+      overlay.classList.add('open');
+    }
+    function closeNav() {
+      mobileNav.classList.remove('open');
+      overlay.classList.remove('open');
+    }
+    hamburger.addEventListener('click', openNav);
+    navClose.addEventListener('click', closeNav);
+    overlay.addEventListener('click', closeNav);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protect World | Nano Banana2 画像プロンプト集</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAFAF8;
+      --dark: #1A1A1A;
+      --gold: #C8B89A;
+      --text: #333333;
+      --light: #F0EDE8;
+      --border: #E5E0D8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    /* === Header === */
+    .header {
+      background: var(--dark);
+      color: white;
+      padding: 48px 60px;
+    }
+    .header__logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: white;
+    }
+    .header__logo span { color: var(--gold); }
+    .header__title {
+      font-size: 28px;
+      font-weight: 300;
+      margin-top: 12px;
+      letter-spacing: 0.05em;
+    }
+    .header__sub {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      margin-top: 8px;
+      line-height: 1.8;
+    }
+
+    /* === Usage Note === */
+    .usage-note {
+      background: linear-gradient(135deg, #1A1A1A 0%, #2a2820 100%);
+      border-left: 4px solid var(--gold);
+      color: white;
+      margin: 48px 60px 0;
+      padding: 32px 36px;
+    }
+    .usage-note h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .usage-note ol {
+      padding-left: 20px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+      line-height: 2;
+    }
+    .usage-note__palette {
+      display: flex;
+      gap: 16px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .palette-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+    }
+    .palette-chip__color {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* === Main Content === */
+    .main { padding: 60px; }
+
+    /* === Section Header === */
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* === Prompt Card === */
+    .prompt-group { margin-bottom: 64px; }
+    .prompt-cards { display: flex; flex-direction: column; gap: 24px; }
+    .prompt-card {
+      background: white;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .prompt-card__header {
+      background: var(--dark);
+      color: white;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .prompt-card__id {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+    .prompt-card__name {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+    .prompt-card__size {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      white-space: nowrap;
+      margin-left: auto;
+    }
+    .prompt-card__body { padding: 28px 24px; }
+
+    /* Context */
+    .prompt-context {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 16px;
+      padding: 8px 12px;
+      background: var(--light);
+      border-left: 2px solid var(--gold);
+      line-height: 1.7;
+    }
+
+    /* Prompt Block */
+    .prompt-block { margin-bottom: 20px; }
+    .prompt-block__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .prompt-block__text {
+      background: #F8F7F5;
+      border: 1px solid var(--border);
+      padding: 16px 20px;
+      font-size: 13px;
+      line-height: 1.85;
+      color: #2a2a2a;
+      font-family: 'Noto Sans JP', sans-serif;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+    .prompt-block__negative {
+      background: #FDF8F5;
+      border: 1px solid #E8D8CC;
+    }
+    .prompt-block__copy-btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 6px 16px;
+      font-size: 11px;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.1em;
+      background: var(--gold);
+      color: var(--dark);
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .prompt-block__copy-btn:hover { background: #b0a080; color: white; }
+    .prompt-block__copy-btn.copied { background: #4CAF50; color: white; }
+
+    /* Setting Tags */
+    .settings-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .setting-tag {
+      font-size: 11px;
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      color: #666;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.05em;
+    }
+    .setting-tag strong {
+      color: var(--dark);
+      margin-right: 4px;
+    }
+
+    /* Shared Badge */
+    .badge-shared {
+      display: inline-block;
+      font-size: 10px;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(200,184,154,0.2);
+      color: var(--gold);
+      border: 1px solid rgba(200,184,154,0.4);
+      padding: 2px 10px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    /* Divider */
+    .page-divider {
+      margin: 80px 0 48px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .page-divider::before, .page-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .page-divider__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    /* Summary Table */
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 13px;
+    }
+    .summary-table th {
+      background: var(--dark);
+      color: rgba(255,255,255,0.7);
+      padding: 12px 16px;
+      text-align: left;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .summary-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .summary-table tr:nth-child(even) td { background: var(--light); }
+    .tag-id {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 768px) {
+      .header, .main, .usage-note { padding: 32px 24px; }
+      .usage-note { margin: 32px 24px 0; }
+      .prompt-card__header { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================
+     Header
+============================ -->
+<div class="header">
+  <div class="header__logo">Protect<span>World</span></div>
+  <h1 class="header__title">Nano Banana2 画像プロンプト集</h1>
+  <p class="header__sub">
+    全ページのプレースホルダー（#ccc）に差し替える画像のプロンプト集です。<br>
+    テイスト参考：<strong>thenude.jp</strong>（ナチュラル高級系・ベージュ×オフホワイト×ブラック）
+  </p>
+</div>
+
+<!-- ============================
+     Usage Note
+============================ -->
+<div class="usage-note">
+  <h2>使い方 / How to Use</h2>
+  <ol>
+    <li>各カードのプロンプトを「コピー」ボタンでコピー</li>
+    <li>Nano Banana2 にペーストして生成</li>
+    <li>生成した画像を <code>images/</code> フォルダに保存（例：<code>hero-bg.jpg</code>）</li>
+    <li>HTML の <code>background-color: #ccc</code> を <code>background-image: url(images/hero-bg.jpg)</code> に差し替え</li>
+    <li>ネガティブプロンプトも必ず入力してテイストを守る</li>
+  </ol>
+  <div class="usage-note__palette">
+    <div class="palette-chip">
+      <div class="palette-chip__color" style="background:#FAFAF8;"></div>
+      <span>オフホワイト #FAFAF8</span>
+    </div>
+    <div class="palette-chip">
+      <div class="palette-chip__color" style="background:#1A1A1A;"></div>
+      <span>ほぼブラック #1A1A1A</span>
+    </div>
+    <div class="palette-chip">
+      <div class="palette-chip__color" style="background:#C8B89A;"></div>
+      <span>ベージュゴールド #C8B89A</span>
+    </div>
+    <div class="palette-chip">
+      <div class="palette-chip__color" style="background:#333333;"></div>
+      <span>テキスト #333333</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================
+     Summary Table
+============================ -->
+<div class="main">
+  <div class="section-label">Image List</div>
+  <h2 class="section-title">生成する画像 一覧（全15枚）</h2>
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>画像の役割</th>
+        <th>使用ページ</th>
+        <th>サイズ・比率</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="tag-id">HERO-01</td><td>ヒーローバックグラウンド（ジム全景）</td><td>index.html</td><td>1920×1080 / 16:9</td></tr>
+      <tr><td class="tag-id">PAGE-BG</td><td>サブページ共通ヘッダー背景</td><td>全サブページ共通</td><td>1920×600 / ワイド</td></tr>
+      <tr><td class="tag-id">CONCEPT-01</td><td>コンセプト「守る＝最大の強さ」</td><td>index / concept</td><td>800×600 / 4:3</td></tr>
+      <tr><td class="tag-id">CONCEPT-02</td><td>コンセプト「科学と情熱」</td><td>concept.html</td><td>800×600 / 4:3</td></tr>
+      <tr><td class="tag-id">TRAINER-01</td><td>代表トレーナー 橘和樹 ポートレート</td><td>trainer / concept / index</td><td>600×800 / 3:4</td></tr>
+      <tr><td class="tag-id">PROGRAM-01</td><td>ダイエット・減量プログラム</td><td>program.html</td><td>800×450 / 16:9</td></tr>
+      <tr><td class="tag-id">PROGRAM-02</td><td>ボディメイクプログラム</td><td>program.html</td><td>800×450 / 16:9</td></tr>
+      <tr><td class="tag-id">PROGRAM-03</td><td>健康維持・機能改善プログラム</td><td>program.html</td><td>800×450 / 16:9</td></tr>
+      <tr><td class="tag-id">VOICE-01</td><td>お客様の声・女性 30代（T.M様）</td><td>index / voice</td><td>120×120 / 1:1</td></tr>
+      <tr><td class="tag-id">VOICE-02</td><td>お客様の声・男性 40代（K.H様）</td><td>index / voice</td><td>120×120 / 1:1</td></tr>
+      <tr><td class="tag-id">VOICE-03</td><td>お客様の声・男性 30代（Y.S様）</td><td>index / voice</td><td>120×120 / 1:1</td></tr>
+      <tr><td class="tag-id">VOICE-04</td><td>お客様の声・女性 20代（A.N様）</td><td>voice.html</td><td>120×120 / 1:1</td></tr>
+      <tr><td class="tag-id">VOICE-05</td><td>お客様の声・男性 60代（M.O様）</td><td>voice.html</td><td>120×120 / 1:1</td></tr>
+      <tr><td class="tag-id">VOICE-06</td><td>お客様の声・女性 30代（R.K様）</td><td>voice.html</td><td>120×120 / 1:1</td></tr>
+      <tr><td class="tag-id">ACCESS-MAP</td><td>地図エリア（外観 or 近隣風景）</td><td>index / access</td><td>800×600 / 4:3</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============================
+       HERO-01
+  ============================ -->
+  <div class="page-divider"><span class="page-divider__label">index.html</span></div>
+  <div class="prompt-group">
+    <div class="section-label">Hero Section</div>
+    <h2 class="section-title">ヒーロー・メインビジュアル</h2>
+    <div class="prompt-cards">
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">HERO-01</span>
+          <span class="prompt-card__name">ヒーローバックグラウンド（ジム全景）</span>
+          <span class="prompt-card__size">1920 × 1080 px ／ 16:9</span>
+        </div>
+        <div class="prompt-card__body">
+          <p class="prompt-context">
+            🖼 使用箇所：index.html のファーストビュー（全幅ダーク背景）<br>
+            💡 ポイント：テキストが重なるため、中央〜左はやや暗め・シンプルな構図が必須。ジムの"上質感"を伝える核心画像。
+          </p>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">a high-end luxury personal training gym interior, wide angle cinematic shot, early morning natural light streaming through large windows, minimal black weight equipment (barbells, dumbbells on black racks), clean concrete and white walls, warm beige and charcoal tones, no people, soft atmospheric mist, premium gym aesthetic, bokeh background, luxury fitness studio Japan, neutral color palette offwhite beige black, moody cinematic lighting, architectural photography, 8K, ultra realistic</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">bright neon colors, red, blue, orange, crowded gym, messy equipment, people, text, logo, bright fluorescent lighting, cartoon, illustration, anime, colorful, vivid, saturated colors, plastic equipment, cheap gym</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 16:9</span>
+            <span class="setting-tag"><strong>Style:</strong> Photorealistic</span>
+            <span class="setting-tag"><strong>Quality:</strong> Ultra HD</span>
+            <span class="setting-tag"><strong>Tone:</strong> Dark / Moody</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================
+       PAGE-BG
+  ============================ -->
+  <div class="prompt-group">
+    <div class="section-label">Sub Page Header — 全サブページ共通</div>
+    <h2 class="section-title">サブページ共通ヘッダー背景</h2>
+    <div class="prompt-cards">
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">PAGE-BG</span>
+          <span class="prompt-card__name">共通ページヘッダー背景 <span class="badge-shared">全サブページ共通</span></span>
+          <span class="prompt-card__size">1920 × 600 px ／ ワイド</span>
+        </div>
+        <div class="prompt-card__body">
+          <p class="prompt-context">
+            🖼 使用箇所：concept / trainer / program / voice / access / contact の各ページヘッダー<br>
+            💡 ポイント：高さ340pxの帯状エリア。1枚の画像を全サブページで使い回し可。ページタイトルテキストが重なるため、右側がぼけた構図が理想的。
+          </p>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">interior detail of a luxury personal training gym, close-up of premium weight equipment on dark matte black rack, soft out-of-focus background with natural window light, warm neutral tones beige offwhite charcoal, minimalist elegant composition, shallow depth of field, right side blurred, cinematic horizontal crop, no people, premium gym atmosphere, texture of brushed metal and concrete, Japan luxury fitness studio</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">bright colors, neon, red, orange, blue, crowded, people, text, cartoon, illustration, cheap equipment, plastic, fluorescent light, saturated, vivid</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 16:5 (ワイド帯)</span>
+            <span class="setting-tag"><strong>Style:</strong> Photorealistic</span>
+            <span class="setting-tag"><strong>Tone:</strong> Dark / Neutral</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================
+       CONCEPT
+  ============================ -->
+  <div class="page-divider"><span class="page-divider__label">index.html / concept.html</span></div>
+  <div class="prompt-group">
+    <div class="section-label">Concept Section</div>
+    <h2 class="section-title">コンセプト・理念 画像</h2>
+    <div class="prompt-cards">
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">CONCEPT-01</span>
+          <span class="prompt-card__name">「守る＝最大の強さ」コンセプト <span class="badge-shared">index / concept 共用</span></span>
+          <span class="prompt-card__size">800 × 600 px ／ 4:3</span>
+        </div>
+        <div class="prompt-card__body">
+          <p class="prompt-context">
+            🖼 使用箇所：index.html のコンセプトプレビューセクション、concept.html の第1ブロック<br>
+            💡 ポイント：「寄り添い・守る」というテーマを視覚化。1対1の指導風景がベスト。温かみと専門性を同時に表現。
+          </p>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">Japanese male personal trainer in his early 30s, wearing clean black athletic wear, kneeling beside a Japanese female client in her 30s who is performing a squat, trainer gently adjusting her posture with a professional caring expression, luxury minimal gym interior, soft warm natural light from side windows, wooden floor, white walls, beige and neutral tones, intimate coaching moment, shallow depth of field, cinematic, photorealistic, high-end fitness studio Japan</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">bright colors, neon, cartoon, illustration, anime, non-Japanese people, aggressive expression, Western gym, crowded, text, logo, plastic equipment, fluorescent light, saturated, vivid, ugly, low quality</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 4:3</span>
+            <span class="setting-tag"><strong>People:</strong> 日本人2名</span>
+            <span class="setting-tag"><strong>Tone:</strong> Warm / Natural</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">CONCEPT-02</span>
+          <span class="prompt-card__name">「科学と情熱」アプローチ</span>
+          <span class="prompt-card__size">800 × 600 px ／ 4:3</span>
+        </div>
+        <div class="prompt-card__body">
+          <p class="prompt-context">
+            🖼 使用箇所：concept.html の第2ブロック（「科学と情熱で理想を実現する」セクション）<br>
+            💡 ポイント：科学・データ・専門性をイメージさせる。カルテやタブレットと指導の組み合わせ、または美しいジム設備の静物写真が合う。
+          </p>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">Japanese male personal trainer in his 30s, holding a tablet or clipboard with training data, standing in a minimal luxury gym, thoughtful professional expression, black athletic wear, gym interior with large mirror, clean white walls, natural light, warm neutral color palette beige and charcoal, professional and scientific atmosphere, shallow depth of field, cinematic portrait, photorealistic, premium fitness studio Japan</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">cartoon, anime, illustration, non-Japanese, bright neon colors, casual clothes, messy gym, fluorescent light, saturated colors, text on screen, logo, ugly, low quality, stock photo look</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 4:3</span>
+            <span class="setting-tag"><strong>People:</strong> 日本人男性トレーナー</span>
+            <span class="setting-tag"><strong>Tone:</strong> Professional / Clean</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================
+       TRAINER
+  ============================ -->
+  <div class="page-divider"><span class="page-divider__label">trainer.html / concept.html</span></div>
+  <div class="prompt-group">
+    <div class="section-label">Trainer Portrait</div>
+    <h2 class="section-title">代表トレーナー 橘和樹 ポートレート</h2>
+    <div class="prompt-cards">
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">TRAINER-01</span>
+          <span class="prompt-card__name">代表トレーナー 橘和樹 メインポートレート <span class="badge-shared">trainer / concept 共用</span></span>
+          <span class="prompt-card__size">600 × 800 px ／ 3:4（縦長）</span>
+        </div>
+        <div class="prompt-card__body">
+          <p class="prompt-context">
+            🖼 使用箇所：trainer.html のメイン画像、concept.html の代表メッセージセクション<br>
+            💡 ポイント：サイトの顔となる最重要画像。信頼感・温かさ・プロフェッショナルを同時に表現。上半身〜腰上の縦位置ショットが理想。
+          </p>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">professional portrait photograph of a Japanese male personal trainer, age 30-35, athletic but not overly muscular build, warm confident gentle smile, wearing a clean black athletic polo shirt or fitted black t-shirt, standing in a minimal luxury gym interior, soft natural side lighting, shallow depth of field with blurred beige/white gym background, arms crossed or relaxed at sides, upper body shot, trustworthy and approachable expression, high-end portrait photography, cinematic, photorealistic, premium fitness studio Japan, warm neutral tones</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">non-Japanese, aggressive expression, overly muscular bodybuilder, cartoon, anime, illustration, bright colorful background, neon, fluorescent light, casual t-shirt with logo, sunglasses, hat, full body shot, ugly, distorted face, low quality, stock photo look, Western appearance</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 3:4 (縦長)</span>
+            <span class="setting-tag"><strong>People:</strong> 日本人男性 30代</span>
+            <span class="setting-tag"><strong>Shot:</strong> Upper body / Half body</span>
+            <span class="setting-tag"><strong>Tone:</strong> Professional / Warm</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================
+       PROGRAM
+  ============================ -->
+  <div class="page-divider"><span class="page-divider__label">program.html</span></div>
+  <div class="prompt-group">
+    <div class="section-label">Program Section</div>
+    <h2 class="section-title">プログラム紹介 画像（3枚）</h2>
+    <div class="prompt-cards">
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">PROGRAM-01</span>
+          <span class="prompt-card__name">ダイエット・減量プログラム</span>
+          <span class="prompt-card__size">800 × 450 px ／ 16:9</span>
+        </div>
+        <div class="prompt-card__body">
+          <p class="prompt-context">
+            🖼 使用箇所：program.html「ダイエット・減量」カードのサムネイル<br>
+            💡 ポイント：有酸素運動・有酸素系マシン・軽やかな運動シーン。女性が主人公の場合は引き締まった健康美をイメージ。
+          </p>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">Japanese woman in her early 30s, slim healthy athletic body, wearing black sports bra and black leggings, running on a premium treadmill in a luxury minimal gym, focused determined expression, soft natural light from window, beige and white gym interior, slightly blurred background, cinematic wide crop, photorealistic, high-end fitness studio Japan, warm neutral tones, dynamic yet elegant pose</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">cartoon, anime, non-Japanese, bright neon colors, revealing clothing, aggressive pose, crowded gym, fluorescent light, saturated colors, overweight, logo on clothes, ugly, low quality</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 16:9</span>
+            <span class="setting-tag"><strong>People:</strong> 日本人女性 30代</span>
+            <span class="setting-tag"><strong>Theme:</strong> Cardio / 有酸素</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">PROGRAM-02</span>
+          <span class="prompt-card__name">ボディメイクプログラム</span>
+          <span class="prompt-card__size">800 × 450 px ／ 16:9</span>
+        </div>
+        <div class="prompt-card__body">
+          <p class="prompt-context">
+            🖼 使用箇所：program.html「ボディメイク」カードのサムネイル<br>
+            💡 ポイント：筋トレ・ウェイトトレーニング。男性モデルが自信を持ってダンベルを扱うシーン。美しいプロポーションと上質な空間が重要。
+          </p>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">Japanese man in his late 20s, toned athletic physique, wearing black fitted athletic shirt, performing dumbbell bicep curls in front of large mirror in a luxury minimal gym, confident focused expression, soft dramatic side lighting, dark premium dumbbell rack in background, beige and charcoal tones, cinematic composition, shallow depth of field, photorealistic, high-end personal training studio Japan, artistic fitness photography</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">cartoon, anime, non-Japanese, bodybuilder extreme muscles, bright neon, aggressive face, colorful clothes, logo on clothes, crowded gym, fluorescent light, saturated, low quality, ugly, fat</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 16:9</span>
+            <span class="setting-tag"><strong>People:</strong> 日本人男性 20代後半</span>
+            <span class="setting-tag"><strong>Theme:</strong> Weight Training</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">PROGRAM-03</span>
+          <span class="prompt-card__name">健康維持・機能改善プログラム</span>
+          <span class="prompt-card__size">800 × 450 px ／ 16:9</span>
+        </div>
+        <div class="prompt-card__body">
+          <p class="prompt-context">
+            🖼 使用箇所：program.html「健康維持・機能改善」カードのサムネイル<br>
+            💡 ポイント：ストレッチ・姿勢改善・リハビリ的なやさしいトレーニング。年齢層は広め（40〜60代でも自然）。穏やかで温かいシーン。
+          </p>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">Japanese male personal trainer in his 30s guiding a Japanese male client in his 50s through gentle hip mobility stretching exercise on a premium beige yoga mat, luxury minimal gym interior, warm natural morning light, calming therapeutic atmosphere, both wearing black athletic wear, trainer with caring professional expression, wide open clean gym space, wooden floor, white walls, soft bokeh background, photorealistic, cinematic, warm neutral tones, Japan premium personal training</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">cartoon, anime, non-Japanese, bright colors, neon, aggressive, heavy weights, crowded gym, fluorescent light, colorful clothes with logos, saturated, low quality, pain expression</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 16:9</span>
+            <span class="setting-tag"><strong>People:</strong> 日本人2名（30代+50代）</span>
+            <span class="setting-tag"><strong>Theme:</strong> Stretching / 機能改善</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================
+       VOICE
+  ============================ -->
+  <div class="page-divider"><span class="page-divider__label">index.html / voice.html</span></div>
+  <div class="prompt-group">
+    <div class="section-label">Customer Voice</div>
+    <h2 class="section-title">お客様の声 アバター画像（6枚）</h2>
+    <p style="font-size:13px; color:#999; margin-bottom:28px; line-height:1.8;">
+      ⚠️ 全6枚とも <strong>120×120px / 正方形 / 顔アップ</strong> で生成してください。<br>
+      HTMLでは 60×60px の円形に切り抜かれますが、Retinaディスプレイ対応のため2倍の120×120で作成推奨。<br>
+      背景はブラー（ぼかし）またはニュートラルなグレー〜ベージュ単色。
+    </p>
+    <div class="prompt-cards">
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">VOICE-01</span>
+          <span class="prompt-card__name">T.M 様 ／ 30代 女性 会社員</span>
+          <span class="prompt-card__size">120 × 120 px ／ 1:1</span>
+        </div>
+        <div class="prompt-card__body">
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">close-up portrait of a Japanese woman, age 30-35, warm bright smile, healthy fit appearance, neat black or dark hair, wearing minimal casual or office attire, soft blurred neutral beige background, natural studio lighting, friendly and happy expression, post-workout glow skin, photorealistic, high quality portrait, round crop safe composition</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">non-Japanese, cartoon, anime, heavy makeup, revealing, neon background, saturated colors, ugly, distorted, low quality, old photo, glasses (optional)</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 1:1</span>
+            <span class="setting-tag"><strong>Shot:</strong> Face close-up</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">VOICE-02</span>
+          <span class="prompt-card__name">K.H 様 ／ 40代 男性 管理職</span>
+          <span class="prompt-card__size">120 × 120 px ／ 1:1</span>
+        </div>
+        <div class="prompt-card__body">
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">close-up portrait of a Japanese businessman man, age 40-45, confident calm smile, fit and healthy appearance, short neat black hair with slight gray at temples, wearing dark business casual collared shirt, soft blurred neutral gray or beige background, professional natural lighting, trustworthy expression, photorealistic, high quality portrait, square composition</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">non-Japanese, cartoon, anime, necktie, suit jacket, aggressive face, neon background, saturated colors, ugly, low quality, fat appearance</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 1:1</span>
+            <span class="setting-tag"><strong>Shot:</strong> Face close-up</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">VOICE-03</span>
+          <span class="prompt-card__name">Y.S 様 ／ 30代 男性 会社員（ランナー）</span>
+          <span class="prompt-card__size">120 × 120 px ／ 1:1</span>
+        </div>
+        <div class="prompt-card__body">
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">close-up portrait of a Japanese man, age 30-35, lean athletic runner physique visible in face, energetic bright smile, slightly tanned healthy skin, wearing black athletic t-shirt, blurred neutral light background, natural outdoor or studio lighting, active sporty expression, photorealistic, high quality portrait, square crop composition</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">non-Japanese, cartoon, anime, overly muscular, neon, saturated colors, ugly, low quality, serious stern face</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 1:1</span>
+            <span class="setting-tag"><strong>Shot:</strong> Face close-up</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">VOICE-04</span>
+          <span class="prompt-card__name">A.N 様 ／ 20代 女性 看護師</span>
+          <span class="prompt-card__size">120 × 120 px ／ 1:1</span>
+        </div>
+        <div class="prompt-card__body">
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">close-up portrait of a Japanese woman, age 25-30, fresh youthful smile, healthy fit slim appearance, neat black hair in ponytail or loose, wearing minimal casual white or light top, soft blurred cream or white background, bright natural lighting, energetic and cheerful expression, clean healthy skin, photorealistic, high quality portrait, 1:1 square composition</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">non-Japanese, cartoon, anime, medical scrubs, heavy makeup, neon, saturated colors, ugly, low quality, older appearance</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 1:1</span>
+            <span class="setting-tag"><strong>Shot:</strong> Face close-up</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">VOICE-05</span>
+          <span class="prompt-card__name">M.O 様 ／ 60代 男性 経営者</span>
+          <span class="prompt-card__size">120 × 120 px ／ 1:1</span>
+        </div>
+        <div class="prompt-card__body">
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">close-up portrait of a distinguished Japanese man, age 60-65, silver gray hair, healthy active appearance, warm genuine smile with wisdom in eyes, wearing dark minimal casual shirt or dark polo, blurred neutral dark gray or charcoal background, soft natural side lighting, dignified confident expression, active senior lifestyle, photorealistic, high quality portrait, square 1:1 composition</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">non-Japanese, cartoon, anime, frail elderly appearance, suit and tie formal, neon, saturated colors, ugly, low quality, unhealthy looking</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 1:1</span>
+            <span class="setting-tag"><strong>Shot:</strong> Face close-up</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">VOICE-06</span>
+          <span class="prompt-card__name">R.K 様 ／ 30代 女性 主婦</span>
+          <span class="prompt-card__size">120 × 120 px ／ 1:1</span>
+        </div>
+        <div class="prompt-card__body">
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">close-up portrait of a Japanese woman, age 32-38, gentle warm motherly smile, healthy fit appearance, black or dark brown hair, natural minimal makeup, wearing minimal casual beige or cream top, soft blurred warm cream or ivory background, warm natural window lighting, kind and cheerful expression, post-baby fit appearance, photorealistic, high quality portrait, 1:1 square composition</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">non-Japanese, cartoon, anime, heavy glamour makeup, neon, saturated colors, revealing clothing, ugly, low quality, tired looking</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 1:1</span>
+            <span class="setting-tag"><strong>Shot:</strong> Face close-up</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================
+       ACCESS MAP
+  ============================ -->
+  <div class="page-divider"><span class="page-divider__label">index.html / access.html</span></div>
+  <div class="prompt-group">
+    <div class="section-label">Access Section</div>
+    <h2 class="section-title">アクセス・外観 画像</h2>
+    <div class="prompt-cards">
+
+      <div class="prompt-card">
+        <div class="prompt-card__header">
+          <span class="prompt-card__id">ACCESS-MAP</span>
+          <span class="prompt-card__name">ジム外観 or 近隣街並み <span class="badge-shared">index / access 共用</span></span>
+          <span class="prompt-card__size">800 × 600 px ／ 4:3</span>
+        </div>
+        <div class="prompt-card__body">
+          <p class="prompt-context">
+            🖼 使用箇所：index.html のアクセスプレビュー、access.html の地図エリア<br>
+            💡 ポイント：Googleマップ埋め込み予定の場合はこの画像不要。外観写真が用意できるまでの代替として、建物外観 or 周辺の街並みを生成。<br>
+            ⚠️ 実際の住所が確定したらGoogleマップのiframeに差し替えを推奨。
+          </p>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Positive Prompt</p>
+            <pre class="prompt-block__text">exterior of a modern minimal Japanese urban building, clean white or light beige facade with black signage, upscale commercial building in a quiet urban street Japan, morning light, no people, minimal street with green trees, premium urban Japan architecture, warm natural light, photorealistic, architectural photography, neutral color palette, elegant minimalist design, city block in Tokyo or Osaka Japan</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="prompt-block">
+            <p class="prompt-block__label">✦ Negative Prompt</p>
+            <pre class="prompt-block__text negative">crowded, people, cars, neon signs, colorful, traditional Japanese, rural, night scene, cartoon, illustration, low quality, ugly building, graffiti</pre>
+            <button class="prompt-block__copy-btn" onclick="copyText(this)">コピー</button>
+          </div>
+          <div class="settings-row">
+            <span class="setting-tag"><strong>Aspect:</strong> 4:3</span>
+            <span class="setting-tag"><strong>Scene:</strong> Outdoor / 外観</span>
+            <span class="setting-tag"><strong>Note:</strong> Googleマップ確定後は差替</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================
+       File Naming Guide
+  ============================ -->
+  <div class="page-divider"><span class="page-divider__label">Implementation Guide</span></div>
+  <div class="section-label">File Naming</div>
+  <h2 class="section-title">ファイル名と差し替えガイド</h2>
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>推奨ファイル名</th>
+        <th>保存先</th>
+        <th>差し替え対象（CSS/HTML）</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="tag-id">HERO-01</td><td>hero-bg.jpg</td><td>images/</td><td>.hero__bg に background-image</td></tr>
+      <tr><td class="tag-id">PAGE-BG</td><td>page-header-bg.jpg</td><td>images/</td><td>.page-header__bg に background-image</td></tr>
+      <tr><td class="tag-id">CONCEPT-01</td><td>concept-01.jpg</td><td>images/</td><td>.concept-preview__img / .concept-block__img</td></tr>
+      <tr><td class="tag-id">CONCEPT-02</td><td>concept-02.jpg</td><td>images/</td><td>.concept-block__img（2番目）</td></tr>
+      <tr><td class="tag-id">TRAINER-01</td><td>trainer-tachibana.jpg</td><td>images/</td><td>.trainer-img / .message-section__img</td></tr>
+      <tr><td class="tag-id">PROGRAM-01</td><td>program-diet.jpg</td><td>images/</td><td>.program-item__img（1枚目）</td></tr>
+      <tr><td class="tag-id">PROGRAM-02</td><td>program-bodymake.jpg</td><td>images/</td><td>.program-item__img（2枚目）</td></tr>
+      <tr><td class="tag-id">PROGRAM-03</td><td>program-health.jpg</td><td>images/</td><td>.program-item__img（3枚目）</td></tr>
+      <tr><td class="tag-id">VOICE-01〜06</td><td>voice-01.jpg 〜 voice-06.jpg</td><td>images/</td><td>.voice-card__img に background-image</td></tr>
+      <tr><td class="tag-id">ACCESS-MAP</td><td>access-building.jpg</td><td>images/</td><td>.access-preview__map / .access-section__map</td></tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:32px; padding:24px; background:var(--light); border-left:3px solid var(--gold); font-size:13px; line-height:2; color:#555;">
+    <strong style="color:var(--dark);">📝 CSS差し替えサンプル：</strong><br>
+    <code style="background:var(--dark); color:var(--gold); padding:2px 8px; font-size:12px;">/* 変更前 */</code><br>
+    <code style="font-size:12px;">.hero__bg &#123; background-color: #ccc; &#125;</code><br><br>
+    <code style="background:var(--dark); color:var(--gold); padding:2px 8px; font-size:12px;">/* 変更後 */</code><br>
+    <code style="font-size:12px;">.hero__bg &#123; background-image: url(images/hero-bg.jpg); background-size: cover; background-position: center; &#125;</code>
+  </div>
+
+</div>
+
+<script>
+  function copyText(btn) {
+    const pre = btn.previousElementSibling;
+    const text = pre.textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✓ コピー済み';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'コピー';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+</script>
+
+</body>
+</html>

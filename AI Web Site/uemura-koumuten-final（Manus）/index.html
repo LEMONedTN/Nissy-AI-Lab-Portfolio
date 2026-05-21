@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上村工務店 | 家族が1つになる家づくり</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Home Specific Styles */
+        .hero {
+            height: 80vh;
+            background: url('hero.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 0;
+        }
+        .hero-content {
+            padding: 40px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        .concept-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .concept-text {
+            flex: 1;
+        }
+        .concept-img {
+            flex: 1;
+            height: 400px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .service-item {
+            background: var(--white);
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .service-icon {
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .pickup-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .pickup-item {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .pickup-img {
+            height: 200px;
+        }
+        .pickup-info {
+            padding: 20px;
+        }
+        .voice-pickup {
+            background-color: var(--bg-light);
+        }
+        .voice-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        .voice-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .cta {
+            background-color: var(--main-color);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 0;
+        }
+        .cta h2 {
+            margin-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            .concept-content, .service-grid, .pickup-grid, .voice-grid {
+                grid-template-columns: 1fr;
+                flex-direction: column;
+            }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">上村工務店</div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">上村工務店について</a></li>
+                    <li><a href="works.html">施工実績</a></li>
+                    <li><a href="voice.html">お客様の声</a></li>
+                    <li><a href="company.html">会社情報</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p>創業50年（1976年創業）</p>
+                <h1>家族が1つになる家づくり</h1>
+                <a href="contact.html" class="btn btn-accent">無料相談・お見積り</a>
+            </div>
+
+        </section>
+
+        <section class="concept">
+            <div class="container">
+                <div class="concept-content">
+                    <div class="concept-text">
+                        <div class="section-title" style="text-align: left;">
+                            <h2>上村工務店の想い</h2>
+                        </div>
+                        <p>私たち上村工務店は、大阪の地で50年、地域の皆様と共に歩んできました。「家族が1つになる家づくり」をコンセプトに、単なる修繕ではない、暮らしが豊かになるリフォームをご提案します。</p>
+                        <p style="margin-top: 20px;">長年培った技術と、自然素材へのこだわりで、何世代にもわたって愛される住まいを実現します。</p>
+                        <a href="about.html" class="btn btn-main" style="margin-top: 30px;">詳しく見る</a>
+                    </div>
+                    <div class="concept-img" style="background: url('concept.jpg') center/cover no-repeat; border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" style="background-color: var(--bg-light);">
+            <div class="container">
+                <div class="section-title">
+                    <h2>リフォームメニュー</h2>
+                </div>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <div class="service-icon" style="background: url('kitchen.jpg') center/cover no-repeat; border-radius: 8px;"></div>
+                        <h3>キッチン</h3>
+                        <p>使い勝手とデザインを両立した理想の調理空間へ。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon" style="background: url('bath.jpg') center/cover no-repeat; border-radius: 8px;"></div>
+                        <h3>浴室</h3>
+                        <p>一日の疲れを癒やす、快適で安全なバスタイムを。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon" style="background: url('toilet.jpg') center/cover no-repeat; border-radius: 8px;"></div>
+                        <h3>トイレ</h3>
+                        <p>清潔感あふれる、お手入れのしやすい空間づくり。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon" style="background: url('living.jpg') center/cover no-repeat; border-radius: 8px;"></div>
+                        <h3>リビング</h3>
+                        <p>家族が自然と集まる、開放感のある居間へ。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon" style="background: url('exterior.jpg') center/cover no-repeat; border-radius: 8px;"></div>
+                        <h3>外壁・屋根</h3>
+                        <p>大切なお住まいを長く守るためのメンテナンス。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon" style="background: url('living.jpg') center/cover no-repeat; border-radius: 8px;"></div>
+                        <h3>増築・改築</h3>
+                        <p>ライフスタイルの変化に合わせた空間の拡張。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pickup">
+            <div class="container">
+                <div class="section-title">
+                    <h2>施工実績ピックアップ</h2>
+                </div>
+                <div class="pickup-grid">
+                    <div class="pickup-item">
+                        <div class="pickup-img" style="background: url('kitchen.jpg') center/cover no-repeat;"></div>
+                        <div class="pickup-info">
+                            <h3>光が差し込む開放的なキッチン</h3>
+                            <p>大阪市北区 / キッチン</p>
+                        </div>
+                    </div>
+                    <div class="pickup-item">
+                        <div class="pickup-img" style="background: url('bath.jpg') center/cover no-repeat;"></div>
+                        <div class="pickup-info">
+                            <h3>築40年の浴室を最新ユニットバスに</h3>
+                            <p>大阪市淀川区 / 浴室</p>
+                        </div>
+                    </div>
+                    <div class="pickup-item">
+                        <div class="pickup-img" style="background: url('living.jpg') center/cover no-repeat;"></div>
+                        <div class="pickup-info">
+                            <h3>家族が集うリビング全面改装</h3>
+                            <p>大阪市西区 / リビング</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="works.html" class="btn btn-main">実績一覧を見る</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="voice-pickup">
+            <div class="container">
+                <div class="section-title">
+                    <h2>お客様の声</h2>
+                </div>
+                <div class="voice-grid">
+                    <div class="voice-item">
+                        <p>「古くなったキッチンが見違えるほどきれいになりました。上村さんの丁寧な対応に感謝しています。」</p>
+                        <p style="margin-top: 20px; font-weight: bold;">T.K様（大阪市北区）</p>
+                    </div>
+                    <div class="voice-item">
+                        <p>「冬場のお風呂が寒くて悩んでいましたが、断熱もしっかりしてもらい、今は快適です。」</p>
+                        <p style="margin-top: 20px; font-weight: bold;">M.S様（大阪市淀川区）</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="voice.html" class="btn btn-main">お客様の声一覧</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>理想の住まいづくり、お手伝いします</h2>
+                <p style="margin-bottom: 30px;">ご相談・現地調査・お見積りは無料で承っております。<br>まずはお気軽にお問い合わせください。</p>
+                <a href="contact.html" class="btn btn-accent">お問い合わせはこちら</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>上村工務店</h3>
+                    <p>〒530-0001 大阪府大阪市北区梅田3丁目1-1</p>
+                    <p>受付時間：9:00〜18:00（日・祝定休）</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">上村工務店について</a></li>
+                        <li><a href="works.html">施工実績</a></li>
+                        <li><a href="voice.html">お客様の声</a></li>
+                        <li><a href="company.html">会社情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>お問い合わせ</h4>
+                    <span class="tel">06-XXXX-XXXX</span>
+                    <a href="contact.html" class="btn-contact">メールで相談する</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 上村工務店 All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="お問い合わせ｜上村工務店。リフォームのご相談・お見積りはこちらから。電話・Web、どちらでもお気軽にどうぞ。">
+  <title>お問い合わせ｜上村工務店</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Contact page additional styles */
+    .contact-section { padding: 80px 0; background-color: var(--color-white); }
+
+    .contact-note {
+      background-color: var(--color-beige);
+      border-left: 4px solid var(--color-terra);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+      font-size: 0.85rem;
+      color: var(--color-text-mid);
+      line-height: 1.8;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 18px;
+      font-size: 1rem;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border: none;
+      border-radius: var(--radius);
+      font-family: var(--font-sans);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .submit-btn:hover {
+      background-color: var(--color-primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .contact-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 40px 0;
+      color: var(--color-text-light);
+      font-size: 0.8rem;
+    }
+    .contact-divider::before,
+    .contact-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background-color: var(--color-border);
+    }
+
+    @media (max-width: 640px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="site-logo__name">上村工務店</span>
+        <span class="site-logo__catch">家族が1つになる家づくり</span>
+      </a>
+      <nav class="site-nav" aria-label="メインナビゲーション">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="about.html">上村工務店について</a></li>
+          <li><a href="works.html">施工実績</a></li>
+          <li><a href="voice.html">お客様の声</a></li>
+          <li><a href="company.html">会社情報</a></li>
+          <li><a href="contact.html" class="active">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn--primary header-cta">無料相談</a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="about.html">上村工務店について</a></li>
+      <li><a href="works.html">施工実績</a></li>
+      <li><a href="voice.html">お客様の声</a></li>
+      <li><a href="company.html">会社情報</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary">無料相談はこちら</a>
+  </nav>
+
+  <main>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+      <div class="container">
+        <p class="page-hero__label">Contact</p>
+        <h1 class="page-hero__title">お問い合わせ</h1>
+        <p class="page-hero__lead">リフォームのご相談・無料お見積りはこちらから。お気軽にどうぞ。</p>
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+          <a href="index.html">ホーム</a>
+          <span>›</span>
+          <span>お問い合わせ</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ==============================
+         Contact CTA Cards
+         ============================== -->
+    <section style="padding:48px 0; background-color:var(--color-beige); border-bottom:1px solid var(--color-border);">
+      <div class="container">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+          <div style="background:var(--color-white); border-radius:var(--radius-lg); padding:36px; text-align:center; border:1px solid var(--color-border);" class="fade-in">
+            <div style="font-size:2rem; margin-bottom:12px;">📝</div>
+            <h3 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--color-primary-dark); margin-bottom:8px;">Webフォームからのご相談</h3>
+            <p style="font-size:0.82rem; color:var(--color-text-mid); line-height:1.8; margin-bottom:20px;">24時間受付。折り返しご連絡いたします。<br>写真や資料の添付もお気軽に。</p>
+            <a href="#contact-form" class="btn btn--primary" style="display:block;">フォームへ進む ↓</a>
+          </div>
+          <div style="background:var(--color-primary-dark); border-radius:var(--radius-lg); padding:36px; text-align:center; color:var(--color-white);" class="fade-in">
+            <div style="font-size:2rem; margin-bottom:12px;">📞</div>
+            <h3 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--color-white); margin-bottom:8px;">お電話でのご相談</h3>
+            <p style="font-size:0.82rem; color:rgba(255,255,255,0.75); line-height:1.8; margin-bottom:16px;">直接スタッフと話せます。お急ぎの方は<br>お電話が一番早く対応できます。</p>
+            <p style="font-size:2rem; font-weight:700; letter-spacing:0.05em; margin-bottom:4px;">06-XXXX-XXXX</p>
+            <p style="font-size:0.75rem; color:rgba(255,255,255,0.6);">受付時間：9:00〜18:00（日・祝定休）</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         Contact Form Section
+         ============================== -->
+    <section class="contact-section" id="contact-form">
+      <div class="container">
+        <p class="section-subtitle">Form</p>
+        <h2 class="section-title">お問い合わせフォーム</h2>
+        <p class="section-lead">以下のフォームにご記入の上、送信してください。通常2営業日以内にご返信いたします。</p>
+
+        <div class="contact-wrap fade-in">
+
+          <!-- Form -->
+          <div>
+            <div class="contact-note">
+              ※ このフォームはデザインのみです（送信機能はございません）。<br>
+              実際のお問い合わせはお電話（06-XXXX-XXXX）にてお気軽にどうぞ。
+            </div>
+
+            <form class="contact-form" action="#" method="post" onsubmit="return false;">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">お名前 <span class="required">必須</span></label>
+                  <input type="text" id="name" name="name" placeholder="上村 太郎" autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label for="name-kana">お名前（フリガナ）</label>
+                  <input type="text" id="name-kana" name="name-kana" placeholder="ウエムラ タロウ">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">メールアドレス <span class="required">必須</span></label>
+                  <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label for="tel">電話番号</label>
+                  <input type="tel" id="tel" name="tel" placeholder="06-XXXX-XXXX" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="address">ご住所（施工場所）</label>
+                <input type="text" id="address" name="address" placeholder="大阪府大阪市北区○○" autocomplete="address-line1">
+              </div>
+
+              <div class="form-group">
+                <label for="category">お問い合わせ種別 <span class="required">必須</span></label>
+                <select id="category" name="category">
+                  <option value="" disabled selected>選択してください</option>
+                  <option>無料相談・お見積りのご依頼</option>
+                  <option>キッチンリフォームについて</option>
+                  <option>浴室リフォームについて</option>
+                  <option>トイレリフォームについて</option>
+                  <option>リビング・内装リフォームについて</option>
+                  <option>外壁・屋根リフォームについて</option>
+                  <option>増築・大規模改修について</option>
+                  <option>アフターフォローについて</option>
+                  <option>その他</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+                <textarea id="message" name="message" placeholder="例）キッチンのリフォームを検討しています。現在のキッチンは築20年で、広さはXXm²程度です。予算やプランについてご相談したいです。"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-time">ご連絡希望時間帯</label>
+                <select id="contact-time" name="contact-time">
+                  <option value="" selected>指定なし</option>
+                  <option>午前中（9:00〜12:00）</option>
+                  <option>午後（12:00〜15:00）</option>
+                  <option>夕方（15:00〜18:00）</option>
+                </select>
+              </div>
+
+              <div class="form-privacy">
+                送信いただいた個人情報は、お問い合わせへの対応のみに使用し、
+                第三者への提供はいたしません。
+                <a href="#">プライバシーポリシー</a>をご確認の上、送信ください。
+              </div>
+
+              <button type="submit" class="submit-btn">送信する →</button>
+
+            </form>
+          </div>
+
+          <!-- Side Info -->
+          <aside class="contact-side">
+            <h3>📞 お電話でのご相談</h3>
+            <p class="contact-side__tel">06-XXXX-XXXX</p>
+            <p class="contact-side__hours">受付時間：9:00〜18:00<br>（日曜日・祝日は定休）</p>
+            <a href="tel:06-XXXX-XXXX" class="btn btn--primary" style="display:block; text-align:center; margin-bottom:24px;">電話で相談する</a>
+
+            <div class="contact-divider">または</div>
+
+            <h3 style="margin-bottom:12px;">🏢 会社所在地</h3>
+            <div class="img-placeholder" style="height:140px; margin-bottom:12px; font-size:0.72rem;">地図プレースホルダー</div>
+            <p style="font-size:0.8rem; color:var(--color-text-mid); line-height:1.8;">
+              〒530-0001<br>
+              大阪府大阪市北区梅田3丁目1-1<br>
+              JR大阪駅より徒歩5分
+            </p>
+
+            <div class="contact-side__note">
+              <p style="font-weight:700; margin-bottom:8px; color:var(--color-primary-dark);">💡 こんなご相談もOKです</p>
+              <ul style="font-size:0.8rem; color:var(--color-text-mid); line-height:2; list-style:disc; padding-left:1em;">
+                <li>リフォームするか悩んでいる</li>
+                <li>予算感が知りたい</li>
+                <li>どこを頼めばいいかわからない</li>
+                <li>他社の見積りを比較したい</li>
+                <li>急いでいないがいつかやりたい</li>
+              </ul>
+              <p style="font-size:0.8rem; margin-top:12px; color:var(--color-text-mid);">どんな段階でも歓迎します。まずはお気軽に！</p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section--beige">
+      <div class="container">
+        <p class="section-subtitle">FAQ</p>
+        <h2 class="section-title">よくあるご質問</h2>
+
+        <div style="max-width:720px; margin:3rem auto 0;" class="fade-in">
+
+          <details style="background:var(--color-white); border:1px solid var(--color-border); border-radius:var(--radius); margin-bottom:12px; padding:0; overflow:hidden;">
+            <summary style="padding:20px 24px; cursor:pointer; font-weight:700; font-size:0.92rem; color:var(--color-primary-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              現地調査・お見積りは本当に無料ですか？
+              <span style="font-size:1.2rem; color:var(--color-terra); flex-shrink:0;">＋</span>
+            </summary>
+            <div style="padding:0 24px 20px; font-size:0.88rem; color:var(--color-text-mid); line-height:1.9; border-top:1px solid var(--color-border);">
+              はい、完全無料です。現地にお伺いしての調査・お見積りはすべて無料で承っております。
+              費用が発生するのは、ご契約・着工後のみとなります。安心してご相談ください。
+            </div>
+          </details>
+
+          <details style="background:var(--color-white); border:1px solid var(--color-border); border-radius:var(--radius); margin-bottom:12px; padding:0; overflow:hidden;">
+            <summary style="padding:20px 24px; cursor:pointer; font-weight:700; font-size:0.92rem; color:var(--color-primary-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              リフォーム中、家に住み続けられますか？
+              <span style="font-size:1.2rem; color:var(--color-terra); flex-shrink:0;">＋</span>
+            </summary>
+            <div style="padding:0 24px 20px; font-size:0.88rem; color:var(--color-text-mid); line-height:1.9; border-top:1px solid var(--color-border);">
+              工事の内容によって異なりますが、多くの場合、住みながらのリフォームが可能です。
+              工事の範囲や期間をご説明した上で、ご不便を最小限に抑えるよう配慮いたします。
+            </div>
+          </details>
+
+          <details style="background:var(--color-white); border:1px solid var(--color-border); border-radius:var(--radius); margin-bottom:12px; padding:0; overflow:hidden;">
+            <summary style="padding:20px 24px; cursor:pointer; font-weight:700; font-size:0.92rem; color:var(--color-primary-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              工事完了後のアフターフォローはありますか？
+              <span style="font-size:1.2rem; color:var(--color-terra); flex-shrink:0;">＋</span>
+            </summary>
+            <div style="padding:0 24px 20px; font-size:0.88rem; color:var(--color-text-mid); line-height:1.9; border-top:1px solid var(--color-border);">
+              はい。定期点検（1ヶ月後・1年後など）を実施しております。
+              工事後に気になる点があれば、いつでもお気軽にご連絡ください。
+              迅速に対応いたします。
+            </div>
+          </details>
+
+          <details style="background:var(--color-white); border:1px solid var(--color-border); border-radius:var(--radius); margin-bottom:12px; padding:0; overflow:hidden;">
+            <summary style="padding:20px 24px; cursor:pointer; font-weight:700; font-size:0.92rem; color:var(--color-primary-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              予算が限られていても相談できますか？
+              <span style="font-size:1.2rem; color:var(--color-terra); flex-shrink:0;">＋</span>
+            </summary>
+            <div style="padding:0 24px 20px; font-size:0.88rem; color:var(--color-text-mid); line-height:1.9; border-top:1px solid var(--color-border);">
+              もちろんです！ご予算に合わせた最適なプランをご提案いたします。
+              「こんなことをしたい」「このくらいの予算で何ができるか」など、
+              まずはお気軽にご相談ください。
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div>
+          <div class="footer-logo">
+            <p class="footer-logo__name">上村工務店</p>
+            <p class="footer-logo__catch">家族が1つになる家づくり</p>
+          </div>
+          <div class="footer-info">
+            <p>〒530-0001 大阪府大阪市北区梅田3丁目1-1</p>
+            <p>TEL：06-XXXX-XXXX</p>
+            <p>受付：9:00〜18:00（日・祝定休）</p>
+            <p>創業：1976年（創業50年）</p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">上村工務店について</a></li>
+            <li><a href="works.html">施工実績</a></li>
+            <li><a href="voice.html">お客様の声</a></li>
+            <li><a href="company.html">会社情報</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="contact.html">キッチンリフォーム</a></li>
+            <li><a href="contact.html">浴室リフォーム</a></li>
+            <li><a href="contact.html">トイレリフォーム</a></li>
+            <li><a href="contact.html">リビング・内装</a></li>
+            <li><a href="contact.html">外壁・屋根リフォーム</a></li>
+            <li><a href="contact.html">増築・大規模改修</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div>
+          <div class="footer-tel">
+            <span>お電話でのお問い合わせ</span>
+            06-XXXX-XXXX
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn--outline-white btn--sm">無料相談・お見積り</a>
+        <p class="footer-copy">© 2026 上村工務店 All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open', isOpen);
+    });
+    // FAQ accordion icon toggle
+    document.querySelectorAll('details').forEach(detail => {
+      detail.addEventListener('toggle', () => {
+        const icon = detail.querySelector('summary span');
+        if (icon) icon.textContent = detail.open ? '－' : '＋';
+      });
+    });
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

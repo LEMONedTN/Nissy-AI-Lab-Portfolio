@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hair Factory RR（ヘアーファクトリーダブルアール）は大阪市東淀川区南江口にある理髪店です。マスター早田吉徳が一人ひとりに似合うヘアスタイルをご提案します。">
+  <title>Hair Factory RR | 大阪・東淀川区の理髪店</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================
+       HEADER
+       ======================================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="site-logo">
+        Hair Factory RR
+        <span>Yoshinori Hayata</span>
+      </a>
+
+      <nav class="global-nav">
+        <a href="#top">Home</a>
+        <a href="#master">Master</a>
+        <a href="#menu">Menu</a>
+        <a href="#access">Access</a>
+        <a href="tel:06-6320-2212" class="nav-tel">
+          <svg class="tel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          06-6320-2212
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- ========================================================
+       CAROUSEL
+       ======================================================== -->
+  <section id="top" class="carousel" aria-label="メインビジュアル">
+
+    <div class="carousel-track" id="carouselTrack">
+
+      <!-- Slide 1 : 外観・店内 -->
+      <div class="carousel-slide">
+        <div class="slide-bg">
+          <img src="images/slide-01.jpg" alt="店内外観" style="width: 100%; height: 580px; object-fit: cover;">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <p class="slide-label">Welcome</p>
+          <h2 class="slide-title">A space where<br>every visit matters.</h2>
+        </div>
+      </div>
+
+      <!-- Slide 2 : カットシーン -->
+      <div class="carousel-slide">
+        <div class="slide-bg">
+          <img src="images/slide-02.jpg" alt="カットシーン" style="width: 100%; height: 580px; object-fit: cover;">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <p class="slide-label">Craftsmanship</p>
+          <h2 class="slide-title">Precision cut,<br>every single time.</h2>
+        </div>
+      </div>
+
+      <!-- Slide 3 : 仕上がりヘアスタイル -->
+      <div class="carousel-slide">
+        <div class="slide-bg">
+          <img src="images/slide-03.jpg" alt="仕上がりヘアスタイル" style="width: 100%; height: 580px; object-fit: cover;">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <p class="slide-label">Result</p>
+          <h2 class="slide-title">Style that fits<br>who you are.</h2>
+        </div>
+      </div>
+
+    </div><!-- /.carousel-track -->
+
+    <!-- 前後ボタン -->
+    <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="前のスライド">&#8592;</button>
+    <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="次のスライド">&#8594;</button>
+
+    <!-- ドット -->
+    <div class="carousel-dots" role="tablist" aria-label="スライド選択">
+      <button class="carousel-dot is-active" data-index="0" role="tab" aria-selected="true"  aria-label="スライド1"></button>
+      <button class="carousel-dot"            data-index="1" role="tab" aria-selected="false" aria-label="スライド2"></button>
+      <button class="carousel-dot"            data-index="2" role="tab" aria-selected="false" aria-label="スライド3"></button>
+    </div>
+
+  </section><!-- /.carousel -->
+
+
+  <!-- ========================================================
+       CONCEPT
+       ======================================================== -->
+  <section class="concept-section">
+    <div class="section-inner">
+      <p class="section-label">Concept</p>
+      <h2 class="section-title">一期一会の理髪</h2>
+      <div class="concept-grid">
+
+        <div class="concept-img">
+          <img src="images/concept.jpg" alt="サロンイメージ" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover;">
+        </div>
+
+        <div class="concept-body">
+          <p class="concept-tagline">あなたに似合う一つのスタイルを、<br>丁寧に仕上げます。</p>
+          <p class="concept-text">
+            Hair Factory RR では、お客様一人ひとりの骨格・髪質・ライフスタイルに合わせたヘアスタイルをご提案しています。カットやカラーの技術を通じて、来てくださるお客さんといいご縁が生まれるのが最高の喜びです。
+          </p>
+          <a href="#master" class="btn-outline">About Master</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       MENU
+       ======================================================== -->
+  <section id="menu" class="menu-section">
+    <div class="section-inner">
+      <p class="section-label">Menu &amp; Price</p>
+      <h2 class="section-title">メニュー・料金表</h2>
+
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <p class="menu-card__name">Cut</p>
+          <p class="menu-card__jp">カット（大人）</p>
+          <p class="menu-card__price">¥4,000<span>税込</span></p>
+          <p class="menu-card__desc">顔剃り・シャンプーセット。カットのみご希望の方はお申し付けください。</p>
+        </div>
+
+        <div class="menu-card">
+          <p class="menu-card__name">Nice Middle Cut</p>
+          <p class="menu-card__jp">ナイスミドルカット</p>
+          <p class="menu-card__price">¥3,000<span>税込</span></p>
+          <p class="menu-card__desc">落ち着いたスタイルをご提案。シニア・ベテラン世代に好評のメニューです。</p>
+        </div>
+
+        <div class="menu-card">
+          <p class="menu-card__name">Student Cut</p>
+          <p class="menu-card__jp">カット（学生）</p>
+          <p class="menu-card__price">¥2,000~<span>税込</span></p>
+          <p class="menu-card__desc">高校生 ¥3,000 / 中学生 ¥2,500 / 小学生以下 ¥2,000</p>
+        </div>
+
+        <div class="menu-card">
+          <p class="menu-card__name">Perm</p>
+          <p class="menu-card__jp">パーマ</p>
+          <p class="menu-card__price">¥3,000~<span>税込</span></p>
+          <p class="menu-card__desc">コントロールアイロン ¥3,500〜 / ストレートパーマ ¥10,000〜</p>
+        </div>
+
+        <div class="menu-card">
+          <p class="menu-card__name">Color</p>
+          <p class="menu-card__jp">カラー</p>
+          <p class="menu-card__price">¥2,500~<span>税込</span></p>
+          <p class="menu-card__desc">ご要望に合わせて幅広いカラーに対応しています。</p>
+        </div>
+
+        <div class="menu-card">
+          <p class="menu-card__name">Treatment</p>
+          <p class="menu-card__jp">トリートメント</p>
+          <p class="menu-card__price">¥1,000~<span>税込</span></p>
+          <p class="menu-card__desc">髪のダメージをケアし、艶やかな仕上がりに整えます。</p>
+        </div>
+
+      </div><!-- /.menu-grid -->
+
+      <p class="menu-note">※価格はすべて税込価格です。詳細はお気軽にお問い合わせください。</p>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       MASTER
+       ======================================================== -->
+  <section id="master" class="master-section">
+    <div class="section-inner">
+      <p class="section-label">About Master</p>
+      <h2 class="section-title">マスターについて</h2>
+
+      <div class="master-grid">
+
+        <div class="master-img">
+          <img src="images/master.jpg" alt="マスター 早田吉徳" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover;">
+        </div>
+
+        <div class="master-body">
+          <p class="master-name">早田 吉徳</p>
+          <p class="master-name-en">Yoshinori Hayata</p>
+          <blockquote class="master-quote">「一期一会」―― お客さん一人一人との<br>出会いを大切に。</blockquote>
+          <p class="master-text">
+            2003年のHair Factory RR開業以来、大阪・東淀川区南江口に根ざしてお客様と向き合ってきました。カットやカラーの技術を通じて、来てくださる方との素敵なご縁が生まれることが最高の喜びです。「こんな髪型にしてほしい」というリクエストも大歓迎。お気軽にご相談ください。
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       ACCESS
+       ======================================================== -->
+  <section id="access" class="access-section">
+    <div class="section-inner">
+      <p class="section-label">Access</p>
+      <h2 class="section-title">アクセス</h2>
+
+      <div class="access-grid">
+
+        <div class="access-map">
+          <iframe
+            src="https://maps.google.com/maps?q=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E6%9D%B1%E6%B7%80%E5%B7%9D%E5%8C%BA%E5%8D%97%E6%B1%9F%E5%8F%A33%E4%B8%81%E7%9B%AE1-11&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            title="Hair Factory RR アクセスマップ"
+            width="100%"
+            height="100%"
+            style="border:none;"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <div>
+          <dl class="access-info">
+            <dt>Address</dt>
+            <dd>〒533-0003<br>大阪府大阪市東淀川区南江口3丁目1-11</dd>
+            <dt>Tel</dt>
+            <dd>
+              <a href="tel:06-6320-2212">06-6320-2212</a><br>
+              <span class="note">※予約優先制・お電話にて承ります</span>
+            </dd>
+          </dl>
+
+          <div class="access-hours">
+            <div class="hours-row">
+              <span class="hours-day">平日</span>
+              <span class="hours-time">09:30 〜 19:30</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">土・日</span>
+              <span class="hours-time">09:00 〜 19:00</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">定休日</span>
+              <span class="hours-time">月曜日・第2・第3火曜日</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer class="site-footer">
+    <p class="footer-logo">Hair Factory RR</p>
+    <p class="footer-copy">&copy; 2025 Hair Factory RR &mdash; Yoshinori Hayata. All Rights Reserved.</p>
+  </footer>
+
+
+  <!-- ========================================================
+       JavaScript : Carousel
+       ======================================================== -->
+  <script>
+    (function () {
+      var track  = document.getElementById('carouselTrack');
+      var dots   = document.querySelectorAll('.carousel-dot');
+      var prev   = document.getElementById('carouselPrev');
+      var next   = document.getElementById('carouselNext');
+      var total  = 3;
+      var cur    = 0;
+      var timer;
+
+      function goTo(n) {
+        cur = (n + total) % total;
+        track.style.transform = 'translateX(-' + (cur * 33.333) + '%)';
+        dots.forEach(function (d, i) {
+          d.classList.toggle('is-active', i === cur);
+          d.setAttribute('aria-selected', i === cur ? 'true' : 'false');
+        });
+      }
+
+      function startAuto() {
+        clearInterval(timer);
+        timer = setInterval(function () { goTo(cur + 1); }, 4500);
+      }
+
+      prev.addEventListener('click', function () { goTo(cur - 1); startAuto(); });
+      next.addEventListener('click', function () { goTo(cur + 1); startAuto(); });
+      dots.forEach(function (d) {
+        d.addEventListener('click', function () {
+          goTo(parseInt(d.getAttribute('data-index'), 10));
+          startAuto();
+        });
+      });
+
+      startAuto();
+    })();
+  </script>
+
+</body>
+</html>

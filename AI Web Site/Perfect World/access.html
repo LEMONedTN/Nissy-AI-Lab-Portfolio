@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access | Protect World</title>
+  <meta name="description" content="Protect Worldへのアクセス情報。住所・電話番号・営業時間・最寄駅からのルートをご案内します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo">Protect<span>World</span></a>
+      <nav class="site-nav">
+        <a href="index.html" class="site-nav__item">Home</a>
+        <a href="concept.html" class="site-nav__item">Concept</a>
+        <a href="trainer.html" class="site-nav__item">Trainer</a>
+        <a href="program.html" class="site-nav__item">Program</a>
+        <a href="voice.html" class="site-nav__item">Voice</a>
+        <a href="access.html" class="site-nav__item active">Access</a>
+        <a href="contact.html" class="nav-cta">無料体験予約</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav__close" id="navClose">✕</button>
+    <a href="index.html">Home</a>
+    <a href="concept.html">Concept</a>
+    <a href="trainer.html">Trainer</a>
+    <a href="program.html">Program</a>
+    <a href="voice.html">Voice</a>
+    <a href="access.html" class="active">Access</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header__bg"></div>
+    <div class="page-header__content">
+      <span class="page-header__en">Access</span>
+      <h1 class="page-header__title">アクセス</h1>
+    </div>
+  </section>
+
+  <!-- ============================
+       Access Section
+  ============================ -->
+  <section class="access-section section">
+    <div class="container">
+      <div class="access-section__inner">
+        <!-- 地図エリア（プレースホルダー） -->
+        <div>
+          <div class="access-section__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.106828555139!2d135.49595009999999!3d34.7024854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e68d95e3a70b%3A0x1baec822e859c84ce!2z5aSn6Ziq6aeF!5e0!3m2!1sja!2sjp!4v1712750000000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <!-- 情報エリア -->
+        <div>
+          <div class="section-heading" style="text-align:left; margin-bottom:40px;">
+            <span class="section-heading__en">Location</span>
+            <h2 class="section-heading__jp" style="font-size:22px;">店舗情報</h2>
+            <div class="section-heading__line" style="margin:20px 0 0;"></div>
+          </div>
+
+          <table class="access-table">
+            <tr>
+              <th>ジム名</th>
+              <td>Protect World（プロテクトワールド）</td>
+            </tr>
+            <tr>
+              <th>住所</th>
+              <td>〒530-0001<br>大阪府大阪市北区梅田3丁目1-1<br>（JR大阪駅構内）</td>
+            </tr>
+            <tr>
+              <th>電話番号</th>
+              <td>000-0000-0000</td>
+            </tr>
+            <tr>
+              <th>メール</th>
+              <td>info@protect-world.jp</td>
+            </tr>
+            <tr>
+              <th>営業時間</th>
+              <td>
+                平日：9:00〜21:00<br>
+                土曜：9:00〜18:00<br>
+                日曜：10:00〜17:00
+              </td>
+            </tr>
+            <tr>
+              <th>定休日</th>
+              <td>毎週月曜日・祝日<br>（年末年始・お盆を除く）</td>
+            </tr>
+          </table>
+
+          <div class="access-route">
+            <p class="access-route__title">Access Route</p>
+            <p class="access-route__item">
+              <strong>JR「大阪駅」より</strong><br>
+              徒歩0分。駅直結の商業施設内につき、雨の日でも濡れずにアクセス可能です。
+            </p>
+            <p class="access-route__item">
+              <strong>各線「梅田駅」より</strong><br>
+              徒歩3〜5分。地下街を通って直接お越しいただけます。
+            </p>
+            <p class="access-route__item">
+              <strong>お車でお越しの方</strong><br>
+              近隣にコインパーキングあり。提携駐車場はございません。
+            </p>
+          </div>
+
+          <div class="mt-32">
+            <a href="contact.html" class="btn btn--primary">無料体験を予約する</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <span class="cta-section__label">Free Trial</span>
+      <h2 class="cta-section__title">まずはお気軽にお立ち寄りください</h2>
+      <p class="cta-section__text">
+        見学・ご相談は随時受け付けております。<br>
+        無料体験のご予約はオンラインまたはお電話にて。
+      </p>
+      <a href="contact.html" class="btn btn--outline-dark">無料体験を予約する</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div>
+          <p class="site-footer__logo">Protect<span>World</span></p>
+          <p class="site-footer__tagline">あなたの身体と健康を守るパーソナルトレーニングジム</p>
+        </div>
+        <nav class="site-footer__nav">
+          <a href="index.html">Home</a>
+          <a href="program.html">Program</a>
+          <a href="concept.html">Concept</a>
+          <a href="voice.html">Voice</a>
+          <a href="trainer.html">Trainer</a>
+          <a href="access.html">Access</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 Protect World All Rights Reserved.</p>
+        <a href="#" class="site-footer__privacy">プライバシーポリシー</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('overlay');
+    const navClose = document.getElementById('navClose');
+    function openNav() { mobileNav.classList.add('open'); overlay.classList.add('open'); }
+    function closeNav() { mobileNav.classList.remove('open'); overlay.classList.remove('open'); }
+    hamburger.addEventListener('click', openNav);
+    navClose.addEventListener('click', closeNav);
+    overlay.addEventListener('click', closeNav);
+  </script>
+
+</body>
+</html>

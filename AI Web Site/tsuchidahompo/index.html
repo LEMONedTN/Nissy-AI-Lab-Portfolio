@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="土田本舗 — 職人の技と季節の素材が織りなす、本物の江戸前鮨。">
+  <title>土田本舗 | 鮨処</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-ja">土田本舗</span>
+        <span class="logo-en">TSUCHIDA HONPO</span>
+      </a>
+      <nav class="global-nav">
+        <a href="#" class="nav-item">ホーム</a>
+        <a href="#about" class="nav-item">土田本舗について</a>
+        <a href="#menu" class="nav-item">お品書き</a>
+        <a href="#shop" class="nav-item">店舗紹介</a>
+        <a href="#contact" class="nav-item">お問い合わせ</a>
+      </nav>
+      <a href="#contact" class="header-reserve">ご予約</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO / CAROUSEL ===== -->
+  <section class="hero" id="home">
+    <div class="carousel-track" id="carouselTrack">
+
+      <!-- Slide 1: メインビジュアル -->
+      <div class="carousel-slide is-active">
+        <img src="images/hero_sushi_exterior.png" alt="高級な寿司店の外観" class="slide-img" style="object-fit: cover;">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">TSUCHIDA HONPO — EST. 1988</span>
+          <h1 class="slide-headline">
+            一貫に、<br>職人の<br>すべてを。
+          </h1>
+          <p class="slide-sub">
+            季節の旬を、熟練の技で丁寧に握る。<br>
+            日本の食の粋を、一皿に込めて。
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 2: お品書きイメージ -->
+      <div class="carousel-slide">
+        <img src="images/hero_sushi_menu.png" alt="江戸前寿司の俯瞰写真" class="slide-img" style="object-fit: cover;">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">SEASONAL MENU</span>
+          <h2 class="slide-headline">
+            旬の素材を<br>極上の一皿へ。
+          </h2>
+          <p class="slide-sub">
+            その日の市場で選び抜いた素材だけを使用。<br>
+            おまかせコースでご堪能ください。
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 3: 店内雰囲気 -->
+      <div class="carousel-slide">
+        <img src="images/hero_sushi_interior.png" alt="上質なカウンター席の店内雰囲気" class="slide-img" style="object-fit: cover;">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">OUR SPACE</span>
+          <h2 class="slide-headline">
+            時間を忘れる<br>上質な空間。
+          </h2>
+          <p class="slide-sub">
+            カウンター越しに響く職人の息づかい。<br>
+            大切なひとときを、特別な場所で。
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /.carousel-track -->
+
+    <!-- コントロール -->
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="prevBtn" aria-label="前のスライド">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="carousel-dots">
+        <button class="carousel-dot is-active" data-index="0" aria-label="スライド1"></button>
+        <button class="carousel-dot" data-index="1" aria-label="スライド2"></button>
+        <button class="carousel-dot" data-index="2" aria-label="スライド3"></button>
+      </div>
+      <button class="carousel-btn" id="nextBtn" aria-label="次のスライド">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <!-- スクロールインジケーター -->
+    <div class="scroll-indicator">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+  <!-- ===== NEWS ===== -->
+  <section class="news fade-in">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">NEWS</span>
+        <h2 class="section-title">お知らせ</h2>
+        <div class="section-divider"></div>
+      </div>
+      <ul class="news-list">
+        <li class="news-item">
+          <time class="news-date">2025.04.01</time>
+          <span class="news-cat">お知らせ</span>
+          <a href="#" class="news-title">春の特別おまかせコースを開始いたします</a>
+        </li>
+        <li class="news-item">
+          <time class="news-date">2025.03.15</time>
+          <span class="news-cat">営業情報</span>
+          <a href="#" class="news-title">4月の休業日のご案内</a>
+        </li>
+        <li class="news-item">
+          <time class="news-date">2025.02.28</time>
+          <span class="news-cat">ご案内</span>
+          <a href="#" class="news-title">ホームページをリニューアルいたしました</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== CONCEPT / ABOUT ===== -->
+  <section class="concept fade-in" id="about">
+    <div class="container">
+      <div class="concept-inner">
+        <div class="concept-img-wrap">
+          <img src="images/about_craftsman.png" alt="真剣に鮨を握る職人" class="concept-img" style="object-fit: cover;">
+        </div>
+        <div class="concept-body">
+          <div class="section-header">
+            <span class="section-label">ABOUT</span>
+            <h2 class="section-title">土田本舗について</h2>
+            <div class="section-divider"></div>
+          </div>
+          <p class="concept-lead">
+            受け継がれる技と、<br>
+            変わらぬ想いを一貫に。
+          </p>
+          <p class="concept-text">
+            昭和63年の創業以来、土田本舗は「素材の声を聴く」という一点にこだわり続けてきました。その日の仕入れによって変わるお品書き、職人が手渡しする温もりのある一貫。カウンターを挟んで生まれる、お客様と職人との小さな対話を大切にしています。
+          </p>
+          <br>
+          <p class="concept-text">
+            急ぐことなく、丁寧に。日本の食文化が持つ静けさと豊かさを、ここ土田本舗でお感じいただければ幸いです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section class="menu fade-in" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">MENU</span>
+        <h2 class="section-title">お品書き</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/menu_omakase.png" alt="おまかせコースの豪華な盛り合わせ" class="menu-card-img" style="object-fit: cover;">
+          <div class="menu-card-overlay">
+            <h3 class="menu-card-name">おまかせコース</h3>
+            <span class="menu-card-price">¥25,000〜</span>
+            <p class="menu-card-desc">その日の旬を職人が選び、最高の状態でお出しする本格江戸前鮨。</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img src="images/menu_nigiri.png" alt="にぎり盛り合わせ 真上からのアングル" class="menu-card-img" style="object-fit: cover;">
+          <div class="menu-card-overlay">
+            <h3 class="menu-card-name">にぎり盛り合わせ</h3>
+            <span class="menu-card-price">¥12,000〜</span>
+            <p class="menu-card-desc">厳選したネタを一つひとつ丁寧に握るランチ・ディナー向け定番コース。</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <img src="images/menu_seasonal.png" alt="季節の前菜と日本酒" class="menu-card-img" style="object-fit: cover;">
+          <div class="menu-card-overlay">
+            <h3 class="menu-card-name">季節の一品</h3>
+            <span class="menu-card-price">¥3,000〜</span>
+            <p class="menu-card-desc">旬の食材を活かした前菜や酒肴を、日本酒とともにお楽しみください。</p>
+          </div>
+        </div>
+      </div>
+      <div class="menu-cta">
+        <a href="#" class="btn-outline">お品書き一覧を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SHOP INFO ===== -->
+  <section class="shop-info fade-in" id="shop">
+    <div class="container">
+      <div class="shop-inner">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.1!2d135.4959!3d34.7024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6871f8518b3%3A0x70cc2697e80e9a58!2sJR%E5%A4%A7%E9%98%AA%E9%A7%85!5e0!3m2!1sja!2sjp!4v1"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" class="shop-map">
+        </iframe>
+        <div class="shop-details">
+          <div class="section-header">
+            <span class="section-label">ACCESS</span>
+            <h2 class="section-title">店舗紹介</h2>
+            <div class="section-divider"></div>
+          </div>
+          <dl class="info-table">
+            <div class="info-row">
+              <dt class="info-label">店舗名</dt>
+              <dd class="info-value"><span class="highlight">土田本舗</span><br>Tsuchida Honpo</dd>
+            </div>
+            <div class="info-row">
+              <dt class="info-label">住所</dt>
+              <dd class="info-value">〒000-0000<br>◯◯県◯◯市◯◯町1-2-3</dd>
+            </div>
+            <div class="info-row">
+              <dt class="info-label">電話</dt>
+              <dd class="info-value"><span class="highlight">000-0000-0000</span></dd>
+            </div>
+            <div class="info-row">
+              <dt class="info-label">営業時間</dt>
+              <dd class="info-value">
+                ランチ　11:30〜14:00（L.O. 13:30）<br>
+                ディナー　17:30〜22:00（L.O. 21:00）
+              </dd>
+            </div>
+            <div class="info-row">
+              <dt class="info-label">定休日</dt>
+              <dd class="info-value">水曜日<br><small style="font-size:12px;">※祝日の場合は翌木曜日</small></dd>
+            </div>
+            <div class="info-row">
+              <dt class="info-label">アクセス</dt>
+              <dd class="info-value">◯◯線「◯◯駅」より徒歩5分</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="news fade-in" id="contact" style="padding-top: 0; padding-bottom: 80px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">CONTACT</span>
+        <h2 class="section-title">お問い合わせ・ご予約</h2>
+        <div class="section-divider"></div>
+      </div>
+      <p style="text-align:center; font-size:15px; color:var(--color-text-muted); line-height:2; letter-spacing:0.06em; margin-bottom: 48px;">
+        ご予約・お問い合わせはお電話またはフォームにてお気軽にどうぞ。<br>
+        おまかせコースはご予約をお勧めいたします。
+      </p>
+      <div style="display:flex; justify-content:center; gap:24px; flex-wrap:wrap;">
+        <a href="tel:000-0000-0000" style="
+          display:inline-flex; align-items:center; gap:12px;
+          padding:18px 48px; background:var(--color-primary);
+          color:var(--color-white); font-size:15px; letter-spacing:0.15em;
+          font-family:var(--font-serif); transition:background 0.3s;
+        " onmouseover="this.style.background='var(--color-primary-light)'" onmouseout="this.style.background='var(--color-primary)'">
+          ☎ 000-0000-0000
+        </a>
+        <a href="#" style="
+          display:inline-block; padding:18px 48px;
+          border:1px solid var(--color-primary);
+          color:var(--color-primary); font-size:13px; letter-spacing:0.25em;
+          transition: all 0.3s;
+        " onmouseover="this.style.background='var(--color-primary)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='var(--color-primary)'">
+          WEBフォーム
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="site-logo">
+            <span class="logo-ja">土田本舗</span>
+            <span class="logo-en">TSUCHIDA HONPO</span>
+          </div>
+          <p class="footer-tagline">
+            受け継がれる技と、<br>
+            変わらぬ想いを一貫に。
+          </p>
+        </div>
+        <div class="footer-nav-group">
+          <h4>NAVIGATION</h4>
+          <nav class="footer-nav-links">
+            <a href="#">ホーム</a>
+            <a href="#about">土田本舗について</a>
+            <a href="#menu">お品書き</a>
+            <a href="#shop">店舗紹介</a>
+            <a href="#contact">お問い合わせ</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <small class="copyright">© 2025 土田本舗 All Rights Reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    /* ── ヘッダー スクロール ── */
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ── カルーセル ── */
+    const track   = document.getElementById('carouselTrack');
+    const slides  = track.querySelectorAll('.carousel-slide');
+    const dots    = document.querySelectorAll('.carousel-dot');
+    let current   = 0;
+    let timer;
+
+    function goTo(index) {
+      slides[current].classList.remove('is-active');
+      dots[current].classList.remove('is-active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('is-active');
+      dots[current].classList.add('is-active');
+      track.style.transform = `translateX(-${current * 100}%)`;
+    }
+
+    function startAuto() {
+      timer = setInterval(() => goTo(current + 1), 5000);
+    }
+
+    function resetAuto() {
+      clearInterval(timer);
+      startAuto();
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+    document.getElementById('prevBtn').addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => { goTo(+dot.dataset.index); resetAuto(); });
+    });
+
+    startAuto();
+
+    /* ── スクロールフェードイン ── */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

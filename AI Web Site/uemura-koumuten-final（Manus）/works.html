@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>施工実績 | 上村工務店</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background-color: var(--main-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .work-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .work-card:hover {
+            transform: translateY(-5px);
+        }
+        .work-img {
+            height: 250px;
+        }
+        .work-info {
+            padding: 20px;
+        }
+        .work-category {
+            display: inline-block;
+            background: var(--bg-light);
+            padding: 2px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            color: var(--main-color);
+        }
+        .work-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .work-area {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        @media (max-width: 992px) {
+            .works-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 576px) {
+            .works-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">上村工務店</div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">上村工務店について</a></li>
+                    <li><a href="works.html">施工実績</a></li>
+                    <li><a href="voice.html">お客様の声</a></li>
+                    <li><a href="company.html">会社情報</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>施工実績</h1>
+            </div>
+        </div>
+
+        <section class="works">
+            <div class="container">
+                <div class="works-grid">
+                    <div class="work-card">
+                        <div class="work-img" style="background: url('kitchen.jpg') center/cover no-repeat;"></div>
+                        <div class="work-info">
+                            <span class="work-category">キッチン</span>
+                            <h3 class="work-title">光が差し込む開放的なキッチンリフォーム</h3>
+                            <p class="work-area">大阪市北区</p>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-img" style="background: url('bath.jpg') center/cover no-repeat;"></div>
+                        <div class="work-info">
+                            <span class="work-category">浴室</span>
+                            <h3 class="work-title">築40年の浴室を最新ユニットバスに</h3>
+                            <p class="work-area">大阪市淀川区</p>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-img" style="background: url('living.jpg') center/cover no-repeat;"></div>
+                        <div class="work-info">
+                            <span class="work-category">リビング</span>
+                            <h3 class="work-title">家族が集うリビング全面改装</h3>
+                            <p class="work-area">大阪市西区</p>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-img" style="background: url('washroom.jpg') center/cover no-repeat;"></div>
+                        <div class="work-info">
+                            <span class="work-category">洋面所</span>
+                            <h3 class="work-title">収納力アップの洋面所リフォーム</h3>
+                            <p class="work-area">大阪市阻倉区</p>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-img" style="background: url('exterior.jpg') center/cover no-repeat;"></div>
+                        <div class="work-info">
+                            <span class="work-category">外壁</span>
+                            <h3 class="work-title">外壁塚装で新築のような外観に</h3>
+                            <p class="work-area">大阪市中変区</p>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-img" style="background: url('living.jpg') center/cover no-repeat;"></div>
+                        <div class="work-info">
+                            <span class="work-category">増築</span>
+                            <h3 class="work-title">二世帯に対応した増築工事</h3>
+                            <p class="work-area">大阪市天王寶区</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>上村工務店</h3>
+                    <p>〒530-0001 大阪府大阪市北区梅田3丁目1-1</p>
+                    <p>受付時間：9:00〜18:00（日・祝定休）</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">上村工務店について</a></li>
+                        <li><a href="works.html">施工実績</a></li>
+                        <li><a href="voice.html">お客様の声</a></li>
+                        <li><a href="company.html">会社情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>お問い合わせ</h4>
+                    <span class="tel">06-XXXX-XXXX</span>
+                    <a href="contact.html" class="btn-contact">メールで相談する</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 上村工務店 All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

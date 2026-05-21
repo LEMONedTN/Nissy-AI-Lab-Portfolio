@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Pro | あなたの仕事を変える、AIアシスタント</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Montserrat:wght@700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ========== RESET & BASE ========== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --orange: #E8651A;
+      --orange-light: #F5873A;
+      --orange-dark: #C4510E;
+      --orange-pale: #FFF3EC;
+      --white: #FFFFFF;
+      --text: #333333;
+      --gray-light: #F7F7F7;
+      --gray-mid: #CCCCCC;
+      --gray-border: #E5E5E5;
+      --font-jp: 'Noto Sans JP', sans-serif;
+      --font-en: 'Montserrat', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-jp);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.8;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ========== ANIMATIONS ========== */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(32px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideRight {
+      from {
+        opacity: 0;
+        transform: translateX(-24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.04);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    .anim-fadeup {
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .anim-delay1 {
+      animation-delay: 0.1s;
+    }
+
+    .anim-delay2 {
+      animation-delay: 0.25s;
+    }
+
+    .anim-delay3 {
+      animation-delay: 0.4s;
+    }
+
+    .anim-delay4 {
+      animation-delay: 0.55s;
+    }
+
+    /* ========== HEADER ========== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--gray-border);
+      padding: 0 40px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo {
+      font-family: var(--font-en);
+      font-weight: 900;
+      font-size: 22px;
+      color: var(--orange);
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+
+    .header-logo span {
+      color: var(--text);
+      font-weight: 700;
+      font-size: 13px;
+      margin-left: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .header-cta {
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font-jp);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 24px;
+      border-radius: 24px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .header-cta:hover {
+      background: var(--orange-dark);
+      transform: translateY(-1px);
+    }
+
+    /* ========== SECTION COMMON ========== */
+    section {
+      padding: 96px 40px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--font-en);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--orange);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    .section-title em {
+      color: var(--orange);
+      font-style: normal;
+    }
+
+    .section-lead {
+      font-size: 17px;
+      line-height: 1.9;
+      color: #555;
+      max-width: 680px;
+    }
+
+    /* ========== 01 FIRST VIEW ========== */
+    #firstview {
+      height: 800px;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* グレーの画像プレースホルダー（全面背景） */
+    .fv-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--gray-mid);
+      z-index: 0;
+    }
+
+    /* 画像の上に重ねるグラデーションオーバーレイ */
+    .fv-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.6) 40%,
+          rgba(0, 0, 0, 0.85) 100%);
+      z-index: 1;
+    }
+
+    /* テキストブロック：画像中央に重ねる */
+    .fv-inner {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .fv-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(6px);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .fv-badge::before {
+      content: '✦';
+      font-size: 10px;
+      color: var(--orange-light);
+    }
+
+    .fv-title {
+      font-size: clamp(32px, 5.5vw, 60px);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: var(--white);
+      text-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .fv-title em {
+      color: var(--orange-light);
+      font-style: normal;
+      position: relative;
+    }
+
+    .fv-title em::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--orange-light);
+      opacity: 0.45;
+      border-radius: 2px;
+    }
+
+    .fv-sub {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.9;
+      margin-bottom: 36px;
+      max-width: 520px;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .fv-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--orange);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 16px;
+      padding: 18px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(232, 101, 26, 0.5);
+      transition: all 0.25s;
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    .fv-cta:hover {
+      background: var(--orange-dark);
+      box-shadow: 0 12px 40px rgba(232, 101, 26, 0.6);
+      transform: translateY(-2px);
+      animation: none;
+    }
+
+    .fv-cta-arrow {
+      font-size: 18px;
+      transition: transform 0.2s;
+    }
+
+    .fv-cta:hover .fv-cta-arrow {
+      transform: translateX(4px);
+    }
+
+    .fv-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ========== 02 PAIN (共感) ========== */
+    #pain {
+      background: var(--gray-light);
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .pain-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 28px 28px 28px 68px;
+      position: relative;
+      border: 1px solid var(--gray-border);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .pain-card:hover {
+      border-color: #F5C4A3;
+      box-shadow: 0 4px 20px rgba(232, 101, 26, 0.08);
+    }
+
+    .pain-num {
+      position: absolute;
+      top: 26px;
+      left: 24px;
+      font-family: var(--font-en);
+      font-weight: 900;
+      font-size: 28px;
+      color: var(--gray-mid);
+      line-height: 1;
+    }
+
+    .pain-card p {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .pain-bottom {
+      margin-top: 48px;
+      background: var(--orange-pale);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      padding: 24px 28px;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .pain-bottom em {
+      color: var(--orange);
+      font-style: normal;
+    }
+
+    /* ========== 03 AGITATE (体験談) ========== */
+    #agitate {
+      background: var(--white);
+    }
+
+    .agitate-card {
+      background: var(--gray-light);
+      border-radius: 16px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-top: 48px;
+      border: 1px solid var(--gray-border);
+    }
+
+    .agitate-image-box {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--gray-mid);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 13px;
+    }
+
+    .agitate-quote {
+      border-left: 3px solid var(--orange);
+      padding-left: 24px;
+      font-size: 16px;
+      line-height: 1.9;
+      color: #555;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .agitate-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #888;
+    }
+
+    .agitate-extra {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .agitate-stat {
+      text-align: center;
+      padding: 28px 16px;
+      background: var(--gray-light);
+      border-radius: 12px;
+      border: 1px solid var(--gray-border);
+    }
+
+    .agitate-stat-num {
+      font-family: var(--font-en);
+      font-weight: 900;
+      font-size: 36px;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .agitate-stat-label {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* ========== 04 SOLUTION (解決策) ========== */
+    #solution {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    #solution .section-label {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    #solution .section-title {
+      color: var(--white);
+    }
+
+    #solution .section-title em {
+      color: #FFD9C0;
+    }
+
+    #solution .section-lead {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .solution-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 48px;
+    }
+
+    .solution-image-box {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .solution-desc {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .solution-desc strong {
+      color: #FFD9C0;
+    }
+
+    /* ========== 05 BENEFIT (メリット) ========== */
+    #benefit {
+      background: var(--white);
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .benefit-card {
+      background: var(--white);
+      border: 1px solid var(--gray-border);
+      border-radius: 16px;
+      padding: 36px 28px;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(232, 101, 26, 0.12);
+      border-color: #F5C4A3;
+    }
+
+    .benefit-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--orange-pale);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+      transition: background 0.2s;
+    }
+
+    .benefit-card:hover .benefit-icon {
+      background: var(--orange);
+    }
+
+    .benefit-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .benefit-desc {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.8;
+    }
+
+    /* ========== 06 EVIDENCE (実績・根拠) ========== */
+    #evidence {
+      background: var(--gray-light);
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+      align-items: start;
+    }
+
+    .evidence-list li {
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .evidence-list li:last-child {
+      border-bottom: none;
+    }
+
+    .evidence-check {
+      width: 26px;
+      height: 26px;
+      min-width: 26px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .evidence-text strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .evidence-text span {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.6;
+    }
+
+    .evidence-image-box {
+      width: 100%;
+      aspect-ratio: 1;
+      background: var(--gray-mid);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 13px;
+    }
+
+    /* ========== 07 CONTENTS (機能紹介) ========== */
+    #contents {
+      background: var(--white);
+    }
+
+    .contents-tabs {
+      display: flex;
+      gap: 12px;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+
+    .contents-tab {
+      padding: 10px 22px;
+      border-radius: 24px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 2px solid var(--gray-border);
+      background: transparent;
+      color: #888;
+      transition: all 0.2s;
+      font-family: var(--font-jp);
+    }
+
+    .contents-tab.active,
+    .contents-tab:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: var(--white);
+    }
+
+    .contents-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .contents-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 24px;
+      background: var(--gray-light);
+      border-radius: 12px;
+      border: 1px solid var(--gray-border);
+      transition: border-color 0.2s;
+    }
+
+    .contents-item:hover {
+      border-color: #F5C4A3;
+    }
+
+    .contents-icon {
+      font-size: 28px;
+      min-width: 40px;
+      text-align: center;
+      margin-top: 2px;
+    }
+
+    .contents-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .contents-desc {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.7;
+    }
+
+    /* ========== 08 OFFER (プラン) ========== */
+    #offer {
+      background: var(--gray-light);
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 48px;
+      align-items: start;
+    }
+
+    .offer-card {
+      background: var(--white);
+      border: 2px solid var(--gray-border);
+      border-radius: 20px;
+      padding: 40px 36px;
+      transition: all 0.25s;
+    }
+
+    .offer-card.featured {
+      border-color: var(--orange);
+      background: var(--white);
+      box-shadow: 0 8px 40px rgba(232, 101, 26, 0.15);
+      position: relative;
+    }
+
+    .offer-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--orange);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 18px;
+      border-radius: 12px;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .offer-plan {
+      font-size: 13px;
+      font-weight: 700;
+      color: #888;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .offer-price {
+      font-family: var(--font-en);
+      font-weight: 900;
+      font-size: 48px;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .offer-price sub {
+      font-size: 16px;
+      font-family: var(--font-jp);
+      font-weight: 400;
+      vertical-align: bottom;
+      margin-bottom: 4px;
+    }
+
+    .offer-card.featured .offer-price {
+      color: var(--orange);
+    }
+
+    .offer-period {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 32px;
+    }
+
+    .offer-divider {
+      border: none;
+      border-top: 1px solid var(--gray-border);
+      margin: 0 0 28px;
+    }
+
+    .offer-features li {
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      padding: 8px 0;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .offer-features li::before {
+      content: '✓';
+      color: var(--orange);
+      font-weight: 900;
+      min-width: 16px;
+      margin-top: 1px;
+    }
+
+    .offer-features li.dim {
+      color: #bbb;
+    }
+
+    .offer-features li.dim::before {
+      color: #bbb;
+    }
+
+    .offer-btn {
+      display: block;
+      text-align: center;
+      margin-top: 32px;
+      padding: 16px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-family: var(--font-jp);
+    }
+
+    .offer-btn-free {
+      background: transparent;
+      border: 2px solid var(--gray-border);
+      color: var(--text);
+    }
+
+    .offer-btn-free:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    .offer-btn-pro {
+      background: var(--orange);
+      color: var(--white);
+      box-shadow: 0 6px 24px rgba(232, 101, 26, 0.3);
+    }
+
+    .offer-btn-pro:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(232, 101, 26, 0.4);
+    }
+
+    /* ========== 09 NARROW (限定性) ========== */
+    #narrow {
+      background: var(--white);
+      text-align: center;
+    }
+
+    .narrow-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .narrow-box {
+      background: var(--orange-pale);
+      border: 2px solid #F5C4A3;
+      border-radius: 16px;
+      padding: 48px 40px;
+      margin-top: 48px;
+    }
+
+    .narrow-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .narrow-title em {
+      color: var(--orange);
+      font-style: normal;
+    }
+
+    .narrow-desc {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.9;
+      margin-bottom: 32px;
+    }
+
+    /* ========== 10 ACTION (CTA) ========== */
+    #action {
+      background: linear-gradient(135deg, var(--orange-dark) 0%, var(--orange) 50%, var(--orange-light) 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #action::before {
+      content: 'Claude Pro';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--font-en);
+      font-size: 200px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.06);
+      white-space: nowrap;
+      pointer-events: none;
+      letter-spacing: -8px;
+    }
+
+    .action-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .action-title {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .action-desc {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.9;
+      margin-bottom: 48px;
+    }
+
+    .action-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--white);
+      color: var(--orange);
+      font-size: 18px;
+      font-weight: 900;
+      padding: 20px 48px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 48px rgba(0, 0, 0, 0.2);
+      transition: all 0.25s;
+      font-family: var(--font-jp);
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    .action-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 56px rgba(0, 0, 0, 0.3);
+      animation: none;
+    }
+
+    .action-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: #1A1A1A;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 56px 40px 32px;
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 48px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      font-family: var(--font-en);
+      font-weight: 900;
+      font-size: 24px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 1.7;
+      max-width: 260px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--orange);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.3);
+      text-align: center;
+    }
+
+    /* ========== UTILITY ========== */
+    .text-center {
+      text-align: center;
+    }
+
+    .text-center .section-lead {
+      margin: 0 auto;
+    }
+
+    .divider-orange {
+      width: 48px;
+      height: 3px;
+      background: var(--orange);
+      border-radius: 2px;
+      margin: 0 0 32px;
+    }
+
+    .divider-orange.center {
+      margin: 0 auto 32px;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      section {
+        padding: 72px 24px;
+      }
+
+      header {
+        padding: 0 24px;
+      }
+
+      footer {
+        padding: 48px 24px 24px;
+      }
+
+      .fv-inner,
+      .agitate-card,
+      .solution-intro,
+      .evidence-grid,
+      .offer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fv-inner {
+        padding: 0 24px 56px;
+      }
+
+      .agitate-image-box {
+        aspect-ratio: 3/2;
+      }
+
+      .pain-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .agitate-extra {
+        grid-template-columns: 1fr;
+      }
+
+      .contents-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .benefit-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= HEADER ======= -->
+  <header>
+    <a class="header-logo" href="#">Claude <span>by Anthropic</span></a>
+    <a class="header-cta" href="#action">Claude Pro を試す</a>
+  </header>
+
+  <main>
+
+    <!-- ======= 01 FIRST VIEW ======= -->
+    <section id="firstview">
+      <!-- 背景：画像プレースホルダー（実装時は <img> or background-image に差し替え） -->
+      <div class="fv-bg"
+        style="background-image: url('images/fv_background.png'); background-size: cover; background-position: center;">
+      </div>
+      <!-- グラデーションオーバーレイ -->
+      <div class="fv-overlay"></div>
+      <!-- テキストコンテンツ（画像の上に重なる） -->
+      <div class="fv-inner">
+        <p class="fv-badge anim-fadeup">AIアシスタント、はじめの一歩</p>
+        <h1 class="fv-title anim-fadeup anim-delay1">
+          毎日の業務を、<br><em>もっとラクに。</em><br>もっとスムーズに。
+        </h1>
+        <p class="fv-sub anim-fadeup anim-delay2">
+          Claudeは、あなたの「困った」を素早く解決する<br>
+          AIアシスタントです。文章作成・資料整理・情報調査──<br>
+          面倒な業務をまるごとサポートします。
+        </p>
+        <div class="anim-fadeup anim-delay3">
+          <a class="fv-cta" href="#action">
+            まず無料で試してみる
+            <span class="fv-cta-arrow">→</span>
+          </a>
+          <p class="fv-note">クレジットカード不要 · いつでも解約OK</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 02 PAIN (P - Problem / 共感) ======= -->
+    <section id="pain">
+      <div class="container">
+        <p class="section-label">Pain Point</p>
+        <div class="divider-orange"></div>
+        <h2 class="section-title">こんなお悩み、<br><em>ありませんか？</em></h2>
+        <div class="pain-grid">
+          <div class="pain-card">
+            <span class="pain-num">01</span>
+            <p>メールや報告書の文章を書くのに時間がかかりすぎる。何を書けばいいかわからない</p>
+          </div>
+          <div class="pain-card">
+            <span class="pain-num">02</span>
+            <p>大量の資料をまとめる作業が多く、毎日残業続き。もっと効率化できないかと感じている</p>
+          </div>
+          <div class="pain-card">
+            <span class="pain-num">03</span>
+            <p>AIって便利らしいけど、難しそう・専門知識が必要そうで、自分には無理だと思っている</p>
+          </div>
+          <div class="pain-card">
+            <span class="pain-num">04</span>
+            <p>インターネット検索だと情報が多すぎて、必要なことをまとめるのに余計な時間がかかる</p>
+          </div>
+        </div>
+        <div class="pain-bottom">
+          実は、<em>AIを正しく使うだけ</em>で、これらはほとんど解決できます。<br>しかも、今日から。特別なスキルは必要ありません。
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 03 AGITATE (A - 体験談 / 共感の深掘り) ======= -->
+    <section id="agitate">
+      <div class="container">
+        <p class="section-label">Story</p>
+        <div class="divider-orange"></div>
+        <h2 class="section-title">実は、<em>私もそうでした。</em></h2>
+        <p class="section-lead">
+          「AIは若い人や技術者が使うもの」と思っていた事務職のAさん（48歳）の話です。
+        </p>
+        <div class="agitate-card">
+          <div class="agitate-image-box"
+            style="background-image: url('images/experience_portrait.png'); background-size: cover; background-position: center; border: none; color: transparent;">
+          </div>
+          <div>
+            <p class="agitate-quote">
+              「毎日、議事録・報告書・お客様へのメールに追われて、気づいたら定時を2時間も過ぎていました。AIツールの話は聞いていたけれど、パソコンが得意じゃない自分には無縁かなって……。でも同僚に勧められてClaudeを試したら、本当にびっくりしました。」
+            </p>
+            <p class="agitate-name">── 製造業 事務担当 Aさん（48歳）の体験談より</p>
+          </div>
+        </div>
+        <div class="agitate-extra">
+          <div class="agitate-stat">
+            <p class="agitate-stat-num">約60%</p>
+            <p class="agitate-stat-label">文書作成にかかる<br>時間が削減</p>
+          </div>
+          <div class="agitate-stat">
+            <p class="agitate-stat-num">3日→30分</p>
+            <p class="agitate-stat-label">分厚い資料の<br>要点まとめ作業が</p>
+          </div>
+          <div class="agitate-stat">
+            <p class="agitate-stat-num">初日から</p>
+            <p class="agitate-stat-label">すぐ使える<br>専門知識は不要</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 04 SOLUTION (S - 解決策) ======= -->
+    <section id="solution">
+      <div class="container">
+        <p class="section-label">Solution</p>
+        <div class="divider-orange"></div>
+        <h2 class="section-title">解決策は、<em>Claude</em>です。</h2>
+        <p class="section-lead">
+          Anthropicが開発した、対話型AIアシスタント。<br>
+          「話しかけるだけ」で、複雑な作業をあなたの代わりにこなします。
+        </p>
+        <div class="solution-intro">
+          <div class="solution-image-box"
+            style="background-image: url('images/solution_assistant.png'); background-size: cover; background-position: center; border: none; color: transparent;">
+          </div>
+          <div>
+            <p class="solution-desc">
+              Claudeは、難しい操作は一切不要。<strong>日本語で普通に話しかけるだけ</strong>で、
+              文章の作成・翻訳・要約・アイデア出しなどを瞬時にこなします。<br><br>
+              「メールの返信を考えて」「この資料を3行でまとめて」──
+              まるで<strong>優秀なアシスタントが隣にいる</strong>ような感覚で、毎日の仕事がどんどんラクになります。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 05 BENEFIT (B - メリット) ======= -->
+    <section id="benefit">
+      <div class="container text-center">
+        <p class="section-label">Benefits</p>
+        <div class="divider-orange center"></div>
+        <h2 class="section-title">Claudeで<em>できること</em></h2>
+        <p class="section-lead">
+          事務・総務・営業サポートなど、あらゆる職種のデスクワークをサポートします。
+        </p>
+        <div class="benefit-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">✍️</div>
+            <h3 class="benefit-title">文章・メール作成</h3>
+            <p class="benefit-desc">「こんな内容でメールを書いて」と伝えるだけ。ビジネス文書も議事録も、プロ品質で仕上がります。</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📋</div>
+            <h3 class="benefit-title">資料の要約・整理</h3>
+            <p class="benefit-desc">長い報告書も、貼り付けるだけで瞬時に要点を抽出。上司への報告がスムーズになります。</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🔍</div>
+            <h3 class="benefit-title">情報調査・まとめ</h3>
+            <p class="benefit-desc">複雑な制度や業界知識も、わかりやすく説明してもらえます。検索＆まとめ作業が激減します。</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">💡</div>
+            <h3 class="benefit-title">アイデア出し・企画</h3>
+            <p class="benefit-desc">「企画書のネタが浮かばない」「改善案を考えたい」──一緒にブレストしてくれる頼れる相棒です。</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🌐</div>
+            <h3 class="benefit-title">翻訳・語学サポート</h3>
+            <p class="benefit-desc">英文メールの作成・和訳もお任せ。外国語対応が必要な場面も怖くありません。</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📊</div>
+            <h3 class="benefit-title">データ分析補助</h3>
+            <p class="benefit-desc">数字の読み方・グラフの解釈など、データに不慣れでも分かりやすくサポートしてくれます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 06 EVIDENCE (E - 根拠) ======= -->
+    <section id="evidence">
+      <div class="container">
+        <p class="section-label">Evidence</p>
+        <div class="divider-orange"></div>
+        <h2 class="section-title">なぜClaudeが<em>選ばれるのか</em></h2>
+        <div class="evidence-grid">
+          <ul class="evidence-list">
+            <li>
+              <span class="evidence-check">✓</span>
+              <div class="evidence-text">
+                <strong>安全性・倫理性の高さ</strong>
+                <span>Anthropicは「AIの安全な開発」を最優先に掲げる企業。個人情報の取り扱いにも厳格な基準を設けています。</span>
+              </div>
+            </li>
+            <li>
+              <span class="evidence-check">✓</span>
+              <div class="evidence-text">
+                <strong>自然な日本語対応</strong>
+                <span>日本語での細かいニュアンスも理解。敬語・丁寧語・ビジネス文書も違和感なく仕上がります。</span>
+              </div>
+            </li>
+            <li>
+              <span class="evidence-check">✓</span>
+              <div class="evidence-text">
+                <strong>長文処理が得意</strong>
+                <span>他のAIが苦手とする長い文書も、正確に読み込んで要約・分析できます。</span>
+              </div>
+            </li>
+            <li>
+              <span class="evidence-check">✓</span>
+              <div class="evidence-text">
+                <strong>世界1億人以上が利用</strong>
+                <span>グローバルで多くのビジネスパーソンが信頼して使っている実績があります。</span>
+              </div>
+            </li>
+          </ul>
+          <div class="evidence-image-box"
+            style="background-image: url('images/evidence_trust.png'); background-size: cover; background-position: center; border: none; color: transparent;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 07 CONTENTS (C - 機能詳細) ======= -->
+    <section id="contents">
+      <div class="container">
+        <p class="section-label">Features</p>
+        <div class="divider-orange"></div>
+        <h2 class="section-title">Claude Proで<em>できる体験</em></h2>
+        <p class="section-lead">無料版でも十分に使えますが、Proにすると一段上の体験が広がります。</p>
+        <div class="contents-list">
+          <div class="contents-item">
+            <div class="contents-icon">⚡</div>
+            <div>
+              <p class="contents-title">無制限のメッセージ送信</p>
+              <p class="contents-desc">無料版の制限なしに、何度でも使える。たくさん質問しても大丈夫。</p>
+            </div>
+          </div>
+          <div class="contents-item">
+            <div class="contents-icon">🧠</div>
+            <div>
+              <p class="contents-title">最新・最高性能モデルへのアクセス</p>
+              <p class="contents-desc">より高精度な回答・より高度な思考力のClaudeが使えます。</p>
+            </div>
+          </div>
+          <div class="contents-item">
+            <div class="contents-icon">🖼️</div>
+            <div>
+              <p class="contents-title">画像・ファイルのアップロード</p>
+              <p class="contents-desc">写真や資料をそのまま貼り付けて分析・解説してもらえます。</p>
+            </div>
+          </div>
+          <div class="contents-item">
+            <div class="contents-icon">🌐</div>
+            <div>
+              <p class="contents-title">Web検索機能（最新情報対応）</p>
+              <p class="contents-desc">インターネットで最新情報を調べながら回答。常に最新の情報が手に入ります。</p>
+            </div>
+          </div>
+          <div class="contents-item">
+            <div class="contents-icon">📁</div>
+            <div>
+              <p class="contents-title">プロジェクト機能</p>
+              <p class="contents-desc">業務ごとにClaudeとの会話を整理できる。毎回説明しなくてOK。</p>
+            </div>
+          </div>
+          <div class="contents-item">
+            <div class="contents-icon">📱</div>
+            <div>
+              <p class="contents-title">スマホアプリ対応</p>
+              <p class="contents-desc">外出先でもスマホからすぐに使える。移動中・隙間時間も有効活用。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 08 OFFER (O - プラン比較) ======= -->
+    <section id="offer">
+      <div class="container">
+        <p class="section-label">Pricing</p>
+        <div class="divider-orange"></div>
+        <h2 class="section-title">シンプルな<em>料金プラン</em></h2>
+        <p class="section-lead">まずは無料から。慣れたらProにアップグレードするのがおすすめです。</p>
+        <div class="offer-grid">
+          <div class="offer-card">
+            <p class="offer-plan">Free</p>
+            <p class="offer-price">¥<span>0</span></p>
+            <p class="offer-period">ずっと無料</p>
+            <hr class="offer-divider">
+            <ul class="offer-features">
+              <li>基本的なAI会話機能</li>
+              <li>日本語での文章作成・要約</li>
+              <li>情報整理・質問への回答</li>
+              <li class="dim">無制限メッセージ（制限あり）</li>
+              <li class="dim">最新モデルへのアクセス</li>
+              <li class="dim">ファイル・画像のアップロード</li>
+              <li class="dim">Web検索・最新情報対応</li>
+            </ul>
+            <a class="offer-btn offer-btn-free" href="#">無料で始める</a>
+          </div>
+          <div class="offer-card featured">
+            <span class="offer-badge">✦ おすすめ</span>
+            <p class="offer-plan">Pro</p>
+            <p class="offer-price">¥<span>3,000</span><sub>/月</sub></p>
+            <p class="offer-period">※税別 · いつでも解約可能</p>
+            <hr class="offer-divider">
+            <ul class="offer-features">
+              <li>基本的なAI会話機能</li>
+              <li>日本語での文章作成・要約</li>
+              <li>情報整理・質問への回答</li>
+              <li>無制限メッセージ送信</li>
+              <li>最新・最高性能モデル利用</li>
+              <li>ファイル・画像のアップロード</li>
+              <li>Web検索・最新情報対応</li>
+            </ul>
+            <a class="offer-btn offer-btn-pro" href="#action">Claude Pro を始める →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 09 NARROW (N - 限定・背中押し) ======= -->
+    <section id="narrow">
+      <div class="narrow-inner">
+        <p class="section-label" style="text-align:center;">Now</p>
+        <div class="divider-orange center"></div>
+        <h2 class="section-title" style="text-align:center;">AIを使いこなす人と<br><em>差がついてしまう前に。</em></h2>
+        <div class="narrow-box">
+          <p class="narrow-title">あなたの職場の隣の人も、<em>もう使い始めているかもしれません。</em></p>
+          <p class="narrow-desc">
+            AIの活用は、今や特別なスキルではなく「ビジネスの基礎力」になりつつあります。<br>
+            難しく考える必要はありません。まず試してみること──それが最初の一歩です。<br><br>
+            Claudeは<strong>今日から・無料で・普通の日本語</strong>で使い始められます。
+          </p>
+          <a class="fv-cta" href="#action" style="display:inline-flex; margin: 0 auto;">
+            今すぐ無料で体験する
+            <span class="fv-cta-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 10 ACTION (A - CTA) ======= -->
+    <section id="action">
+      <div class="action-inner">
+        <p class="section-label" style="color:rgba(255,255,255,0.7); text-align:center;">Get Started</p>
+        <h2 class="action-title">さあ、今日から<br>仕事を変えよう。</h2>
+        <p class="action-desc">
+          Claudeを使えば、あなたの毎日がもっとラクに・もっとスムーズになります。<br>
+          まずは無料で始めて、違いを実感してください。
+        </p>
+        <a class="action-cta" href="https://claude.ai/upgrade" target="_blank">
+          Claude Pro を試してみる →
+        </a>
+        <p class="action-note">まずは無料プランからでもOK · いつでもキャンセル可能</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <p class="footer-logo">Claude</p>
+          <p class="footer-tagline">Anthropicが開発した、安全で信頼性の高いAIアシスタントです。</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">利用規約</a>
+          <a href="#">お問い合わせ</a>
+          <a href="https://anthropic.com" target="_blank">Anthropic</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Anthropic, PBC. All rights reserved. · このページはデモ目的で作成されたLPです。
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll Animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('anim-fadeup');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.benefit-card, .pain-card, .contents-item, .agitate-stat, .evidence-list li').forEach(el => {
+      el.style.opacity = '0';
+      observer.observe(el);
+    });
+
+    // Smooth reveal for section headings
+    const headingObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeUp 0.6s ease both';
+          headingObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.section-title, .section-label, .divider-orange').forEach(el => {
+      headingObserver.observe(el);
+    });
+  </script>
+
+</body>
+
+</html>

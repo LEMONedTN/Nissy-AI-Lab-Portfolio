@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>天来 Tenrai｜本物の一杯を、あなたへ</title>
+  <meta name="description" content="天来（Tenrai）は、厳選素材と20年の技が生み出す渾身の一杯をお届けするラーメン専門店です。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        天来
+        <span>TENRAI RAMEN</span>
+      </a>
+      <nav class="global-nav" id="globalNav">
+        <ul>
+          <li><a href="index.html" class="active">TOP</a></li>
+          <li><a href="kodawari.html">こだわり</a></li>
+          <li><a href="menu.html">メニュー</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-label">AUTHENTIC RAMEN</span>
+      <h1 class="hero-title">一杯に、魂を込めて。</h1>
+      <p class="hero-subtitle">
+        素材と向き合い、火と語り、時間をかけて辿り着いた<br>
+        天来だけの、この味がある。
+      </p>
+      <a href="menu.html" class="btn-primary">メニューを見る</a>
+    </div>
+  </section>
+
+  <!-- ============ こだわり紹介 ============ -->
+  <section class="section section-mid">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">OUR STORY</span>
+        <h2 class="section-title">妥協なき、天来のこだわり</h2>
+        <p class="section-sub">毎朝仕込むスープ、丁寧に打つ麺、産地直送の素材。<br>すべては、あなたの「うまい」のために。</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- こだわり1 -->
+      <div class="kodawari-block">
+        <div class="kodawari-image" style="background-image: url('img/index-kodawari-soup.jpg');"></div>
+        <div class="kodawari-text">
+          <span class="section-label">SOUP</span>
+          <h3>12時間煮込む、黄金のスープ</h3>
+          <p>
+            鹿児島産黒豚の骨を中心に、国産鶏ガラ・昆布・煮干しを加えた複雑な旨みのブレンドスープ。
+            毎朝3時から仕込みを始め、12時間以上かけてゆっくりと旨みを引き出します。
+            一切の妥協なく向き合ったその味は、飲み干さずにはいられない濃密な一杯です。
+          </p>
+        </div>
+      </div>
+
+      <!-- こだわり2 -->
+      <div class="kodawari-block reverse">
+        <div class="kodawari-image" style="background-image: url('img/index-kodawari-noodle.jpg');"></div>
+        <div class="kodawari-text">
+          <span class="section-label">NOODLE</span>
+          <h3>スープに寄り添う、自家製麺</h3>
+          <p>
+            毎日工房で打つ自家製麺は、北海道産小麦「春よ恋」を使用。
+            スープの種類に合わせて加水率・太さ・切り歯を変え、
+            最高のマリアージュを追求しています。
+            コシと弾力の絶妙なバランスが、最後の一口まで飽きさせません。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ こだわりページへのCTA ============ -->
+  <section class="section section-dark" style="padding: 48px 0; text-align: center;">
+    <a href="kodawari.html" class="btn-outline">こだわりをもっと見る →</a>
+  </section>
+
+  <!-- ============ メニュー抜粋 ============ -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">MENU</span>
+        <h2 class="section-title">看板メニュー</h2>
+        <p class="section-sub">天来の顔とも言える、渾身の四杯。</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="menu-grid" style="--menu-card-bg: #fff;">
+
+        <div class="menu-card" style="background-color: #f9f5ef; border-color: #ddd;">
+          <div class="menu-card-image" style="background-image: url('images/menu-tonkotsu-shoyu.jpg');"></div>
+          <div class="menu-card-body">
+            <p class="menu-card-name" style="color: #1a1a1a;">天来特製 豚骨醤油ラーメン</p>
+            <p class="menu-card-price">¥1,050</p>
+            <p class="menu-card-desc" style="color: #666;">
+              豚骨の深みと醤油の香ばしさが溶け合う、天来の原点。
+              じっくり煮込んだチャーシュー2枚と半熟煮卵が主役を引き立てます。
+            </p>
+          </div>
+        </div>
+
+        <div class="menu-card" style="background-color: #f9f5ef; border-color: #ddd;">
+          <div class="menu-card-image" style="background-image: url('images/menu-shio-paitan.jpg');"></div>
+          <div class="menu-card-body">
+            <p class="menu-card-name" style="color: #1a1a1a;">塩白湯ラーメン</p>
+            <p class="menu-card-price">¥980</p>
+            <p class="menu-card-desc" style="color: #666;">
+              鶏白湯に瀬戸内の塩を合わせたクリアな美しさ。
+              素材の甘みがまっすぐ伝わる、繊細さと力強さを兼ね備えた一杯。
+            </p>
+          </div>
+        </div>
+
+        <div class="menu-card" style="background-color: #f9f5ef; border-color: #ddd;">
+          <div class="menu-card-image" style="background-image: url('images/menu-kara-miso.jpg');"></div>
+          <div class="menu-card-body">
+            <p class="menu-card-name" style="color: #1a1a1a;">辛味噌らーめん</p>
+            <p class="menu-card-price">¥1,100</p>
+            <p class="menu-card-desc" style="color: #666;">
+              北海道産白味噌と天来特製辛味タレを合わせた、やみつき必至の辛旨スープ。
+              体の芯から温まる、冬の定番メニューです。
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="menu.html" class="btn-primary">全メニューを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ アクセス情報（簡易） ============ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">ACCESS</span>
+        <h2 class="section-title">お店へのアクセス</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="access-simple">
+        <div class="access-simple-map">
+          <iframe src="https://maps.google.co.jp/maps?output=embed&q=大阪府大阪市北区梅田3-1-1+天来ビル&hl=ja&z=16" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="access-simple-info">
+          <h3>天来（Tenrai）</h3>
+          <dl>
+            <div>
+              <dt>住所</dt>
+              <dd>〒530-0001 大阪府大阪市北区梅田3-1-1<br>天来ビル 1F</dd>
+            </div>
+            <div>
+              <dt>電話番号</dt>
+              <dd>06-XXXX-XXXX</dd>
+            </div>
+            <div>
+              <dt>営業時間</dt>
+              <dd>11:00〜15:00 / 18:00〜22:30<br>（L.O. 各30分前）</dd>
+            </div>
+            <div>
+              <dt>定休日</dt>
+              <dd>毎週火曜日・第3水曜日</dd>
+            </div>
+            <div>
+              <dt>アクセス</dt>
+              <dd>JR大阪駅 御堂筋口より徒歩3分</dd>
+            </div>
+          </dl>
+          <div style="margin-top: 32px;">
+            <a href="access.html" class="btn-outline">詳細アクセスを見る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <p class="footer-logo">
+            天来
+            <span>TENRAI RAMEN</span>
+          </p>
+          <p class="footer-address" style="margin-top: 16px;">
+            〒530-0001 大阪府大阪市北区梅田3-1-1 天来ビル 1F<br>
+            TEL: 06-XXXX-XXXX<br>
+            営業時間: 11:00〜15:00 / 18:00〜22:30
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="kodawari.html">こだわり</a></li>
+            <li><a href="menu.html">メニュー</a></li>
+            <li><a href="access.html">アクセス</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">© 2025 天来（Tenrai） All Rights Reserved.</p>
+        <p class="footer-policy"><a href="#">プライバシーポリシー</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ハンバーガーメニュー制御
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('globalNav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
