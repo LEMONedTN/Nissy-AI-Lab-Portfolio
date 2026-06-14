@@ -1,2 +1,11 @@
 .DS_Store
 **/.DS_Store
+
+# 環境変数・秘密情報
+.env
+.env.*
+*.key
+*.pem
+*.p12
+config.local.*
+secrets.*
