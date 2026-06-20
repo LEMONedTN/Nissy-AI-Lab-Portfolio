@@ -1,0 +1,304 @@
+:root {
+    /* カラーパレット */
+    --color-bg: #FDF8F5;
+    /* アイボリーホワイト */
+    --color-accent: #E8A0B0;
+    /* ソフトピンク */
+    --color-accent-hover: #D78B9C;
+    /* ソフトピンク（ホバー用） */
+    --color-text-main: #3B3B3B;
+    /* ダークグレー */
+    --color-text-sub: #888888;
+    /* グレー */
+
+    /* フォント */
+    --font-en: 'Cormorant Garamond', serif;
+    --font-ja: 'Noto Serif JP', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-ja);
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================================
+   Animations
+   ================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero__main-copy,
+.hero__sub-copy,
+.hero__cta-wrapper,
+.hero__image-area {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.hero__main-copy {
+    animation-delay: 0.1s;
+}
+
+.hero__sub-copy {
+    animation-delay: 0.3s;
+}
+
+.hero__cta-wrapper {
+    animation-delay: 0.5s;
+}
+
+.hero__image-area {
+    animation-delay: 0.4s;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ================================
+   Header
+   ================================ */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 5%;
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--font-en);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--color-text-main);
+}
+
+.logo .accent-text {
+    color: var(--color-accent);
+}
+
+/* ボタン共通スタイル */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+}
+
+.btn--header {
+    padding: 12px 28px;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(232, 160, 176, 0.3);
+}
+
+.btn--header:hover {
+    box-shadow: 0 6px 16px rgba(232, 160, 176, 0.4);
+}
+
+/* ================================
+   Hero Section
+   ================================ */
+.hero {
+    width: 100%;
+    height: 100vh;
+    max-height: 800px;
+    background-color: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* テキストエリア（左半分） */
+.hero__text-area {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5% 0 10%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero__main-copy {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    letter-spacing: 0.1em;
+}
+
+.hero__sub-copy {
+    font-size: 16px;
+    color: var(--color-text-sub);
+    margin-bottom: 48px;
+    letter-spacing: 0.05em;
+}
+
+.btn--cta {
+    padding: 20px 48px;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    box-shadow: 0 8px 24px rgba(232, 160, 176, 0.4);
+}
+
+.btn--cta:hover {
+    box-shadow: 0 12px 32px rgba(232, 160, 176, 0.5);
+}
+
+/* 画像エリア（右半分） */
+.hero__image-area {
+    flex: 0 0 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 画像左端のグラデーション（背景色と馴染ませる） */
+.hero__image-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(to right, var(--color-bg) 0%, rgba(253, 248, 245, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* ================================
+   Responsive (スマホ対応)
+   ================================ */
+@media (max-width: 992px) {
+    .hero__main-copy {
+        font-size: 40px;
+    }
+
+    .hero__text-area {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 16px 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .btn--header {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .hero {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .hero__inner {
+        flex-direction: column-reverse;
+        padding-top: 60px;
+        height: auto;
+        /* ヘッダー分の余白 */
+    }
+
+    .hero__text-area {
+        flex: none;
+        width: 100%;
+        padding: 40px 20px 80px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero__main-copy {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .hero__sub-copy {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    .btn--cta {
+        padding: 16px 32px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .hero__image-area {
+        flex: none;
+        width: 100%;
+        height: 50vh;
+        min-height: 400px;
+    }
+
+    /* スマホ時は下から上へのグラデーションに変更 */
+    .hero__image-area::before {
+        width: 100%;
+        height: 30%;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to top, var(--color-bg) 0%, rgba(253, 248, 245, 0) 100%);
+    }
+}

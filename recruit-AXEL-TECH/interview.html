@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>社員インタビュー｜株式会社アクセルテック 採用サイト</title>
+<meta name="description" content="株式会社アクセルテックで働く社員のインタビュー。エンジニア・営業それぞれのリアルな声をご紹介します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="logo en">AXEL<span>TECH</span></a>
+    <nav class="gnav" id="gnav">
+      <ul>
+        <li><a href="index.html">採用TOP</a></li>
+        <li><a href="about.html">会社説明</a></li>
+        <li><a href="interview.html" class="active">社員インタビュー</a></li>
+        <li><a href="roundtable.html">座談会</a></li>
+        <li><a href="workflow.html">1日の仕事の流れ</a></li>
+        <li><a href="workstyle.html">働き方・福利厚生</a></li>
+        <li><a href="recruit.html">採用情報</a></li>
+        <li><a href="recruit.html#form" class="nav-entry">エントリー</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container"><span class="en">INTERVIEW</span><h1>社員インタビュー</h1></div>
+  </section>
+  <nav class="breadcrumb"><ul><li><a href="index.html">採用TOP</a></li><li>＞</li><li>社員インタビュー</li></ul></nav>
+
+  <section class="section">
+    <div class="container">
+      <p class="lead" style="margin-bottom:48px;">職種も入社のきっかけもさまざまなメンバーが活躍しています。気になる社員のカードをクリックすると、詳しいインタビューが開きます。</p>
+      <div class="member-grid">
+
+        <button class="member" data-member="1"><div class="ph"></div><div class="member__body"><div class="member__role">エンジニア / 開発部</div><div class="member__name">佐藤 大輔<span>2018年入社</span></div><div class="member__more en">VIEW INTERVIEW +</div></div></button>
+
+        <button class="member" data-member="2"><div class="ph"></div><div class="member__body"><div class="member__role">営業 / 営業部</div><div class="member__name">鈴木 彩花<span>2020年入社</span></div><div class="member__more en">VIEW INTERVIEW +</div></div></button>
+
+        <button class="member" data-member="3"><div class="ph"></div><div class="member__body"><div class="member__role">エンジニア / 開発部</div><div class="member__name">田中 翔太<span>2021年入社</span></div><div class="member__more en">VIEW INTERVIEW +</div></div></button>
+
+        <button class="member" data-member="4"><div class="ph"></div><div class="member__body"><div class="member__role">プロジェクトマネージャー</div><div class="member__name">高橋 美咲<span>2015年入社</span></div><div class="member__more en">VIEW INTERVIEW +</div></div></button>
+
+        <button class="member" data-member="5"><div class="ph"></div><div class="member__body"><div class="member__role">営業 / 営業部</div><div class="member__name">伊藤 健<span>2019年入社</span></div><div class="member__more en">VIEW INTERVIEW +</div></div></button>
+
+        <button class="member" data-member="6"><div class="ph"></div><div class="member__body"><div class="member__role">エンジニア / 開発部</div><div class="member__name">渡辺 結衣<span>2022年入社</span></div><div class="member__more en">VIEW INTERVIEW +</div></div></button>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta__bg"></div>
+    <div class="container">
+      <h2>あなたの声も、ここに加わるかもしれない。</h2>
+      <p>まずはカジュアル面談から。お気軽にエントリーください。</p>
+      <a href="recruit.html#form" class="btn btn-accent btn-lg">エントリーする</a>
+    </div>
+  </section>
+</main>
+
+<!-- ===== モーダル ===== -->
+<div class="modal" id="interviewModal">
+  <div class="modal__panel">
+    <button class="modal__close" aria-label="閉じる">×</button>
+    <div class="modal__panel-content"></div>
+  </div>
+</div>
+
+<!-- ===== インタビュー内容テンプレート ===== -->
+<template id="member-1">
+  <div class="modal__head"><div class="ph"></div><div><div class="role">エンジニア / 開発部</div><div class="name">佐藤 大輔</div><div class="meta">2018年入社｜情報工学部 卒</div></div></div>
+  <div class="modal__body">
+    <div class="qa"><div class="qa__q">入社の決め手は？</div><div class="qa__a">技術力だけでなく「人を育てる文化」に惹かれました。面接で現場のエンジニアと話したとき、若手にも裁量を渡す姿勢が伝わってきて、ここなら成長できると確信しました。</div></div>
+    <div class="qa"><div class="qa__q">いまの仕事のやりがいは？</div><div class="qa__a">金融系の業務システムの設計を任されています。要件定義から関わるので、自分の提案がそのまま形になる手応えがあります。難しい課題ほど燃えますね。</div></div>
+    <div class="qa"><div class="qa__q">1日の過ごし方を教えてください。</div><div class="qa__a">午前は設計・コーディングに集中し、午後はチームのレビューや若手のサポート。リモートと出社を使い分けて、集中とコミュニケーションのバランスを取っています。</div></div>
+    <div class="qa"><div class="qa__q">今後の目標は？</div><div class="qa__a">テックリードとして、チーム全体の技術力を底上げしたい。後輩が「この人と働きたい」と思える存在になるのが目標です。</div></div>
+  </div>
+</template>
+<template id="member-2">
+  <div class="modal__head"><div class="ph"></div><div><div class="role">営業 / 営業部</div><div class="name">鈴木 彩花</div><div class="meta">2020年入社｜経済学部 卒</div></div></div>
+  <div class="modal__body">
+    <div class="qa"><div class="qa__q">入社の決め手は？</div><div class="qa__a">「技術がわかる営業になれる環境」でした。文系出身でIT未経験でしたが、研修とエンジニアとの距離の近さで、お客様に自信を持って提案できるようになりました。</div></div>
+    <div class="qa"><div class="qa__q">いまの仕事のやりがいは？</div><div class="qa__a">お客様の課題をヒアリングし、エンジニアと一緒に解決策を組み立てる瞬間です。「鈴木さんに任せてよかった」と言われると、本当に嬉しいです。</div></div>
+    <div class="qa"><div class="qa__q">1日の過ごし方を教えてください。</div><div class="qa__a">午前は商談やオンライン打ち合わせ、午後は提案書作成や社内連携。フレックスを活用して、自分のペースで動けるのが助かっています。</div></div>
+    <div class="qa"><div class="qa__q">今後の目標は？</div><div class="qa__a">新規顧客の開拓をリードできる営業になること。ゆくゆくは後輩の育成にも関わっていきたいです。</div></div>
+  </div>
+</template>
+<template id="member-3">
+  <div class="modal__head"><div class="ph"></div><div><div class="role">エンジニア / 開発部</div><div class="name">田中 翔太</div><div class="meta">2021年入社｜理工学部 卒</div></div></div>
+  <div class="modal__body">
+    <div class="qa"><div class="qa__q">入社の決め手は？</div><div class="qa__a">モダンな技術スタックに挑戦できる点です。複数の現場を経験できるので、エンジニアとしての引き出しが一気に増えました。</div></div>
+    <div class="qa"><div class="qa__q">いまの仕事のやりがいは？</div><div class="qa__a">自社SaaSの新機能開発を担当中。ユーザーの反応がダイレクトに返ってくるので、改善のサイクルが楽しいです。</div></div>
+    <div class="qa"><div class="qa__q">1日の過ごし方を教えてください。</div><div class="qa__a">朝会で進捗共有 → 開発に集中 → 夕方にコードレビュー。週1の勉強会で新しい技術をキャッチアップしています。</div></div>
+    <div class="qa"><div class="qa__q">今後の目標は？</div><div class="qa__a">フロントからインフラまで一通り任されるフルスタックエンジニアになることです。</div></div>
+  </div>
+</template>
+<template id="member-4">
+  <div class="modal__head"><div class="ph"></div><div><div class="role">プロジェクトマネージャー</div><div class="name">高橋 美咲</div><div class="meta">2015年入社｜文学部 卒</div></div></div>
+  <div class="modal__body">
+    <div class="qa"><div class="qa__q">入社の決め手は？</div><div class="qa__a">キャリアの幅を広げられると感じたからです。エンジニアからマネジメントへ、本人の希望を尊重してくれる会社です。</div></div>
+    <div class="qa"><div class="qa__q">いまの仕事のやりがいは？</div><div class="qa__a">複数の開発案件を束ね、チームが気持ちよく成果を出せる環境をつくること。プロジェクトの成功はメンバーの笑顔に表れます。</div></div>
+    <div class="qa"><div class="qa__q">1日の過ごし方を教えてください。</div><div class="qa__a">朝はスケジュールと課題の整理、日中は各チームとの調整やお客様対応。在宅勤務で家庭と両立しやすいのも魅力です。</div></div>
+    <div class="qa"><div class="qa__q">今後の目標は？</div><div class="qa__a">より大規模なプロジェクトを成功に導くこと。働きやすいチーム文化を社内に広げたいです。</div></div>
+  </div>
+</template>
+<template id="member-5">
+  <div class="modal__head"><div class="ph"></div><div><div class="role">営業 / 営業部</div><div class="name">伊藤 健</div><div class="meta">2019年入社｜商学部 卒</div></div></div>
+  <div class="modal__body">
+    <div class="qa"><div class="qa__q">入社の決め手は？</div><div class="qa__a">「提案型のセールスがしたい」という想いに合致したからです。売るだけでなく、お客様の事業に踏み込める営業ができています。</div></div>
+    <div class="qa"><div class="qa__q">いまの仕事のやりがいは？</div><div class="qa__a">既存のお客様との信頼関係を深め、新しい案件につなげること。長くお付き合いするほど、貢献できる幅が広がります。</div></div>
+    <div class="qa"><div class="qa__q">1日の過ごし方を教えてください。</div><div class="qa__a">午前に外回りや商談、午後は社内でエンジニアと案件の擦り合わせ。チームで動くので一人で抱え込まずに済みます。</div></div>
+    <div class="qa"><div class="qa__q">今後の目標は？</div><div class="qa__a">営業チームのリーダーとして、メンバーが成果を出せる仕組みづくりに挑戦したいです。</div></div>
+  </div>
+</template>
+<template id="member-6">
+  <div class="modal__head"><div class="ph"></div><div><div class="role">エンジニア / 開発部</div><div class="name">渡辺 結衣</div><div class="meta">2022年入社｜情報科学部 卒</div></div></div>
+  <div class="modal__body">
+    <div class="qa"><div class="qa__q">入社の決め手は？</div><div class="qa__a">新人研修とメンター制度が手厚いことです。未経験の領域でも、先輩が伴走してくれる安心感がありました。</div></div>
+    <div class="qa"><div class="qa__q">いまの仕事のやりがいは？</div><div class="qa__a">はじめて担当した機能がリリースされ、実際に使われたときの感動は忘れられません。日々できることが増えていく実感があります。</div></div>
+    <div class="qa"><div class="qa__q">1日の過ごし方を教えてください。</div><div class="qa__a">午前は実装、午後はメンターとの1on1や勉強会。わからないことをすぐ相談できる雰囲気が、成長を後押ししてくれます。</div></div>
+    <div class="qa"><div class="qa__q">今後の目標は？</div><div class="qa__a">まずは一人前のエンジニアとして、チームに頼られる存在になること。いつか後輩のメンターになりたいです。</div></div>
+  </div>
+</template>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div><a href="index.html" class="logo en">AXEL<span>TECH</span></a><p class="footer__lead">技術で、未来をアクセラレートする。株式会社アクセルテック 採用サイト。</p></div>
+      <div class="footer__nav">
+        <div><h4>CONTENTS</h4><ul><li><a href="about.html">会社説明</a></li><li><a href="interview.html">社員インタビュー</a></li><li><a href="roundtable.html">座談会</a></li><li><a href="workflow.html">1日の仕事の流れ</a></li></ul></div>
+        <div><h4>RECRUIT</h4><ul><li><a href="workstyle.html">働き方・福利厚生</a></li><li><a href="recruit.html">採用情報</a></li><li><a href="recruit.html#form">エントリー</a></li></ul></div>
+        <div><h4>FOLLOW</h4><ul><li><a href="#">X (Twitter)</a></li><li><a href="#">Instagram</a></li><li><a href="#">YouTube</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer__bottom"><span>© 2025 株式会社アクセルテック All Rights Reserved.</span><a href="#">プライバシーポリシー</a></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
