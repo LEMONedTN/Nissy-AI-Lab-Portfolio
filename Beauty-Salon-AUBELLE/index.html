@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUBELLE（オーベル）| 30代・40代の肌に寄り添うビューティーサロン</title>
+<meta name="description" content="AUBELLE（オーベル）は、30代・40代の肌悩みに向き合うビューティーサロン。代表 早川由紀が届ける、頑張らないスキンケア。今すぐLINEで無料相談。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<!-- ============================================
+     Header
+     ============================================ -->
+<header class="header">
+  <div class="container header__inner">
+    <div class="logo">AUBELLE</div>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="#concept">コンセプト</a></li>
+        <li><a href="#lineup">アイテム</a></li>
+        <li><a href="#voice">お客様の声</a></li>
+        <li><a href="#offer">選ばれる理由</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+      </ul>
+      <a href="#cta" class="btn btn--primary header__cta">無料相談する</a>
+    </nav>
+    <button class="hamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============================================
+     FV Carousel（3枚）
+     ============================================ -->
+<section class="fv" id="fv">
+  <div class="fv__track" id="fvTrack">
+    <div class="fv__slide">
+      <img class="ph" src="images/fv_carousel_1.jpg" alt="鏡を優しく見つめながら頬に触れる30代後半の日本人女性">
+      <div class="fv__overlay">
+        <span class="fv__sub">AUBELLE BEAUTY SALON</span>
+        <p class="fv__catch">その肌に、<br>もう一度、夜明けを。</p>
+      </div>
+    </div>
+    <div class="fv__slide">
+      <img class="ph" src="images/fv_carousel_2.jpg" alt="窓辺で微笑む健康的な肌の40代前後の日本人女性">
+      <div class="fv__overlay">
+        <span class="fv__sub">FOR 30&#39;S &amp; 40&#39;S SKIN</span>
+        <p class="fv__catch">重ねてきた年月には、<br>重ねてきた肌悩みがある。</p>
+      </div>
+    </div>
+    <div class="fv__slide">
+      <img class="ph" src="images/fv_carousel_3.jpg" alt="朝の光の中で優しく微笑む40代半ばの美しい肌の日本人女性">
+      <div class="fv__overlay">
+        <span class="fv__sub">HAJIMARI WA HANBUN</span>
+        <p class="fv__catch">諦めていた肌悩みが、<br>変わりはじめる。</p>
+      </div>
+    </div>
+  </div>
+  <div class="fv__controls">
+    <button class="fv__arrow" id="fvPrev" aria-label="前のスライド">‹</button>
+    <div class="fv__dots" id="fvDots">
+      <span class="fv__dot is-active" data-index="0"></span>
+      <span class="fv__dot" data-index="1"></span>
+      <span class="fv__dot" data-index="2"></span>
+    </div>
+    <button class="fv__arrow" id="fvNext" aria-label="次のスライド">›</button>
+  </div>
+</section>
+
+<!-- ============================================
+     P: Problem
+     ============================================ -->
+<section class="section section--white problem" id="concept">
+  <div class="container center">
+    <span class="eyebrow">PROBLEM</span>
+    <h2 class="section-heading">鏡の前で、時間だけが過ぎていく</h2>
+    <p class="problem__lines">
+      30代を過ぎたころから、<br>
+      肌がなんだか、いつもと違う。<br><br>
+      化粧のノリが悪い朝。<br>
+      乾燥が気になる夕方。<br><br>
+      「そろそろ、ちゃんと向き合わなきゃ」<br>
+      そう思いながら、<br>
+      今日もつい、後回しにしていませんか。
+    </p>
+  </div>
+</section>
+
+<!-- 写真ブリッジ -->
+<div class="strip">
+  <img class="ph" src="images/strip_1.jpg" alt="化粧水を優しく手になじませる日本人女性の手元">
+  <img class="ph" src="images/strip_2.jpg" alt="大理石の洗面台に置かれた上品なスキンケアボトルとドライフラワー">
+  <img class="ph" src="images/strip_3.jpg" alt="目を優しく閉じてリラックスする30〜40代日本人女性の横顔">
+</div>
+
+<!-- ============================================
+     A: Affinity
+     ============================================ -->
+<section class="section section--soft">
+  <div class="container split">
+    <div class="split__media">
+      <img class="ph" src="images/founder_large.jpg" alt="AUBELLE代表 早川由紀のポートレート">
+    </div>
+    <div class="split__text">
+      <span class="eyebrow">AFFINITY</span>
+      <h2 class="section-heading">わたしも、同じ鏡を<br>見てきました</h2>
+      <p>はじめまして。AUBELLE代表の早川由紀です。</p>
+      <p>わたし自身、30代半ばで肌の変化に戸惑い、何を試しても手応えが感じられない時期がありました。</p>
+      <p>高い化粧品を買っても、情報に振り回されても、肌は正直に応えてくれない。そんな経験から生まれたのが、AUBELLEです。</p>
+      <p>特別なことをする必要はありません。あなたの毎日に、そっと寄り添うケアを届けたい。それが、わたしたちの願いです。</p>
+      <div class="profile-card">
+        <img class="ph" src="images/founder_small.jpg" alt="早川由紀">
+        <div>
+          <div class="profile-card__name">早川 由紀</div>
+          <div class="profile-card__role">FOUNDER, AUBELLE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     S: Solution
+     ============================================ -->
+<section class="section section--pink">
+  <span class="watermark">SOLUTION</span>
+  <div class="container center">
+    <span class="eyebrow">SOLUTION</span>
+    <h2 class="section-heading">AUBELLEが届けるのは、<br>&#34;頑張らない&#34;スキンケア</h2>
+    <p class="section-lead center">
+      特別な工程も、難しい手順も必要ありません。毎日の習慣に、ひとつ加えるだけ。<br>
+      肌本来の力を引き出すための、シンプルな処方にこだわりました。
+    </p>
+
+    <div class="cards-3">
+      <div class="card">
+        <img class="ph" src="images/solution_1.jpg" alt="大理石の上に美しく並べられた天然由来の美容液成分とハーブ">
+        <div class="card__body">
+          <span class="card__num">01</span>
+          <h3 class="card__title">厳選された天然由来成分</h3>
+          <p class="card__text">肌にやさしい原料だけを選び抜き、負担をかけずに整えます。</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="ph" src="images/solution_2.jpg" alt="シンプルなノートやドライフラワーと一緒に並べられたスキンケアボトル">
+        <div class="card__body">
+          <span class="card__num">02</span>
+          <h3 class="card__title">肌のリズムに寄り添う設計</h3>
+          <p class="card__text">年齢とともに変わる肌の状態に合わせて、処方を見直し続けています。</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="ph" src="images/solution_3.jpg" alt="バスルームで1本の美容液ボトルを優しく手にする様子">
+        <div class="card__body">
+          <span class="card__num">03</span>
+          <h3 class="card__title">続けやすいシンプルケア</h3>
+          <p class="card__text">工程を最小限にすることで、忙しい毎日でも無理なく続けられます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     B: Benefit
+     ============================================ -->
+<section class="section section--white">
+  <div class="container split split--reverse">
+    <div class="split__media">
+      <img class="ph" src="images/benefit.jpg" alt="朝、明るい鏡の前で自信に満ちた笑顔を見せる40代の日本人女性">
+    </div>
+    <div class="split__text">
+      <span class="eyebrow">BENEFIT</span>
+      <h2 class="section-heading">1ヶ月後、鏡を見るのが<br>楽しみになる</h2>
+      <p>乾燥知らずの、もちっとした肌へ。メイクのノリが変わり、朝の支度時間が、ちょっと特別なものになっていく。</p>
+      <p>肌が変わると、気持ちまで前向きになれる。それが、AUBELLEを選ぶ理由です。</p>
+      <p>「今日はどんな自分に会えるだろう」。そんな朝を、AUBELLEと一緒に。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     E: Evidence
+     ============================================ -->
+<section class="section section--soft" id="voice">
+  <div class="container center">
+    <span class="eyebrow">EVIDENCE</span>
+    <h2 class="section-heading">数字が語る、AUBELLEの実感</h2>
+  </div>
+
+  <div class="container stats">
+    <div>
+      <div class="stat__num">92<span>%</span></div>
+      <div class="stat__label">継続利用率</div>
+    </div>
+    <div>
+      <div class="stat__num">8<span>ヶ月</span></div>
+      <div class="stat__label">平均継続期間</div>
+    </div>
+    <div>
+      <div class="stat__num">4.8<span>/5.0</span></div>
+      <div class="stat__label">お客様満足度</div>
+    </div>
+  </div>
+
+  <div class="container testimonials">
+    <div class="testimonial">
+      <p class="testimonial__quote">「肌のトーンが明るくなったねと言われるようになりました。」</p>
+      <div class="testimonial__who">
+        <img class="ph" src="images/review_1.jpg" alt="42歳 / 会社員のお客様">
+        <div class="testimonial__meta">42歳 / 会社員</div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial__quote">「難しい手順がないから、ちゃんと続けられています。」</p>
+      <div class="testimonial__who">
+        <img class="ph" src="images/review_2.jpg" alt="38歳 / 主婦のお客様">
+        <div class="testimonial__meta">38歳 / 主婦</div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial__quote">「無料相談で肌の状態を丁寧に聞いてもらえて安心できました。」</p>
+      <div class="testimonial__who">
+        <img class="ph" src="images/review_3.jpg" alt="45歳 / 自営業のお客様">
+        <div class="testimonial__meta">45歳 / 自営業</div>
+      </div>
+    </div>
+  </div>
+  <p class="container disclaimer">※効果には個人差があります。掲載の感想は個人の体験に基づくものです。</p>
+</section>
+
+<!-- ============================================
+     C: Contents（LINE UP）
+     ============================================ -->
+<section class="section terrazzo" id="lineup">
+  <div class="container center">
+    <span class="eyebrow">CONTENTS</span>
+    <h2 class="section-heading">AUBELLE LINE UP</h2>
+    <p class="section-lead center">肌の状態やお悩みに合わせて選べる、AUBELLEのアイテムたち。</p>
+  </div>
+
+  <div class="container">
+    <div class="lineup-cat">
+      <div class="lineup-cat__title">Skin Care</div>
+      <div class="product-grid">
+        <div class="product">
+          <img class="ph" src="images/product_1.jpg" alt="モイストリペア乳液">
+          <div class="product__body">
+            <div class="product__name">モイストリペア乳液</div>
+            <div class="product__en">MOIST REPAIR MILK</div>
+          </div>
+        </div>
+        <div class="product">
+          <img class="ph" src="images/product_2.jpg" alt="ブライトニングセラム">
+          <div class="product__body">
+            <div class="product__name">ブライトニングセラム</div>
+            <div class="product__en">BRIGHTENING SERUM</div>
+          </div>
+        </div>
+        <div class="product">
+          <img class="ph" src="images/product_3.jpg" alt="クリアローション">
+          <div class="product__body">
+            <div class="product__name">クリアローション</div>
+            <div class="product__en">CLEAR LOTION</div>
+          </div>
+        </div>
+        <div class="product">
+          <img class="ph" src="images/product_4.jpg" alt="リンクルケアクリーム">
+          <div class="product__body">
+            <div class="product__name">リンクルケアクリーム</div>
+            <div class="product__en">WRINKLE CARE CREAM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lineup-cat">
+      <div class="lineup-cat__title">Special Care</div>
+      <div class="product-grid">
+        <div class="product">
+          <img class="ph" src="images/product_5.jpg" alt="ナイトリペアマスク">
+          <div class="product__body">
+            <div class="product__name">ナイトリペアマスク</div>
+            <div class="product__en">NIGHT REPAIR MASK</div>
+          </div>
+        </div>
+        <div class="product">
+          <img class="ph" src="images/product_6.jpg" alt="ディープモイストオイル">
+          <div class="product__body">
+            <div class="product__name">ディープモイストオイル</div>
+            <div class="product__en">DEEP MOIST OIL</div>
+          </div>
+        </div>
+        <div class="product">
+          <img class="ph" src="images/product_7.jpg" alt="アイケアバーム">
+          <div class="product__body">
+            <div class="product__name">アイケアバーム</div>
+            <div class="product__en">EYE CARE BALM</div>
+          </div>
+        </div>
+        <div class="product">
+          <img class="ph" src="images/product_8.jpg" alt="トライアル3日セット">
+          <div class="product__body">
+            <div class="product__name">トライアル3日セット</div>
+            <div class="product__en">TRIAL 3 DAYS SET</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     O: Offer（サイド縦タブ）
+     ============================================ -->
+<section class="offer" id="offer">
+  <div class="offer__tab">OFFER</div>
+  <div class="offer__content">
+    <div class="offer__content-inner">
+      <span class="eyebrow eyebrow--light">はじめての方へ</span>
+      <h2 class="section-heading">特別なご案内があります</h2>
+      <p>LINEのご登録＆無料相談で、AUBELLEのトライアルセット（3日分）をプレゼント。あなたの肌に合わせた無料肌診断も、一緒に受けられます。</p>
+      <ul class="offer__list">
+        <li>トライアルセット（3日分）プレゼント</li>
+        <li>専門スタッフによる無料肌診断</li>
+        <li>LINEでのご相談は24時間受付</li>
+      </ul>
+      <a href="#cta" class="btn btn--accent">無料相談に申し込む<span class="btn__arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     N: Narrowing
+     ============================================ -->
+<div class="narrow-bar">
+  <div class="container narrow-bar__inner">
+    <span class="narrow-bar__badge">NOTICE</span>
+    <p class="narrow-bar__text">無料相談は、お一人おひとり丁寧にご対応するため<strong>毎月30名様限定</strong>とさせていただいております。</p>
+  </div>
+</div>
+
+<!-- ============================================
+     FAQ
+     ============================================ -->
+<section class="section section--white" id="faq">
+  <div class="container center">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="section-heading">よくある質問</h2>
+  </div>
+  <div class="container faq">
+    <div class="faq-item">
+      <div class="faq-item__q"><span class="mark">Q</span><span>敏感肌でも使用できますか？</span></div>
+      <div class="faq-item__a"><span class="mark">A</span><span>肌への負担を抑えた処方ですが、ご不安な場合は無料相談時に肌質を確認させていただき、最適なアイテムをご提案します。</span></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-item__q"><span class="mark">Q</span><span>無料相談はどのように行われますか？</span></div>
+      <div class="faq-item__a"><span class="mark">A</span><span>LINEでの簡単なチャット形式です。肌のお悩みをお伺いした上で、あなたに合ったケア方法をご提案いたします。</span></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-item__q"><span class="mark">Q</span><span>しつこい勧誘はありますか？</span></div>
+      <div class="faq-item__a"><span class="mark">A</span><span>ご相談はあくまでカウンセリングが目的です。無理なご案内は一切行っておりませんので、安心してご利用ください。</span></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-item__q"><span class="mark">Q</span><span>トライアルセットだけの利用は可能ですか？</span></div>
+      <div class="faq-item__a"><span class="mark">A</span><span>はい、まずはトライアルセットからお試しいただけます。継続のご案内はお客様のご意思を尊重しています。</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     A: Action（Closing CTA）
+     ============================================ -->
+<section class="section section--deep closing" id="cta">
+  <div class="container">
+    <span class="eyebrow eyebrow--light">AUBELLE BEAUTY SALON</span>
+    <div class="closing__logo">AUBELLE</div>
+    <h2 class="closing__heading">さあ、肌の夜明けを<br>はじめよう。</h2>
+    <!-- LINE公式アカウントの友だち追加URLに差し替えてください -->
+    <a href="https://line.me/R/ti/p/@aubelle" class="btn btn--primary" target="_blank" rel="noopener">今すぐ無料相談する（LINE）<span class="btn__arrow">→</span></a>
+    <p class="closing__note">友だち追加は30秒で完了します。しつこい営業は一切行いません。</p>
+  </div>
+</section>
+
+<!-- ============================================
+     Footer
+     ============================================ -->
+<footer class="footer">
+  <div class="container footer__top">
+    <div>
+      <div class="footer__logo">AUBELLE</div>
+      <p class="footer__tagline">30代・40代の肌に寄り添う、ビューティーサロン。頑張らないスキンケアで、毎日に夜明けを。</p>
+      <div class="footer__sns">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="LINE">LN</a>
+        <a href="#" aria-label="X">X</a>
+      </div>
+    </div>
+    <div class="footer__cols">
+      <div class="footer__col">
+        <div class="footer__col-title">MENU</div>
+        <a href="#concept">コンセプト</a>
+        <a href="#lineup">アイテム</a>
+        <a href="#voice">お客様の声</a>
+        <a href="#offer">選ばれる理由</a>
+        <a href="#faq">よくある質問</a>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">INFO</div>
+        <span>運営：AUBELLE / 早川由紀</span>
+        <span>お問い合わせはLINEにて</span>
+      </div>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>&copy; 2026 AUBELLE All Rights Reserved.</span>
+    <span>プライバシーポリシー</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var track = document.getElementById('fvTrack');
+  var dots = document.querySelectorAll('.fv__dot');
+  var slides = document.querySelectorAll('.fv__slide');
+  var index = 0;
+  var total = slides.length;
+  var timer;
+
+  function goTo(i) {
+    index = (i + total) % total;
+    track.style.transform = 'translateX(-' + (index * 100) + '%)';
+    dots.forEach(function (d, di) {
+      d.classList.toggle('is-active', di === index);
+    });
+  }
+
+  function next() { goTo(index + 1); }
+  function prev() { goTo(index - 1); }
+
+  function startAuto() {
+    clearInterval(timer);
+    timer = setInterval(next, 5500);
+  }
+
+  document.getElementById('fvNext').addEventListener('click', function () {
+    next();
+    startAuto();
+  });
+  document.getElementById('fvPrev').addEventListener('click', function () {
+    prev();
+    startAuto();
+  });
+  dots.forEach(function (d) {
+    d.addEventListener('click', function () {
+      goTo(parseInt(d.dataset.index, 10));
+      startAuto();
+    });
+  });
+
+  goTo(0);
+  startAuto();
+
+  // hamburger -> simple: scroll to nav anchor list at bottom (mobile fallback: show nav inline)
+  var hamburger = document.querySelector('.hamburger');
+  var navList = document.querySelector('.nav__list');
+  var headerCta = document.querySelector('.header__cta');
+  hamburger.addEventListener('click', function () {
+    var isOpen = navList.style.display === 'flex';
+    navList.style.display = isOpen ? 'none' : 'flex';
+    headerCta.style.display = isOpen ? 'none' : 'inline-flex';
+    navList.style.flexDirection = 'column';
+    navList.style.position = 'absolute';
+    navList.style.top = '64px';
+    navList.style.left = '0';
+    navList.style.right = '0';
+    navList.style.background = '#FBF9F5';
+    navList.style.padding = '24px';
+    navList.style.gap = '18px';
+    navList.style.borderTop = '1px solid #DFD5C8';
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>北野スクール｜中学生・高校生の受験と定期テストを本気で支える個別指導塾</title>
+<meta name="description" content="北野スクールは、中学生・高校生の受験対策と定期テスト対策を一人ひとりに合わせて指導する個別指導塾です。志望校合格まで、専任の講師と担任がご家庭に寄り添います。まずは無料相談から。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<!-- ============ Header ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">北野スクール<span>KITANO SCHOOL</span></a>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="#point">選ばれる理由</a></li>
+        <li><a href="#course">学年別コース</a></li>
+        <li><a href="#voice">合格の声</a></li>
+        <li><a href="#flow">ご利用の流れ</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="header-cta">今すぐ無料相談する</a>
+  </div>
+</header>
+
+<!-- ============ Hero ============ -->
+<section class="hero">
+  <div class="hero-carousel" id="heroCarousel">
+    <div class="hero-slide is-active"><img src="images/carousel-lesson.png" alt="生徒と講師が対話する授業風景" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="hero-slide"><img src="images/carousel-student.png" alt="明るい自然光の教室で学ぶ生徒" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="hero-slide"><img src="images/carousel-meeting.png" alt="担任と保護者の面談風景" style="width:100%;height:100%;object-fit:cover;"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <button class="hero-arrow prev" id="heroPrev" type="button" aria-label="前の画像へ">&#10094;</button>
+  <button class="hero-arrow next" id="heroNext" type="button" aria-label="次の画像へ">&#10095;</button>
+  <div class="hero-inner">
+    <div class="hero-body">
+      <span class="hero-badge">中学生・高校生の受験対策専門</span>
+      <h1>受験までの一日一日を、<br><em>合格</em>につながる学びに変える。</h1>
+      <p class="hero-lead">「このままの勉強で、志望校に届くのだろうか」。そんな保護者の不安に、北野スクールは正面から向き合います。お子さま一人ひとりの現在地を見極め、合格までの道すじを一緒に描きます。</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-cta"><span class="sub">入力はカンタン・費用は一切かかりません</span>今すぐ無料相談する</a>
+      </div>
+      <p class="hero-note">無理な勧誘は一切いたしません。まずはお子さまの状況をお聞かせください。</p>
+    </div>
+  </div>
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot is-active" type="button" aria-label="1枚目を表示"></button>
+    <button class="hero-dot" type="button" aria-label="2枚目を表示"></button>
+    <button class="hero-dot" type="button" aria-label="3枚目を表示"></button>
+  </div>
+</section>
+
+<!-- ============ 悩み共感 ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">FOR PARENTS</span>
+      <h2>こんなお悩み、<span class="accent">ありませんか</span></h2>
+      <p>受験を控えたご家庭から、私たちがよくいただくご相談です。</p>
+    </div>
+    <div class="worry-list">
+      <div class="worry-item">
+        <p class="q">受験まで時間がない</p>
+        <p>受験が近づいてきたのに、何から手をつければいいか分からず、焦りだけが募っている。</p>
+      </div>
+      <div class="worry-item">
+        <p class="q">学びを加速させたい</p>
+        <p>塾には通っているものの、成績が伸び悩んでいる。今のやり方で本当に間に合うのか不安。</p>
+      </div>
+      <div class="worry-item">
+        <p class="q">志望校に合格させたい</p>
+        <p>子どもが本気で目指す志望校がある。親としてできる限りのことをしてあげたい。</p>
+      </div>
+    </div>
+    <p class="worry-bridge">その不安、<span class="accent">北野スクールが一緒に解決します。</span></p>
+  </div>
+</section>
+
+<!-- ============ CTA 1 ============ -->
+<section class="cta-band">
+  <h2>まずは、お子さまの今の学習状況を聞かせてください</h2>
+  <p>ご相談は無料です。合格までにやるべきことが、きっと見えてきます。</p>
+  <a href="#contact" class="btn btn-cta"><span class="sub">しつこい勧誘はありません</span>今すぐ無料相談する</a>
+</section>
+
+<!-- ============ ポイント ============ -->
+<section class="section section-alt" id="point">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">OUR STRENGTH</span>
+      <h2>北野スクールが<span class="accent">選ばれる5つの理由</span></h2>
+      <p>「信頼できる、でも親しみやすい」。ご家庭が安心して子どもを預けられる塾であり続けます。</p>
+    </div>
+
+    <div class="point-block">
+      <div class="point-visual"><img src="images/point-lesson.png" alt="マンツーマン指導の様子" style="width:100%;height:260px;object-fit:cover;"></div>
+      <div class="point-body">
+        <span class="point-num">POINT 01</span>
+        <h3>完全マンツーマン指導で、わかるまで向き合います</h3>
+        <ul>
+          <li>お子さまのペースに合わせた専用カリキュラムで学習を進めます。</li>
+          <li>わからないところをその場で質問できるから、苦手を持ち越しません。</li>
+          <li>集団授業では埋もれてしまう「つまずき」を見逃しません。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="point-block reverse">
+      <div class="point-visual"><img src="images/point-meeting.png" alt="担任と保護者の面談風景" style="width:100%;height:260px;object-fit:cover;"></div>
+      <div class="point-body">
+        <span class="point-num">POINT 02</span>
+        <h3>専任の担任が、学習計画から進路までサポートします</h3>
+        <ul>
+          <li>授業を担当する講師に加え、専任の担任がご家庭を継続的にフォローします。</li>
+          <li>定期的な面談で学習の進み具合を共有し、志望校選びまでご相談いただけます。</li>
+          <li>保護者の方が気軽に相談できる窓口を用意しています。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="point-block">
+      <div class="point-visual"><img src="images/point-tutors.png" alt="相性の合う講師陣" style="width:100%;height:260px;object-fit:cover;"></div>
+      <div class="point-body">
+        <span class="point-num">POINT 03</span>
+        <h3>お子さまに合った講師を、相性から選べます</h3>
+        <ul>
+          <li>指導実績のある講師の中から、学習目的や性格に合わせて担当を決めます。</li>
+          <li>志望校の合格実績がある講師を指名いただくこともできます。</li>
+          <li>万が一相性が合わない場合は、講師の交代を何度でも承ります。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="point-block reverse">
+      <div class="point-visual"><img src="images/point-schedule.jpg" alt="柔軟なスケジュール調整" style="width:100%;height:260px;object-fit:cover;"></div>
+      <div class="point-body">
+        <span class="point-num">POINT 04</span>
+        <h3>部活や習い事と両立できる、柔軟な授業日程</h3>
+        <ul>
+          <li>ご都合に合わせて授業の曜日・時間を決められます。</li>
+          <li>急な予定変更にも、前日までの振替でしっかり対応します。</li>
+          <li>忙しいお子さまでも、無理なく学習を続けられます。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="point-block">
+      <div class="point-visual"><img src="images/point-report.jpg" alt="学習記録の共有画面" style="width:100%;height:260px;object-fit:cover;"></div>
+      <div class="point-body">
+        <span class="point-num">POINT 05</span>
+        <h3>毎回の学習の様子を、保護者の方にお届けします</h3>
+        <ul>
+          <li>授業ごとの取り組みや講師からのコメントを、その都度ご報告します。</li>
+          <li>目標に対する到達度が見えるから、ご家庭でも安心して見守れます。</li>
+          <li>お子さまの頑張りの積み重ねを、一緒に確認できます。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 実績（ダミー） ============ -->
+<section class="section results">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">RESULTS</span>
+      <h2>数字で見る、北野スクール</h2>
+    </div>
+    <div class="result-grid">
+      <div class="result-item">
+        <p class="num">1,200<span class="unit">名</span></p>
+        <p class="label">これまでの累計指導生徒数</p>
+      </div>
+      <div class="result-item">
+        <p class="num">95<span class="unit">%</span></p>
+        <p class="label">第一志望・志望校合格率</p>
+      </div>
+      <div class="result-item">
+        <p class="num">98<span class="unit">%</span></p>
+        <p class="label">保護者アンケート満足度</p>
+      </div>
+    </div>
+    <p class="result-disclaimer">※上記の数値はデザイン確認用のサンプルです。公開時には実際の実績値と、その集計期間・出典に差し替えてご使用ください。</p>
+  </div>
+</section>
+
+<!-- ============ 学年別コース ============ -->
+<section class="section" id="course">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">COURSE</span>
+      <h2>学年別の<span class="accent">学習コース</span></h2>
+      <p>中学生・高校生、それぞれの目標に合わせたコースをご用意しています。</p>
+    </div>
+    <div class="course-grid">
+      <div class="course-item">
+        <img src="images/course-junior.jpg" alt="中学生コースで学ぶ生徒" style="width:100%;height:168px;object-fit:cover;">
+        <div class="course-body">
+          <h3>中学生コース</h3>
+          <p class="target">高校受験・定期テスト対策</p>
+          <ul>
+            <li>高校受験対策・内申点対策</li>
+            <li>定期テストの点数アップ</li>
+            <li>苦手科目の集中克服</li>
+            <li>学習習慣の定着サポート</li>
+          </ul>
+        </div>
+      </div>
+      <div class="course-item">
+        <img src="images/course-high.jpg" alt="大学受験に向けて集中して勉強する高校生" style="width:100%;height:168px;object-fit:cover;">
+        <div class="course-body">
+          <h3>高校生コース</h3>
+          <p class="target">大学受験・定期テスト対策</p>
+          <ul>
+            <li>大学受験対策・志望校別対策</li>
+            <li>総合型・学校推薦型選抜対策</li>
+            <li>定期テスト・評定対策</li>
+            <li>部活動との両立サポート</li>
+          </ul>
+        </div>
+      </div>
+      <div class="course-item">
+        <img src="images/course-custom.jpg" alt="個別最適コースで学ぶ様子" style="width:100%;height:168px;object-fit:cover;">
+        <div class="course-body">
+          <h3>個別最適コース</h3>
+          <p class="target">一人ひとりの状況に合わせて</p>
+          <ul>
+            <li>お子さまの現在地から逆算した計画</li>
+            <li>基礎固めから応用まで柔軟に対応</li>
+            <li>受験直前の総仕上げ特訓</li>
+            <li>まずは無料相談で最適なプランをご提案</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA 2 ============ -->
+<section class="cta-band">
+  <h2>お子さまに合うコースが分からなくても大丈夫です</h2>
+  <p>現在の学習状況をお聞きし、最適な学び方を一緒に考えます。</p>
+  <a href="#contact" class="btn btn-cta"><span class="sub">ご相談だけでも歓迎です</span>今すぐ無料相談する</a>
+</section>
+
+<!-- ============ 体験談 ============ -->
+<section class="section section-alt" id="voice">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">VOICE</span>
+      <h2>合格した<span class="accent">ご家庭の声</span></h2>
+      <p>北野スクールで学んだ生徒と、保護者の方からいただいた声です。</p>
+    </div>
+    <div class="voice-grid">
+      <div class="voice-item">
+        <div class="voice-head">
+          <img src="images/voice-parent1.jpg" alt="Y・Kさん（中学3年生）の保護者">
+          <div class="voice-meta">
+            <p class="name">Y・Kさん（中学3年生）の保護者</p>
+            <p class="attr">大阪府・第一志望校に合格</p>
+          </div>
+        </div>
+        <h3>苦手だった数学が、得意科目に変わりました</h3>
+        <p>どこでつまずいているのかを丁寧に見つけてくださり、そこから指導してもらえたのが大きかったです。担任の先生が毎週様子を教えてくれるので、親としても安心して任せられました。</p>
+      </div>
+      <div class="voice-item">
+        <div class="voice-head">
+          <img src="images/voice-parent2.jpg" alt="S・Mさん（高校3年生）の保護者">
+          <div class="voice-meta">
+            <p class="name">S・Mさん（高校3年生）の保護者</p>
+            <p class="attr">大阪府・志望大学に合格</p>
+          </div>
+        </div>
+        <h3>部活と両立しながら、最後まで走り切れました</h3>
+        <p>授業の時間を柔軟に調整していただけたので、部活を続けながら受験勉強を進められました。子ども自身が「自分から勉強するようになった」のが一番の変化です。</p>
+      </div>
+      <div class="voice-item">
+        <div class="voice-head">
+          <img src="images/voice-parent3.jpg" alt="T・Aさん（中学3年生）の保護者">
+          <div class="voice-meta">
+            <p class="name">T・Aさん（中学3年生）の保護者</p>
+            <p class="attr">大阪府・定期テスト大幅アップ</p>
+          </div>
+        </div>
+        <h3>勉強への向き合い方が、前向きに変わりました</h3>
+        <p>わからないことをすぐ質問できる環境で、勉強への苦手意識がなくなったようです。定期テストの点数も上がり、本人の自信につながっています。</p>
+      </div>
+      <div class="voice-item">
+        <div class="voice-head">
+          <img src="images/voice-parent4.jpg" alt="N・Hさん（高校2年生）の保護者">
+          <div class="voice-meta">
+            <p class="name">N・Hさん（高校2年生）の保護者</p>
+            <p class="attr">大阪府・評定平均が向上</p>
+          </div>
+        </div>
+        <h3>面談のたびに、進む道が明確になりました</h3>
+        <p>進路について親子で迷っていたとき、担任の先生が一緒に考えてくださいました。今やるべきことがはっきりして、子どもも落ち着いて勉強に取り組めています。</p>
+      </div>
+    </div>
+    <p class="voice-disclaimer">※掲載している体験談はデザイン確認用のサンプルです。公開時には実際にいただいたお声に差し替えてご使用ください。</p>
+  </div>
+</section>
+
+<!-- ============ ご利用の流れ ============ -->
+<section class="section" id="flow">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">FLOW</span>
+      <h2>ご利用の<span class="accent">流れ</span></h2>
+      <p>お問い合わせから受講開始まで、4つのステップで進みます。</p>
+    </div>
+    <div class="flow-list">
+      <div class="flow-item">
+        <div class="flow-step"><span class="s">STEP</span><span class="n">1</span></div>
+        <div class="flow-body">
+          <h3>無料相談のお申し込み</h3>
+          <p>フォームまたはお電話でお申し込みください。お子さまの現在の学習状況やお悩みをお聞かせいただきます。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step"><span class="s">STEP</span><span class="n">2</span></div>
+        <div class="flow-body">
+          <h3>学習面談・カリキュラムのご提案</h3>
+          <p>お子さま一人ひとりに合わせた学習プランと、料金についてご説明します。ご不明な点は何でもご質問ください。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step"><span class="s">STEP</span><span class="n">3</span></div>
+        <div class="flow-body">
+          <h3>担当講師の決定</h3>
+          <p>ご希望の条件や相性を考慮して、お子さまに合った講師を選定します。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step"><span class="s">STEP</span><span class="n">4</span></div>
+        <div class="flow-body">
+          <h3>受講スタート</h3>
+          <p>初回授業から、合格に向けた学習が始まります。担任がご家庭を継続的にサポートします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section-alt" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">FAQ</span>
+      <h2>よくある<span class="accent">ご質問</span></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>体験や相談だけでも受けられますか？</summary>
+        <div class="faq-answer">はい、無料相談だけでも大歓迎です。お子さまの学習状況をお聞きし、今後の学び方について一緒に考えます。無理な勧誘は一切いたしませんので、お気軽にお問い合わせください。</div>
+      </details>
+      <details class="faq-item">
+        <summary>今の成績に自信がなくても大丈夫ですか？</summary>
+        <div class="faq-answer">もちろん大丈夫です。北野スクールは、お子さまの現在地から一歩ずつ積み上げる指導を大切にしています。基礎からていねいにサポートしますので、安心してお任せください。</div>
+      </details>
+      <details class="faq-item">
+        <summary>部活が忙しくても続けられますか？</summary>
+        <div class="faq-answer">はい、続けられます。授業の曜日や時間はご都合に合わせて決められ、急な予定変更にも前日までの振替で対応します。部活動と両立しているお子さまも多くいらっしゃいます。</div>
+      </details>
+      <details class="faq-item">
+        <summary>講師との相性が合わない場合はどうなりますか？</summary>
+        <div class="faq-answer">講師の交代は何度でも承ります。お子さまが安心して学べる環境を第一に考えていますので、遠慮なく担任にご相談ください。</div>
+      </details>
+      <details class="faq-item">
+        <summary>料金について知りたいのですが。</summary>
+        <div class="faq-answer">料金は、お子さまの学年や受講内容によって異なります。無料相談の際に、ご希望のプランに合わせて分かりやすくご説明します。ご予算のご相談も承ります。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ アクセス ============ -->
+<section class="section" id="access">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="en">ACCESS</span>
+      <h2>アクセス</h2>
+      <p>JR大阪駅からすぐ。通いやすい場所で、お子さまの学びをお待ちしています。</p>
+    </div>
+    <div class="access-grid">
+      <dl class="access-info">
+        <dt>塾名</dt>
+        <dd>北野スクール（KITANO SCHOOL）</dd>
+        <dt>代表者</dt>
+        <dd>北野 正平</dd>
+        <dt>所在地</dt>
+        <dd>〒530-0001<br>大阪府大阪市北区梅田三丁目1番1号</dd>
+        <dt>最寄り駅</dt>
+        <dd>JR「大阪駅」より徒歩すぐ</dd>
+        <dt>受付時間</dt>
+        <dd>平日・土曜 14:00〜22:00（日曜・祝日を除く）</dd>
+      </dl>
+      <div class="access-map">
+        <iframe
+          src="https://maps.google.com/maps?q=%E5%A4%A7%E9%98%AA%E5%B8%82%E5%8C%97%E5%8C%BA%E6%A2%85%E7%94%B0%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%91%E2%88%92%EF%BC%91&hl=ja&z=16&output=embed"
+          loading="lazy"
+          title="北野スクール 所在地（大阪市北区梅田三丁目1番1号）"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA 3（お問い合わせ） ============ -->
+<section class="cta-band" id="contact">
+  <h2>お子さまの未来のために、<br>まずは一歩を踏み出しませんか</h2>
+  <p>ご相談は無料です。合格までの道すじを、一緒に描いていきましょう。</p>
+  <a href="tel:0120000000" class="btn btn-cta"><span class="sub">入力はカンタン・費用は一切かかりません</span>今すぐ無料相談する</a>
+  <p class="phone">お電話でのご相談は <strong>0120-000-000</strong>（受付 14:00〜22:00）</p>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo">北野スクール<span>KITANO SCHOOL</span></span>
+        <p>中学生・高校生の受験と定期テストを<br>本気で支える個別指導塾</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#point">選ばれる理由</a></li>
+          <li><a href="#course">学年別コース</a></li>
+          <li><a href="#voice">合格の声</a></li>
+          <li><a href="#flow">ご利用の流れ</a></li>
+          <li><a href="#faq">よくあるご質問</a></li>
+          <li><a href="#access">アクセス</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-copy">&copy; 2026 北野スクール（KITANO SCHOOL）</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var carousel = document.getElementById('heroCarousel');
+  if (!carousel) return;
+  var slides = carousel.querySelectorAll('.hero-slide');
+  var dots = document.querySelectorAll('#heroDots .hero-dot');
+  var prev = document.getElementById('heroPrev');
+  var next = document.getElementById('heroNext');
+  var current = 0;
+  var total = slides.length;
+  var timer = null;
+  var INTERVAL = 5000;
+
+  function show(index) {
+    current = (index + total) % total;
+    for (var i = 0; i < total; i++) {
+      slides[i].classList.toggle('is-active', i === current);
+      if (dots[i]) dots[i].classList.toggle('is-active', i === current);
+    }
+  }
+  function nextSlide() { show(current + 1); }
+  function prevSlide() { show(current - 1); }
+  function start() { timer = setInterval(nextSlide, INTERVAL); }
+  function reset() { clearInterval(timer); start(); }
+
+  if (next) next.addEventListener('click', function () { nextSlide(); reset(); });
+  if (prev) prev.addEventListener('click', function () { prevSlide(); reset(); });
+  for (var d = 0; d < dots.length; d++) {
+    (function (idx) {
+      dots[idx].addEventListener('click', function () { show(idx); reset(); });
+    })(d);
+  }
+  // 操作中は自動送りを一時停止
+  carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
+  carousel.addEventListener('mouseleave', function () { start(); });
+
+  start();
+})();
+</script>
+
+</body>
+</html>

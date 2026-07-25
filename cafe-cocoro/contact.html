@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact｜CAFÉ COCORO</title>
+  <meta name="description" content="Café Cocoro へのお問い合わせ・ご予約はこちらから。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Parisienne&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="brand-script">cocoro</span>
+      <span class="brand-en">Café Cocoro</span>
+    </a>
+    <button class="nav-toggle" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    <nav class="gnav">
+      <ul>
+        <li><a href="index.html">Top</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="onlineshop.html">Online Shop</a></li>
+        <li><a href="contact.html" class="current">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <img src="images/exterior.jpg" alt="店舗外観" class="ph ph-img">
+    <div class="titles">
+      <p class="script">get in touch</p>
+      <h1 class="en">Contact</h1>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <p class="breadcrumb"><a href="index.html">Top</a><span>/</span>Contact</p>
+  </div>
+
+  <section class="section" style="padding-top:40px;">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="en">Contact<span class="script">Form</span></span>
+        <span class="sub">お問い合わせフォーム</span>
+      </div>
+
+      <div class="contact-note">
+        ・ご予約はお電話（<strong>06-0000-0000</strong>）でも承っております。<br>
+        ・お問い合わせ内容によっては、返信までに3営業日ほどお時間をいただく場合がございます。<br>
+        ・オンラインショップの在庫についてのリアルタイムのご回答はいたしかねます。あらかじめご了承ください。
+      </div>
+
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-row">
+          <label for="name">お名前<span class="req">必須</span></label>
+          <input type="text" id="name" name="name" placeholder="山田 花子">
+        </div>
+        <div class="form-row">
+          <label for="email">メールアドレス<span class="req">必須</span></label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com">
+        </div>
+        <div class="form-row">
+          <label for="email2">メールアドレス（確認）<span class="req">必須</span></label>
+          <input type="email" id="email2" name="email2" placeholder="example@mail.com">
+        </div>
+        <div class="form-row">
+          <label for="type">お問い合わせ種別<span class="req">必須</span></label>
+          <select id="type" name="type">
+            <option value="">選択してください</option>
+            <option>ご予約について</option>
+            <option>メニューについて</option>
+            <option>オンラインショップについて</option>
+            <option>取材・掲載について</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">お問い合わせ内容<span class="req">必須</span></label>
+          <textarea id="message" name="message" placeholder="お問い合わせ内容をご記入ください。"></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit">送信する</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Access -->
+  <section class="section bg-soft">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="en">Access<span class="script">Map</span></span>
+        <span class="sub">アクセス</span>
+      </div>
+      <div class="info-flex">
+        <div class="map">
+          <iframe src="https://maps.google.com/maps?q=JR%E5%A4%A7%E9%98%AA%E9%A7%85&hl=ja&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Café Cocoro アクセスマップ（JR大阪駅）"></iframe>
+        </div>
+        <div class="info-card">
+          <h3>Café Cocoro</h3>
+          <dl>
+            <dt>Open</dt><dd>9:00 – 19:00（L.O. 18:30）</dd>
+            <dt>Close</dt><dd>火曜日</dd>
+            <dt>Tel</dt><dd>06-0000-0000</dd>
+            <dt>Address</dt><dd>〒530-0001 大阪府大阪市北区梅田3-1-1</dd>
+          </dl>
+          <a href="index.html" class="btn">Top へ戻る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <span class="brand-script">cocoro</span>
+        <span class="brand-en">Café Cocoro</span>
+        <address>
+          〒530-0001 大阪府大阪市北区梅田3-1-1<br>
+          Tel. 06-0000-0000／9:00 – 19:00（火曜定休）
+        </address>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Top</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="onlineshop.html">Online Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-sns">
+        <a href="#">Instagram</a>
+        <a href="#">Line</a>
+      </div>
+    </div>
+    <p class="copyright">© Café Cocoro. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('.gnav');
+      if (!toggle) return;
+      toggle.addEventListener('click', function () { nav.classList.toggle('open'); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+---
+title: AUBELLE LP 画像生成プロンプト集
+project: AUBELLE（beauty Salon）LP
+client: 早川 由紀（美容アイテム販売）
+target: 30〜40代女性
+created: 2026-07-17
+tags: [AUBELLE, 画像生成, プロンプト, LP, まい]
+---
+
+# AUBELLE LP 画像生成プロンプト集
+
+`index.html` 内の `#ccc` プレースホルダー（`.ph`）に、はめ込む画像を生成するためのプロンプト集。
+**画像を差し替えるときは、必ず「同じアスペクト比・同じ用途」の画像を入れること。** 長方形の枠に正方形画像を入れる、といったズレはNG。
+
+---
+
+## 全画像共通ルール（プロンプトの前提）
+
+生成AIに渡すときは、以下を各プロンプトに添える前提とする。
+
+- **人物は必ず日本人**（Japanese woman / Japanese person）。外国人モデルは使わない。
+- **ターゲットは30〜40代女性**。人物を出す場合は原則この年代の日本人女性を中心に。
+- **サイトのテイストを厳守**：
+  - カラー＝くすみカラー（ダスティピンク `#EAD0CA` / スモーキーブルー `#A9B9C4` / オフホワイト `#F7F3EC` / テラコッタ差し色 `#C1683F`）
+  - 質感＝ナチュラルで柔らかい自然光、白〜淡いグレーの背景、大理石・陶器・ガラスの上品な小物
+  - 雰囲気＝静かで上品、囁くようなナチュラルラグジュアリー。派手・高彩度・ギラつきはNG
+- **文字入れ禁止**（テキストはHTML側で乗せる）。ロゴ・パッケージの英字は雰囲気程度ならOK。
+- **アスペクト比を厳守**（下の各項目に明記）。生成後、必要ならそのアスペクト比でトリミングする。
+- ネガティブ要素（共通で避けるもの）：
+  `high saturation, neon colors, harsh shadows, plastic skin, text overlay, watermark, logo text, western model, heavy makeup, cluttered background, oversharpened`
+
+### まい（Gemini / Nano Banana）向け補足
+- 各プロンプトの英語をそのまま貼り付けてOK。比率は「aspect ratio ○:○」で明示済み。
+- 顔のアップ系は「natural, approachable Japanese woman, mid-30s to mid-40s」で年代を固定すること。
+
+---
+
+## プレースホルダー対応表
+
+| No | 箇所 | 実寸(px) | 比率 | 推奨出力 | 枚数 |
+|----|------|---------|------|---------|------|
+| A | FVカルーセル | 1600×900 | 16:9 | 1600×900 | 3 |
+| B | 写真ストリップ（ブリッジ） | 465×220 | 21:10 | 1050×500 | 3 |
+| C | 代表 早川由紀（大） | 700×875 | 4:5 | 800×1000 | 1 |
+| D | 代表 顔写真（小・丸） | 64×64 | 1:1 | 400×400 | 1 |
+| E | Solution カード | 4:3 | 4:3 | 1200×900 | 3 |
+| F | Benefit（大） | 700×875 | 4:5 | 800×1000 | 1 |
+| G | お客様の声 顔（小・丸） | 44×44 | 1:1 | 400×400 | 3 |
+| H | 商品グリッド | 正方形 | 1:1 | 1000×1000 | 8 |
+
+> 丸く表示される画像（D・G）も、生成は**正方形**で作ること。CSS側で円形にトリミングされる。
+
+---
+
+## A. FVカルーセル（16:9 / 1600×900 / 3枚）
+
+ページ最上部の主役。3枚で「悩み→共感→変化」の流れを緩やかに表現する。
+左側にキャッチコピーが白文字で乗るため、**左半分は明るめ・余白多め**に。
+
+### A-1（スライド1：導入・肌に向き合う）
+```
+A serene Japanese woman in her late 30s, touching her cheek gently while looking into a mirror, soft natural morning light, minimal beige and dusty-pink interior, calm and elegant mood, muted color palette (dusty pink, off-white), plenty of empty space on the left side, cinematic wide composition, 16:9 aspect ratio, photorealistic, soft focus background
+```
+
+### A-2（スライド2：年齢と肌の変化に寄り添う）
+```
+A natural Japanese woman around 40 years old with bare, healthy skin, sitting by a bright window, gentle and thoughtful expression, soft diffused light, muted dusty-blue and cream tones, skincare bottles softly out of focus on a marble table, editorial beauty photography, empty space on the left, 16:9 aspect ratio, photorealistic
+```
+
+### A-3（スライド3：変化・明るい兆し）
+```
+A Japanese woman in her mid-40s smiling softly with radiant, well-cared-for skin, warm morning light like a sunrise, airy off-white and dusty-pink atmosphere, feeling of a fresh new day, elegant and calm, muted color grading, empty space on the left, 16:9 aspect ratio, photorealistic
+```
+
+---
+
+## B. 写真ストリップ / ブリッジ（21:10 / 1050×500 / 3枚）
+
+セクション間に敷く帯状の3枚。人物・手元・アイテムを織り交ぜ、生活の一場面を切り取る。横長トリミング前提。
+
+### B-1（手元のスキンケア）
+```
+Close-up of a Japanese woman's hands applying lotion, soft natural light, dusty-pink and cream tones, delicate and gentle, shallow depth of field, muted elegant color palette, wide horizontal crop, 21:10 aspect ratio, photorealistic
+```
+
+### B-2（洗面台まわりの静物）
+```
+A minimal beauty vanity scene, skincare bottles in soft matte packaging on a marble surface, dried flowers and a small glass tray, natural window light, muted dusty tones, calm editorial still life, wide horizontal composition, 21:10 aspect ratio, photorealistic
+```
+
+### B-3（横顔・肌の質感）
+```
+Soft side profile of a Japanese woman in her 30s-40s with smooth natural skin, eyes gently closed, warm diffused light, muted off-white background, serene mood, editorial beauty close-up, wide horizontal crop, 21:10 aspect ratio, photorealistic
+```
+
+---
+
+## C. 代表 早川由紀（4:5 / 800×1000 / 1枚）
+
+「わたしも同じ鏡を見てきました」の共感セクション。**信頼感と親しみ**が最優先。作り込みすぎず、等身大の30代女性。
+
+```
+Portrait of a friendly Japanese woman in her 30s, natural light makeup, wearing a soft neutral-toned blouse, warm and approachable smile, standing in a bright minimal salon interior, muted dusty-pink and cream background, trustworthy and elegant, vertical portrait, 4:5 aspect ratio, photorealistic, soft natural light
+```
+
+---
+
+## D. 代表 顔写真・小（1:1 / 400×400 / 1枚・丸表示）
+
+Cと同一人物の顔アップ。プロフィールカードに丸く表示される。**正方形で生成**。
+
+```
+Close-up headshot of the same friendly Japanese woman in her 30s, natural makeup, gentle smile, looking at camera, soft even lighting, plain muted cream background, warm and trustworthy, centered face, square 1:1 aspect ratio, photorealistic
+```
+
+> Cと顔立ち・服装・雰囲気を揃えること（同一人物として見えるように）。
+
+---
+
+## E. Solution カード（4:3 / 1200×900 / 3枚）
+
+「頑張らないスキンケア」の3つの特長。**成分・処方・続けやすさ**を象徴する静物または手元。人物は出しても手元程度に抑える。
+
+### E-1（厳選された天然由来成分）
+```
+Natural skincare ingredients arranged elegantly, botanical elements and a dropper bottle on a marble surface, soft natural light, muted dusty-pink and cream tones, clean minimal still life, calm and premium, 4:3 aspect ratio, photorealistic
+```
+
+### E-2（肌のリズムに寄り添う設計）
+```
+A minimalist flat-lay of skincare bottles in soft matte packaging with a small notebook and dried flowers, muted dusty-blue and off-white palette, gentle natural light, refined editorial still life, 4:3 aspect ratio, photorealistic
+```
+
+### E-3（続けやすいシンプルケア）
+```
+A Japanese woman's hands gently holding a single skincare bottle in a bright minimal bathroom, everyday and effortless mood, soft natural light, muted cream tones, simple and calm, 4:3 aspect ratio, photorealistic
+```
+
+---
+
+## F. Benefit（4:5 / 800×1000 / 1枚）
+
+「1ヶ月後、鏡を見るのが楽しみになる」。**変化後の前向きな朝**を象徴。Cとは別の女性でOKだが同年代・同テイスト。
+
+```
+A Japanese woman in her 40s smiling with confidence and radiant skin, getting ready in the morning by a bright mirror, soft warm light, muted dusty-pink and cream interior, positive and refreshed mood, vertical portrait, 4:5 aspect ratio, photorealistic, natural light
+```
+
+---
+
+## G. お客様の声 顔・小（1:1 / 400×400 / 3枚・丸表示）
+
+レビューの人物アイコン。**正方形で生成**、CSSで丸くなる。年代・雰囲気を各コメントに合わせる。
+
+### G-1（42歳 / 会社員）
+```
+Natural headshot of a Japanese woman around 42 years old, office-casual style, soft friendly smile, plain muted background, even soft lighting, approachable and real, square 1:1 aspect ratio, photorealistic
+```
+
+### G-2（38歳 / 主婦）
+```
+Natural headshot of a Japanese woman around 38 years old, relaxed casual style, warm gentle smile, plain muted cream background, soft lighting, approachable and real, square 1:1 aspect ratio, photorealistic
+```
+
+### G-3（45歳 / 自営業）
+```
+Natural headshot of a Japanese woman around 45 years old, elegant simple style, calm confident smile, plain muted background, soft even lighting, refined and real, square 1:1 aspect ratio, photorealistic
+```
+
+---
+
+## H. 商品グリッド（1:1 / 1000×1000 / 8枚）
+
+LINE UP の商品パッケージ。**8枚すべてトーンを統一**（同じ撮影・同じ光・同じ背景に見えるように）。背景は淡いグレー〜オフホワイト、影は柔らかく。人物は出さない。
+
+各アイテムでプロンプトの `[PRODUCT]` 部分だけ差し替える。
+
+### 共通テンプレート
+```
+Product photo of a [PRODUCT], soft matte packaging in muted dusty-pink and off-white tones, standing on a plain light grey seamless background, soft natural studio light, subtle soft shadow, minimal elegant cosmetic photography, centered, square 1:1 aspect ratio, photorealistic, no text on label
+```
+
+### 差し替えリスト（Skin Care）
+- H-1 `moisturizing emulsion / milk bottle`（モイストリペア乳液）
+- H-2 `brightening serum dropper bottle`（ブライトニングセラム）
+- H-3 `clear toner lotion bottle`（クリアローション）
+- H-4 `wrinkle care cream jar`（リンクルケアクリーム）
+
+### 差し替えリスト（Special Care）
+- H-5 `night repair sheet mask package`（ナイトリペアマスク）
+- H-6 `deep moisturizing facial oil bottle`（ディープモイストオイル）
+- H-7 `small eye care balm jar`（アイケアバーム）
+- H-8 `trial skincare travel set, three small bottles together`（トライアル3日セット）
+
+> **8枚は必ず同じ光・同じ背景・同じ質感で。** 1枚ずつバラバラの雰囲気にならないよう、まず1枚作って気に入ったら、そのシード／スタイルを固定して残りを生成すると揃いやすい。
+
+---
+
+## 差し込み後のチェックリスト
+
+- [ ] 差し込んだ画像の比率が、対応表の比率と一致しているか（枠と画像のズレなし）
+- [ ] 人物はすべて日本人・30〜40代女性ベースになっているか
+- [ ] くすみカラー統一。派手な色・強い影が混ざっていないか
+- [ ] C と D が同一人物に見えるか
+- [ ] H の商品8枚のトーンが揃っているか
+- [ ] 画像内に不要な文字・ウォーターマークが入っていないか
+- [ ] スマホ幅でも破綻しないか（縦長画像がつぶれていないか）
+
+---
+
+*Nissy AI Lab ― 人と人とのご縁をつなぐ ― 西 毅*
