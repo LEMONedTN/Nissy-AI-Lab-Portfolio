@@ -43,7 +43,15 @@
       mName.textContent = btn.getAttribute("data-name") || "";
       mNameEn.textContent = btn.getAttribute("data-name-en") || "";
       mDept.textContent = btn.getAttribute("data-dept") || "";
-      if (mPh) mPh.setAttribute("data-label", btn.getAttribute("data-photo") || "社員写真");
+      if (mPh) {
+        mPh.setAttribute("data-label", btn.getAttribute("data-photo") || "社員写真");
+        var imgSrc = btn.getAttribute("data-img-sq");
+        if (imgSrc) {
+          mPh.style.backgroundImage = "url('" + imgSrc + "')";
+        } else {
+          mPh.style.backgroundImage = "";
+        }
+      }
 
       // Q&A は data-qa（JSON）から生成
       var qaRaw = btn.getAttribute("data-qa");

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" width="260" height="64" role="img" aria-label="デバン DEBAN">
+  <g fill="none" stroke="#FFA45C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" transform="translate(30 32)">
+    <path d="M-18 10h10v-24h16l10 12v12h-6"/><path d="M-2 10h8"/>
+    <circle cx="-11" cy="14" r="5.5" fill="#FFA45C" stroke="none"/><circle cx="12" cy="14" r="5.5" fill="#FFA45C" stroke="none"/>
+  </g>
+  <text x="66" y="35" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" letter-spacing="1">デバン</text>
+  <text x="66" y="52" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#FFA45C" letter-spacing="4">DEBAN</text>
+</svg>

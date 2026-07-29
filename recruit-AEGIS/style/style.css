@@ -173,6 +173,9 @@ strong { font-weight: 700; }
   text-align: center;
   border: 1px solid var(--line-strong);
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .ph::after {
   content: attr(data-label) " ／ PLACEHOLDER";
@@ -184,6 +187,9 @@ strong { font-weight: 700; }
   background: rgba(5, 10, 24, 0.55);
   border: 1px solid var(--line-strong);
   border-radius: 2px;
+}
+.ph[style*="background-image"]::after {
+  display: none;
 }
 /* HUDコーナーブラケット */
 .ph::before {

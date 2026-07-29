@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>デバン｜キッチンカー・テント催事・物産催事のためのダイレクトマッチング</title>
+<meta name="description" content="仲介手数料0円。事前出店料は後払いOK。キッチンカー・テント催事・物産催事の事業者と主催者を直接つなぐマッチングプラットフォーム「デバン」。会員登録は無料、経費削減特典つき。">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="デバン｜出店の、出番をつくる。">
+<meta property="og:description" content="仲介手数料0円・事前出店料は後払いOK。催事出店のためのダイレクトマッチング。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/hero-bg.jpg">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a class="header__logo" href="#top">
+      <img src="images/logo.svg" alt="デバン DEBAN" width="260" height="64">
+    </a>
+    <nav class="gnav" id="gnav">
+      <ul class="gnav__list">
+        <li><a href="#problem">こんな悩み</a></li>
+        <li><a href="#solution">4つの強み</a></li>
+        <li><a href="#bonus">無料特典</a></li>
+        <li><a href="#flow">利用の流れ</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--head" href="#entry">無料会員登録</a>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="gnav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__bg">
+    <div class="hero__slider">
+      <img class="hero__slide is-active" src="images/hero-bg.jpg" alt="キッチンカー出店風景" width="1920" height="1080" fetchpriority="high">
+      <img class="hero__slide" src="images/hero-bg-2.jpg" alt="テント催事・マルシェ出店風景" width="1920" height="1080" loading="lazy">
+      <img class="hero__slide" src="images/hero-bg-3.jpg" alt="物産催事・ポップアップ出店風景" width="1920" height="1080" loading="lazy">
+    </div>
+  </div>
+
+  <div class="hero__inner">
+    <div class="hero__body">
+      <p class="hero__eyebrow">
+        キッチンカー<span>／</span>テント催事<span>／</span>物産催事の事業者さまへ
+      </p>
+
+      <h1 class="hero__title">
+        その出店、<br>
+        <em>手数料</em>も、<em>前払い</em>も、<br>
+        もう、いらない。
+      </h1>
+
+      <p class="hero__lead">
+        主催者と直接つながるから、中間マージンはゼロ。<br class="pc-only">
+        事前の出店料は後払いできるから、手元の現金を残したまま出店できます。
+      </p>
+
+      <dl class="hero__points">
+        <div>
+          <dt>会員登録・年会費</dt>
+          <dd><b>0</b>円</dd>
+        </div>
+        <div>
+          <dt>仲介手数料</dt>
+          <dd><b>0</b>円</dd>
+        </div>
+        <div>
+          <dt>事前出店料</dt>
+          <dd><b>後</b>払いOK</dd>
+        </div>
+      </dl>
+
+      <form class="entryform entryform--hero" action="#" method="post" novalidate>
+        <div class="entryform__row">
+          <label class="sr-only" for="hero-email">メールアドレス</label>
+          <input class="entryform__input" type="email" id="hero-email" name="email" placeholder="メールアドレスを入力" autocomplete="email" required>
+          <button class="btn btn--primary" type="submit">無料ではじめる</button>
+        </div>
+        <p class="entryform__note">審査料・掲載料は一切かかりません／退会はいつでも無料</p>
+      </form>
+    </div>
+
+    <ul class="hero__types">
+      <li>
+        <img src="images/type-kitchencar.jpg" alt="キッチンカーの出店風景" width="800" height="600" loading="lazy">
+        <span>キッチンカー</span>
+      </li>
+      <li>
+        <img src="images/type-tent.jpg" alt="テント催事の出店風景" width="800" height="600" loading="lazy">
+        <span>テント催事</span>
+      </li>
+      <li>
+        <img src="images/type-bussan.jpg" alt="物産催事の出店風景" width="800" height="600" loading="lazy">
+        <span>物産催事</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="hero__ticker" aria-hidden="true">
+    <div class="hero__ticker-track">
+      <span>仲介手数料 0円</span><span>事前出店料 後払いOK</span><span>業界初・双方向レビュー</span><span>マイページで自動営業</span><span>経費削減特典つき</span>
+      <span>仲介手数料 0円</span><span>事前出店料 後払いOK</span><span>業界初・双方向レビュー</span><span>マイページで自動営業</span><span>経費削減特典つき</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="section problem" id="problem">
+  <div class="container container--narrow">
+    <header class="sect-head js-fade">
+      <p class="sect-head__en">PROBLEM</p>
+      <h2 class="sect-head__ja">出店するたび、<br class="sp-only">こんな思いをしていませんか。</h2>
+    </header>
+
+    <ul class="problem__list">
+      <li class="js-fade">
+        <p class="problem__q">手数料を引かれて、手元にほとんど残らない。</p>
+        <p class="problem__a">売上は立ったのに、仲介会社の取り分が引かれて利益が薄い。頑張った分が返ってこない。</p>
+      </li>
+      <li class="js-fade">
+        <p class="problem__q">出店料が前払い。仕込み前に現金が出ていく。</p>
+        <p class="problem__a">大きな催事ほど事前入金が必要。売上が入る前に、仕入れと出店料で財布が空になる。</p>
+      </li>
+      <li class="js-fade">
+        <p class="problem__q">営業に回る時間が、そもそも無い。</p>
+        <p class="problem__a">仕込み・出店・片付けで一日が終わる。次の出店先を探す電話やメールまで手が回らない。</p>
+      </li>
+      <li class="js-fade">
+        <p class="problem__q">初めての主催者を、信用していいのか分からない。</p>
+        <p class="problem__a">行ってみたら聞いていた条件と違う。支払いが遅れる。そんな不安をいつも抱えている。</p>
+      </li>
+    </ul>
+
+    <p class="problem__bridge js-fade">この4つを、<em>デバン</em>が全部ひっくり返します。</p>
+  </div>
+</section>
+
+<!-- ============ SOLUTION ============ -->
+<section class="section solution" id="solution">
+  <div class="container">
+    <header class="sect-head js-fade">
+      <p class="sect-head__en">SOLUTION</p>
+      <h2 class="sect-head__ja">デバンが選ばれる、<br class="sp-only">4つの理由</h2>
+    </header>
+
+    <!-- 01 -->
+    <div class="feature js-fade">
+      <div class="feature__text">
+        <p class="feature__no">01</p>
+        <h3 class="feature__title">仲介なしの<br>ダイレクトマッチング</h3>
+        <p class="feature__desc">
+          主催者と出店者が直接やり取りするから、間に入る会社がいません。かかるのはシステム利用料のみ。
+          売上から引かれる中間マージンは0円です。
+        </p>
+        <ul class="feature__bullets">
+          <li>条件交渉も直接だから、認識のズレが起きにくい</li>
+          <li>手数料が読めるから、出店の採算計算がしやすい</li>
+        </ul>
+      </div>
+      <div class="feature__visual">
+        <div class="diagram" role="img" aria-label="従来は主催者と出店者の間に仲介会社が入るが、デバンでは直接つながる">
+          <div class="diagram__row">
+            <p class="diagram__tag">従来</p>
+            <div class="diagram__flow">
+              <span class="node">主催者</span>
+              <span class="arw">→</span>
+              <span class="node node--bad">仲介会社<b>マージン</b></span>
+              <span class="arw">→</span>
+              <span class="node">あなた</span>
+            </div>
+          </div>
+          <div class="diagram__row diagram__row--new">
+            <p class="diagram__tag diagram__tag--on">デバン</p>
+            <div class="diagram__flow">
+              <span class="node">主催者</span>
+              <span class="arw arw--long">直接つながる</span>
+              <span class="node node--good">あなた</span>
+            </div>
+            <p class="diagram__result">中間マージン <b>0円</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="feature feature--rev js-fade">
+      <div class="feature__text">
+        <p class="feature__no">02</p>
+        <h3 class="feature__title"><span class="badge">業界初</span>お互いを評価する<br>双方向レビュー</h3>
+        <p class="feature__desc">
+          主催者が出店者を評価するだけではありません。出店者も主催者を評価できます。
+          誠実に出店を重ねた実績が数字として残り、あなたの信用になります。
+        </p>
+        <ul class="feature__bullets">
+          <li>条件のいい催事から、評価の高い出店者に声がかかる</li>
+          <li>主催者側の評価も見えるから、安心して応募できる</li>
+        </ul>
+      </div>
+      <div class="feature__visual">
+        <div class="review" role="img" aria-label="双方向レビューの画面イメージ">
+          <div class="review__item">
+            <p class="review__who">主催者 → 出店者</p>
+            <p class="review__name">〇〇夏まつり実行委員会</p>
+            <p class="review__star" aria-label="5点満点中5点">★★★★★ <span>5.0</span></p>
+            <p class="review__txt">時間通りの搬入で助かりました。列の整理も丁寧で、来場者の評判も上々でした。</p>
+          </div>
+          <p class="review__swap" aria-hidden="true">⇅</p>
+          <div class="review__item review__item--rev">
+            <p class="review__who">出店者 → 主催者</p>
+            <p class="review__name">キッチンカー 〇〇</p>
+            <p class="review__star" aria-label="5点満点中4.5点">★★★★☆ <span>4.5</span></p>
+            <p class="review__txt">電源容量の案内が事前に細かく、当日の準備がスムーズでした。支払いも約束通りでした。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="feature js-fade">
+      <div class="feature__text">
+        <p class="feature__no">03</p>
+        <h3 class="feature__title">事前出店料は<br>後払いでOK</h3>
+        <p class="feature__desc">
+          大手ファイナンス会社の掛け払いに対応。出店料の支払いを後ろにずらせるので、
+          売上が入ってから支払うという流れがつくれます。手元の現金を仕入れに回せます。
+        </p>
+        <ul class="feature__bullets">
+          <li>大きな催事にも、資金を気にせずチャレンジできる</li>
+          <li>与信・請求はファイナンス会社が対応</li>
+        </ul>
+      </div>
+      <div class="feature__visual">
+        <div class="cash" role="img" aria-label="従来は出店前に出店料を支払うが、デバンでは売上の後に支払える">
+          <div class="cash__lane">
+            <p class="cash__ttl">従来<span>先に現金が出ていく</span></p>
+            <ol class="cash__steps">
+              <li class="is-minus"><span>出店料</span><b>−50,000</b></li>
+              <li class="is-minus"><span>仕入れ</span><b>−30,000</b></li>
+              <li class="is-plus"><span>当日売上</span><b>+150,000</b></li>
+            </ol>
+            <p class="cash__res">出店前に <b>80,000円</b> の現金が必要</p>
+          </div>
+          <div class="cash__lane cash__lane--new">
+            <p class="cash__ttl">デバン<span>売上のあとに支払う</span></p>
+            <ol class="cash__steps">
+              <li class="is-zero"><span>出店料</span><b>0（後払い）</b></li>
+              <li class="is-minus"><span>仕入れ</span><b>−30,000</b></li>
+              <li class="is-plus"><span>当日売上</span><b>+150,000</b></li>
+              <li class="is-minus"><span>出店料を後日精算</span><b>−50,000</b></li>
+            </ol>
+            <p class="cash__res cash__res--good">出店前に必要な現金は <b>30,000円</b> だけ</p>
+          </div>
+          <p class="cash__note">※金額は説明のための一例です。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="feature feature--rev js-fade">
+      <div class="feature__text">
+        <p class="feature__no">04</p>
+        <h3 class="feature__title">マイページが<br>24時間、営業してくれる</h3>
+        <p class="feature__desc">
+          業態・メニュー・出店可能エリア・必要な電源などを一度登録するだけ。
+          あとは条件に合う催事のオファーが自動で届きます。探しに行く営業から、届く営業へ。
+        </p>
+        <ul class="feature__bullets">
+          <li>仕込み中でも、片付け中でも、オファーは届き続ける</li>
+          <li>気になる催事は自分から応募することもできる</li>
+        </ul>
+      </div>
+      <div class="feature__visual">
+        <div class="offer" role="img" aria-label="条件に合うオファーが届く画面イメージ">
+          <div class="offer__phone">
+            <p class="offer__bar"><span></span></p>
+            <p class="offer__head">新着オファー <b>3</b>件</p>
+            <ul class="offer__list">
+              <li>
+                <p class="ttl">秋の物産まつり／〇〇市</p>
+                <p class="meta"><span>2日間</span><span>電源あり</span><span class="is-pay">後払い可</span></p>
+                <p class="fee">出店料 20,000円</p>
+              </li>
+              <li>
+                <p class="ttl">〇〇マルシェ 週末開催</p>
+                <p class="meta"><span>1日</span><span>屋外テント</span><span class="is-pay">後払い可</span></p>
+                <p class="fee">出店料 8,000円</p>
+              </li>
+              <li class="is-dim">
+                <p class="ttl">〇〇大学 学園祭</p>
+                <p class="meta"><span>3日間</span><span>キッチンカー</span></p>
+                <p class="fee">出店料 35,000円</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BONUS ============ -->
+<section class="section bonus" id="bonus">
+  <div class="container">
+    <header class="sect-head sect-head--onDark js-fade">
+      <p class="sect-head__en">BONUS</p>
+      <h2 class="sect-head__ja">しかも、登録するだけで<br class="sp-only">経費が下がります。</h2>
+      <p class="sect-head__lead">出店しなくても使える、無料会員全員への特典です。年会費・利用料はかかりません。</p>
+    </header>
+
+    <ul class="bonus__list">
+      <li class="js-fade">
+        <p class="bonus__off">最大<b>90</b>%<span>OFF</span></p>
+        <h3 class="bonus__ttl">日用品・食品の会員価格</h3>
+        <p class="bonus__txt">包材・洗剤・調味料など、毎月かならず出ていく消耗品を会員特別価格で。</p>
+      </li>
+      <li class="js-fade">
+        <p class="bonus__off">最大<b>40</b>%<span>OFF</span></p>
+        <h3 class="bonus__ttl">専用ETCカード</h3>
+        <p class="bonus__txt">遠方の催事ほど重くのしかかる高速代を、直接カットできます。</p>
+      </li>
+      <li class="js-fade">
+        <p class="bonus__off"><b>優待</b></p>
+        <h3 class="bonus__ttl">ロードサービス</h3>
+        <p class="bonus__txt">出店先での車両トラブルは死活問題。もしもの備えを優待価格で。</p>
+      </li>
+    </ul>
+
+    <div class="bonus__closing js-fade">
+      <figure class="bonus__figure">
+        <img src="images/scene-benefit.jpg" alt="経費削減特典のイメージ" width="900" height="700" loading="lazy">
+      </figure>
+      <div class="bonus__closing-text">
+        <p class="bonus__closing-lead">登録は無料。使わなくても、損はしません。</p>
+        <p>「まだ出店の予定は決まっていない」という方も、特典だけ先に受け取っておけます。オファーが届き始めるのは、その後からで大丈夫です。</p>
+        <a class="btn btn--primary btn--lg" href="#entry">無料会員登録して特典を受け取る</a>
+        <p class="bonus__note">※特典内容は提携先の状況により変更となる場合があります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARE ============ -->
+<section class="section compare">
+  <div class="container">
+    <header class="sect-head js-fade">
+      <p class="sect-head__en">COMPARE</p>
+      <h2 class="sect-head__ja">これまでの出店と、<br class="sp-only">何が違うのか。</h2>
+    </header>
+
+    <div class="compare__wrap js-fade">
+      <table class="compare__table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col" class="is-old">従来の仲介型サービス</th>
+            <th scope="col" class="is-new">デバン</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">中間マージン</th>
+            <td>売上から数%〜数十%</td>
+            <td class="is-new"><b>0円</b><span>システム利用料のみ</span></td>
+          </tr>
+          <tr>
+            <th scope="row">事前出店料</th>
+            <td>原則、前払い</td>
+            <td class="is-new"><b>後払いOK</b><span>掛け払い対応</span></td>
+          </tr>
+          <tr>
+            <th scope="row">主催者の評価</th>
+            <td>見られない</td>
+            <td class="is-new"><b>見られる</b><span>双方向レビュー</span></td>
+          </tr>
+          <tr>
+            <th scope="row">営業活動</th>
+            <td>自分で探して問い合わせ</td>
+            <td class="is-new"><b>オファーが届く</b><span>自動マッチング</span></td>
+          </tr>
+          <tr>
+            <th scope="row">登録・年会費</th>
+            <td>サービスにより有料</td>
+            <td class="is-new"><b>0円</b><span>ずっと無料</span></td>
+          </tr>
+          <tr>
+            <th scope="row">経費削減特典</th>
+            <td>なし</td>
+            <td class="is-new"><b>あり</b><span>日用品・ETC・ロードサービス</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLOW ============ -->
+<section class="section flow" id="flow">
+  <div class="container">
+    <header class="sect-head js-fade">
+      <p class="sect-head__en">FLOW</p>
+      <h2 class="sect-head__ja">登録から出店まで、<br class="sp-only">たった4ステップ。</h2>
+    </header>
+
+    <ol class="flow__list">
+      <li class="js-fade">
+        <p class="flow__no">01</p>
+        <h3 class="flow__ttl">無料会員登録</h3>
+        <p class="flow__txt">メールアドレスだけで登録完了。費用は一切かかりません。所要時間およそ30秒。</p>
+      </li>
+      <li class="js-fade">
+        <p class="flow__no">02</p>
+        <h3 class="flow__ttl">プロフィール作成</h3>
+        <p class="flow__txt">業態・メニュー・出店可能エリア・車両サイズなどを入力。これがあなたの営業資料になります。</p>
+      </li>
+      <li class="js-fade">
+        <p class="flow__no">03</p>
+        <h3 class="flow__ttl">オファーを受け取る</h3>
+        <p class="flow__txt">条件に合う催事のオファーが自動で届きます。自分から応募することもできます。</p>
+      </li>
+      <li class="js-fade">
+        <p class="flow__no">04</p>
+        <h3 class="flow__ttl">出店・レビュー</h3>
+        <p class="flow__txt">条件を確認して出店。終了後はお互いを評価。積み重ねた実績が、次の出店につながります。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ VOICE ============ -->
+<section class="section voice">
+  <div class="container container--narrow">
+    <header class="sect-head js-fade">
+      <p class="sect-head__en">VOICE</p>
+      <h2 class="sect-head__ja">先に使っている、<br class="sp-only">現場の声。</h2>
+    </header>
+
+    <ul class="voice__list">
+      <li class="js-fade">
+        <blockquote class="voice__txt">手数料が引かれないだけで、同じ売上でも残るお金が全然違います。前払いが無いのも大きくて、大きい催事に挑戦できるようになりました。</blockquote>
+        <p class="voice__who">
+          <img src="images/avatar-01.jpg" alt="" width="200" height="200" loading="lazy">
+          <span><b>キッチンカー／唐揚げ・関東</b>開業3年目</span>
+        </p>
+      </li>
+      <li class="js-fade">
+        <blockquote class="voice__txt">主催者さんの評価が見られるのが本当にありがたい。条件の説明が丁寧な主催者さんを選べるので、当日の「聞いてない」が減りました。</blockquote>
+        <p class="voice__who">
+          <img src="images/avatar-02.jpg" alt="" width="200" height="200" loading="lazy">
+          <span><b>テント催事／雑貨・関西</b>開業6年目</span>
+        </p>
+      </li>
+      <li class="js-fade">
+        <blockquote class="voice__txt">営業の電話をかける時間が無かったので、プロフィールを作っただけでオファーが来るのは助かります。ETCの割引も地味に効いています。</blockquote>
+        <p class="voice__who">
+          <img src="images/avatar-03.jpg" alt="" width="200" height="200" loading="lazy">
+          <span><b>物産催事／地場食品・東北</b>開業10年目</span>
+        </p>
+      </li>
+    </ul>
+    <p class="voice__note">※掲載内容はデザイン確認用のサンプルです。実際の利用者コメントに差し替えてご利用ください。</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="container container--narrow">
+    <header class="sect-head js-fade">
+      <p class="sect-head__en">FAQ</p>
+      <h2 class="sect-head__ja">よくあるご質問</h2>
+    </header>
+
+    <div class="faq__list js-fade">
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">本当に登録は無料ですか？あとから費用は発生しませんか？</button>
+        <div class="faq__a"><p>会員登録・年会費は無料です。費用が発生するのは、実際に出店が決まった際のシステム利用料と出店料のみです。掲載料や審査料はいただいておりません。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">まだ開業したばかりでも登録できますか？</button>
+        <div class="faq__a"><p>ご登録いただけます。双方向レビューは出店を重ねるごとに実績として積み上がっていく仕組みなので、これから実績をつくりたい方にこそ活用いただけます。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">後払いを利用するのに、審査は必要ですか？</button>
+        <div class="faq__a"><p>提携するファイナンス会社所定の与信確認がございます。ご利用にあたっての詳細な条件は、会員登録後のマイページよりご案内いたします。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">キッチンカー以外の業態でも使えますか？</button>
+        <div class="faq__a"><p>はい。テント催事、物産催事の事業者さまにも多くご利用いただいています。プロフィールで業態を選択いただくと、その業態に合った催事のオファーが届きます。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">オファーは必ず受けないといけませんか？</button>
+        <div class="faq__a"><p>いいえ。届いたオファーを断っていただいて問題ありません。条件・日程を確認したうえで、ご自身のペースでお選びください。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">退会したくなったときは？</button>
+        <div class="faq__a"><p>マイページからいつでも無料で退会いただけます。違約金や手数料は一切かかりません。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENTRY ============ -->
+<section class="entry" id="entry">
+  <div class="container container--narrow">
+    <div class="entry__inner js-fade">
+      <p class="entry__eyebrow">登録は無料・かんたん30秒</p>
+      <h2 class="entry__title">登録しない理由が、<br class="sp-only">見当たらない。</h2>
+      <p class="entry__lead">
+        手数料も、前払いも、営業の手間もいらない。<br class="pc-only">
+        そのうえ、経費が下がる特典まで付いてきます。
+      </p>
+
+      <ul class="entry__points">
+        <li>登録・年会費 <b>0円</b></li>
+        <li>仲介手数料 <b>0円</b></li>
+        <li>事前出店料 <b>後払いOK</b></li>
+      </ul>
+
+      <form class="entryform entryform--main" action="#" method="post" novalidate>
+        <div class="entryform__row">
+          <label class="sr-only" for="entry-email">メールアドレス</label>
+          <input class="entryform__input" type="email" id="entry-email" name="email" placeholder="メールアドレスを入力" autocomplete="email" required>
+          <button class="btn btn--primary btn--lg" type="submit">無料で会員登録する</button>
+        </div>
+        <p class="entryform__note">送信いただくと<a href="#">利用規約</a>および<a href="#">プライバシーポリシー</a>に同意したものとみなします。</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="images/logo-white.svg" alt="デバン DEBAN" width="260" height="64">
+        <p class="footer__tagline">出店の、出番をつくる。</p>
+        <p class="footer__desc">キッチンカー・テント催事・物産催事の事業者と、催事主催者をつなぐダイレクトマッチングプラットフォームです。</p>
+      </div>
+      <nav class="footer__nav">
+        <div>
+          <p class="footer__nav-ttl">サービス</p>
+          <ul>
+            <li><a href="#solution">4つの強み</a></li>
+            <li><a href="#bonus">無料特典</a></li>
+            <li><a href="#flow">利用の流れ</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__nav-ttl">運営情報</p>
+          <ul>
+            <li><a href="#">運営会社</a></li>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <p class="footer__copy">&copy; DEBAN. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ SP FIXED CTA ============ -->
+<div class="spcta" id="spcta">
+  <a class="spcta__btn" href="#entry">
+    <span class="spcta__sub">登録・年会費0円／30秒</span>
+    <span class="spcta__main">無料会員登録する</span>
+  </a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
